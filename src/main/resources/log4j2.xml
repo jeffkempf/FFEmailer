@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="OFF">
+	<Properties>
+		<Property name="log-path" >${sys:log_dir}</Property>
+		<Property name="log-project-name">FFEmailer</Property>
+		<Property name="log-pattern">%d{ISO8601} %-5p [%t|%c{1}] %m\n</Property>
+		<Property name="rollover-strategy-max">7</Property>
+		<Property name="rolling-size-based">20 MB</Property>
+	</Properties>
+	<appenders>
+  
+	 <RollingFile name="INFO" fileName="${log-path}/${log-project-name}-logger.log" filePattern="${log-path}/${log-project-name}-debug-%d-%i.log.zip">
+		<PatternLayout>
+			<pattern>${log-pattern}</pattern>
+		</PatternLayout>
+		<Policies>
+			<SizeBasedTriggeringPolicy size="${rolling-size-based}" />
+		</Policies>
+		<DefaultRolloverStrategy max="${rollover-strategy-max}" />
+	</RollingFile>
+	 
+	</appenders>
+	<Loggers>
+		<logger name="io.switchfour" level="trace" additivity="false">
+			<AppenderRef ref="INFO" level="info" />
+		</logger>
+	</Loggers>
+</configuration>
