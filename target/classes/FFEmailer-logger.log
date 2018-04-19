@@ -79,4 +79,3 @@
 2018-04-19T16:19:40,469 INFO  [main|MailReader] Jeff Erson <jeffsfakeemailbox@gmail.com> count: 1, cutoff: 3
 2018-04-19T16:19:40,587 INFO  [main|MailReader] 1524169180459.txt doesn't contain an HTML multipart. Will disregard message.
 2018-04-19T16:19:51,177 INFO  [main|MailReader] messages.length in main: 0
-2018-04-19T16:20:48,046 INFO  [main|MailReader] messages.length in main: 0

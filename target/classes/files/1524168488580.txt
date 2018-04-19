@@ -1,0 +1,2732 @@
+Contents of Itinerary Email
+Header Content
+
+Delivered-To: appjeffs@gmail.com
+Received: by 10.157.74.55 with SMTP id h52csp3523487otf;
+        Sat, 23 Dec 2017 00:10:32 -0800 (PST)
+X-Received: by 10.107.46.169 with SMTP id u41mr21796486iou.303.1514016632645;
+        Sat, 23 Dec 2017 00:10:32 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1514016632; cv=none;
+        d=google.com; s=arc-20160816;
+        b=lmI1v0/eq24joB08xU0asqOApBjQsFgyGOXQw8QnQrpg+7DadOVfdpf80CEjyZw8uT
+         9y1zbu5nyNl2+WY7R52aVJDf8g9lMHh2U6BXRPg8Q3VWVepfxujTFwRY2sYbj0t/zr17
+         LFPsT544jOC2o3ObuozYwEdfeVo9bGOvGA6OZmNXgfWORumrAEa/MSPdP8nHkvHRD0Gx
+         3JlE4YmBdeRUI2FPrltKddumR+AntVC0Ib5D44rVkxSLZtk31V2PQ7zVZo+7Kptr/jCe
+         CkXNxrmLqKZaK6+pYRHWzD45PCsO5HTmHCtEiwamwITjk8Kd2/MwZX3dbbjCwEepSiEM
+         6gdg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:from:subject:message-id:list-unsubscribe:feedback-id:reply-to
+         :date:mime-version:dkim-signature:arc-authentication-results;
+        bh=IySkd+TFN7etguzsi6qfs47LCSLf7XarT9vCUkgRU8Y=;
+        b=AXd8oCjhsTqsq3KK4qjln75tpJcHJ/17JHDelZNq5XCGd5IBHWt4A2gyd7pfPhGGWz
+         xfAVyhDNbJtLo5/JLd9eDdzX0oHRP3olA0R/kbTSoapDZrNCB4vD03aHwEtDmo3ei0fW
+         d7AxD8nP+0j0ASWee8Ia8tHxIU6RK7sZxfO8bltGQx3RAOEhwiaMyQXix59QJMOIwKto
+         HUmkdEZKyIBPlbJYEA2kQFH1dwp3rukvLa6bh0BbtP7ZbolOgDDcezqYWHfoMt8I/COG
+         +PbvVvBP6JEFuBqHcekX9mreXASWp/WQdxNxvX/41u147RvilAZTTMGVl65nCMLDuR15
+         F/ig==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@youtube.com header.s=20161025 header.b=UbK3YevC;
+       spf=pass (google.com: domain of 3ea8-wgclcgcstwjuqddtzyzgj.htrfuuojkkxlrfnq.htr@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3eA8-WgcLCGcSTWJUQddTZYZGJ.HTRFUUOJKKXLRFNQ.HTR@scoutcamp.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=youtube.com
+Return-Path: <3eA8-WgcLCGcSTWJUQddTZYZGJ.HTRFUUOJKKXLRFNQ.HTR@scoutcamp.bounces.google.com>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id c27sor1681243iod.287.2017.12.23.00.10.32
+        for <appjeffs@gmail.com>
+        (Google Transport Security);
+        Sat, 23 Dec 2017 00:10:32 -0800 (PST)
+Received-SPF: pass (google.com: domain of 3ea8-wgclcgcstwjuqddtzyzgj.htrfuuojkkxlrfnq.htr@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@youtube.com header.s=20161025 header.b=UbK3YevC;
+       spf=pass (google.com: domain of 3ea8-wgclcgcstwjuqddtzyzgj.htrfuuojkkxlrfnq.htr@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3eA8-WgcLCGcSTWJUQddTZYZGJ.HTRFUUOJKKXLRFNQ.HTR@scoutcamp.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=youtube.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=youtube.com; s=20161025;
+        h=mime-version:date:reply-to:feedback-id:list-unsubscribe:message-id
+         :subject:from:to;
+        bh=IySkd+TFN7etguzsi6qfs47LCSLf7XarT9vCUkgRU8Y=;
+        b=UbK3YevC8JY2jWuQnpqVtO5xBklrppfvQMl1GSoEeDhtLGp2GnFEC+mq9Hh8oDaELa
+         nrxQnLT4WVUsAjgMz1wThHbEJTTYvladQ7+kqb7CTbkvu4PrkcIW5J+hsQheoexvg9+1
+         L7cJqJQQFxWyWiKJpANnySK6Jg3gvw9FeItjGFrcUx3u7pvqBIt2j4mMJsSPBxloi6pp
+         jW4Bg25vaJdYxQRWd9TrvwVN3zJPa0vxSyRkZSRcBf7cWUDBWGa5/dUBNr7jr2I8/oiP
+         /aMutiow/26LI29LYCIPjr9xbvhzjoRFNe/MjLpFlsEIfi6TCMvlCDsfIqS02Mu6MCl7
+         s7lg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:date:reply-to:feedback-id
+         :list-unsubscribe:message-id:subject:from:to;
+        bh=IySkd+TFN7etguzsi6qfs47LCSLf7XarT9vCUkgRU8Y=;
+        b=n1DN1ypKs9V5ncybIg3d9UKmFMEkiwZF9bGeRZYbnCCVeupF+mkIr7r7Qx4pW8/cxZ
+         2NTbSuCxQQF/Zgx9AbpDUA1ZthC9ueMokFDQ67s33S4kt68rR9qW8Rljihb7lCCzJm1/
+         qO5zwzgSRtRaqXYfs8Pl1E9qGTJg0Ls3i0/EkbwFoOLqtRekjRglrr2YIgyZwXyxSbX8
+         HhrWphHZPJ7gWdtviCIM/dEYgmBkPnqR0IFPXc9C+R+50oawIW7fmXxcDcfNTLUcPsQA
+         B0kn1Ej2tA8VGEBpWN8kNEndVE385gSekENsui+Nj1Cv6cLxYbvuvbLWQ+9o4HbQxG3Q
+         a9Pw==
+X-Gm-Message-State: AKGB3mK51dRNEGMbWkNMD4aJ+WX2jw6miJE3JwdWGDCW8PboEuRUKKQY
+	l7G77lNnKq4f+w4=
+X-Google-Smtp-Source: ACJfBot9FjbCMJxVZC+JaNTySNuEV+M0pIIjRUDC/9fGd1cUE0jedg2qpwr1pTGwBvunjK3JChLlgeI=
+MIME-Version: 1.0
+X-Received: by 10.107.114.8 with SMTP id n8mr11428946ioc.15.1514016632094;
+ Sat, 23 Dec 2017 00:10:32 -0800 (PST)
+Date: Sat, 23 Dec 2017 00:10:32 -0800
+Reply-To: YouTube <noreply@youtube.com>
+X-Google-Id: yt-em-subs_digest
+Feedback-ID: Len-US:D3572017:C709701:gamma
+X-No-Auto-Attachment: 1
+List-Unsubscribe: <mailto:yt-mailto@google.com?subject=http://www.youtube.com/email_unsubscribe%3Fuid%3DMfxBhDYBg7rrycMVIMKZsw%26action_unsubscribe%3DC4YEbkRb3O9yNqYekq96f73RA9Z8MTUxNDAxNjYzMUAxNTE0MDE2NjMx%26feature%3Dem-subs_digest>,
+ <http://www.youtube.com/email_unsubscribe?uid=MfxBhDYBg7rrycMVIMKZsw&action_unsubscribe=C4YEbkRb3O9yNqYekq96f73RA9Z8MTUxNDAxNjYzMUAxNTE0MDE2NjMx&feature=em-subs_digest>
+X-Feedback-Id: em-subs_digest:UC-No2ITxJsNt50oJQ3fLmUA:jGLipCu2WbY:YouTube
+X-Notifications: GAMMA:<2dd8bebb8dbcc603.1514016631809.826106.709701.en-US.82d6488f53c94813@google.com>
+Message-ID: <2dd8bebb8dbcc603.1514016631809.826106.709701.en-US.82d6488f53c94813@google.com>
+Subject: The Fantasy Footballers: "Fantasy Football 2017 - Week 16 Matchups +
+ Holiday Movie Draft - Ep..."
+From: YouTube <noreply@youtube.com>
+To: appjeffs@gmail.com
+Content-Type: multipart/alternative; boundary="089e08263e588a41610560fd77ab"
+Body Content
+---------------------------------
+
+This is a Multipart
+This is a string
+---------------------------
+Here are the newest videos from each of your subscriptions. To change the  
+subscriptions for which you receive updates, or to turn off updates, go to  
+your email options:
+http://www.youtube.com/account_notifications?feature=em-subs_digest
+----------------------------------------------------------------
+Latest subscription updates
+----------------------------------------------------------------
+http://youtu.be/jGLipCu2WbY?em
+Fantasy Football 2017 - Week 16 Matchups + Holiday Movie Draft - Ep. #505
+[+4 videos]
+by The Fantasy Footballers
+----------------------------------------------------------------We think  
+you'd like...
+----------------------------------------------------------------
+http://youtu.be/kTO0-LltOhg?em
+Fantasy Football 2017 - Holiday Awards, Week 16 Matchups, Starts of the  
+Week - Ep. #504
+by The Fantasy Footballers
+--
+http://youtu.be/6QT1VMpYIeo?em
+Top 10 Most Anticipated Anime of 2018
+by WatchMojo.com
+--
+http://youtu.be/6XxXC6tyxW0?em
+Top 10 Hard Bosses With Easy Exploits
+by WatchMojo.com
+--
+http://youtu.be/Fj8G9dGuNkU?em
+Greatest Trick Plays in Football History
+by Jaydon
+--
+http://youtu.be/kpAigzGfV-g?em
+Top 10 Most Annoying Dark Souls Enemies
+by WatchMojo.com
+--
+http://youtu.be/TTfe2Manwmo?em
+OCEAN'S 8 Official Trailer (2018) Rihanna, Anne Hathaway Action Movie HD
+by ONE Media
+----------------------------------------------------------------
+
+This is a string
+---------------------------
+
+<html lang="en">
+<head>
+<title>
+The Fantasy Footballers: &quot;Fantasy Football 2017 - Week 16 Matchups + Holiday Movie Draft - Ep...&quot;
+</title>
+<style type="text/css">
+* {
+font-family: arial, Arial, sans-serif;
+}
+@media only screen and (max-device-width: 480px) {
+body.suppress-border-on-mobile {
+margin: 0 !important;
+border: 0 !important;
+padding: 0 !important;
+}
+table.suppress-on-mobile, td.suppress-on-mobile, div.suppress-on-mobile, img.suppress-on-mobile, span.suppress-on-mobile {
+display: none !important;
+width: 0px !important;
+height: 0px !important;
+line-height: 0px !important;
+margin: 0 !important;
+border: 0 !important;
+padding: 0 !important;
+}
+table.outer-container-width, td.outer-container-width {
+width: 640px !important;
+}
+td.outer-container-padding-width {
+width: 20px !important;
+}
+table.inner-container-width, td.inner-container-width {
+width: 600px !important;
+}
+table.header-container-width {
+width: 600px !important;
+height: 100px !important;
+}
+td.header_left_padding_width {
+width: 25px !important;
+}
+td.logo_container_size {
+width: 575px !important;
+height: 100px !important;
+}
+img.header_logo_size {
+height: 47px !important;
+}
+table.footer-padding-width, td.footer-padding-width {
+width: 30px !important;
+}
+table.footer-width, td.footer-width {
+width: 540px !important;
+}
+td.footer-font, div.footer-font {
+font-size: 20px !important;
+line-height: 30px !important;
+}
+table.footer-content-padding-height, td.footer-content-padding-height {
+height: 30px !important;
+}
+table.large-section-padding-height, td.large-section-padding-height {
+height: 16px !important;
+}
+table.small-section-padding-height, td.small-section-padding-height {
+height: 20px !important;
+}
+table.content-container-padding-width, td.content-container-padding-width {
+width: 30px !important;
+}
+table.content-container-padding-height, td.content-container-padding-height {
+height: 30px !important;
+}
+table.content-container-width, td.content-container-width {
+width: 540px !important;
+}
+span.video-title-font-class, td.video-title-font-class, div.greeting-font, td.greeting-font {
+font-size: 24px !important;
+line-height: 30px !important;
+}
+a.video-link-font-class, div.video-link-font-class, td.video-link-font-class {
+font-size: 20px !important;
+line-height: 30px !important;
+}
+span.meta-data-font, div.meta-data-font, a.meta-data-font, td.meta-data-font {
+display: block !important;
+font-size: 20px !important;
+line-height: 36px !important;
+}
+td.small-meta-data-font {
+font-size: 25px !important;
+line-height: 30px !important;
+}
+table.video-content-padding-height, td.video-content-padding-height {
+height: 45px !important;
+}
+td.avatar-size, img.avatar-size {
+width: 54px !important;
+height: 54px !important;
+}
+img.large-avatar-size {
+height: 32px !important;
+}
+img.channel-avatar-size {
+width: 80px !important;
+height: 80px !important;
+}
+img.thumbnail-size-class, td.thumbnail-size-class{
+width: 100px !important;
+height: 56px !important;
+}
+table.more-videos-size {
+height: 100px !important;
+}
+div.more-videos-font, td.more-videos-font {
+font-size: 24px !important;
+line-height: 27px !important;
+}
+table.more-videos-button-size {
+width: 230px !important;
+height: 60px !important;
+}
+td.more-videos-button-width {
+width: 250px !important;
+}
+td.more-videos-text-width {
+width: 270px !important;
+}
+table.video-spotlight-width {
+width:600px !important;
+height:332px !important;
+}
+td.video-spotlight-size, img.video-spotlight-size {
+width:600px !important;
+height:332px !important;
+}
+table.regular-button-height {
+height:60px !important;
+}
+td.regular-button-padding-width {
+width:20px !important;
+}
+td.regular-button-font {
+font-size:27.5px !important;
+line-height:27.5px !important;
+}
+img.play-button-img-size {
+width:20px !important;
+height:20px !important;
+}
+table.large-button-size {
+width:600px !important;
+height:70px !important;
+}
+table.video-2col-size {
+width:600px !important;
+}
+table.video-2col-width, td.video-2col-width {
+width:600px !important;
+}
+img.video-2col-thumb-size {
+width:600px !important;
+height:332px !important;
+}
+table.video-2col-outer-container-size, td.video-2col-outer-container-size {
+width: 600px !important;
+}
+table.video-2col-inner-container-size, td.video-2col-inner-container-size {
+width: 540px !important;
+}
+table.video-2col-inner-container-width, td.video-2col-inner-container-width {
+width: 540px !important;
+}
+div.section-title-font, td.section-title-font {
+font-size: 30px !important;
+line-height: 35px !important;
+}
+div.section-subtitle-font, td.section-subtitle-font {
+font-size: 25px !important;
+line-height: 25px !important;
+}
+table.video-3col-padding-height, td.video-3col-padding-height {
+height: 55px !important;
+}
+img.video-3col-thumb-size, table.video-3col-thumb-size {
+width: 600px !important;
+height: 332px !important;
+}
+table.video-3col-width, td.video-3col-width {
+width: 600px !important;
+}
+table.inner-3col-content-container-width, td.inner-3col-content-container-width {
+width: 600px !important;
+}
+td.small-pad-width {
+width: 20px !important;
+}
+img.channel-avatar-size {
+width: 80px !important;
+height: 80px !important;
+}
+span.follow-and-subs-font {
+display: block !important;
+font-size: 24px !important;
+line-height: 27px !important;
+max-height:30px !important;
+}
+td.social-logo-padding-width {
+width: 32px !important;
+}
+table.channel-owner-block-content-width, td.channel-owner-block-content-width {
+width: 420px !important;
+}
+td.show-only-on-mobile {
+display: block !important;
+width: 100% !important;
+max-height: 100% !important;
+overflow: visible !important;
+}
+td.show-not-on-mobile, tr.show-not-on-mobile {
+display: none !important;
+visibility: hidden !important;
+}
+}
+</style>
+<style type="text/css">
+* {
+font-family: arial, Arial, sans-serif;
+}
+@media only screen and (max-device-width: 480px) {
+body[class=suppress-border-on-mobile] {
+margin: 0 !important;
+border: 0 !important;
+padding: 0 !important;
+}
+table[class=suppress-on-mobile], td[class=suppress-on-mobile], div[class=suppress-on-mobile], img[class=suppress-on-mobile], span[class=suppress-on-mobile] {
+display: none !important;
+width: 0px !important;
+height: 0px !important;
+line-height: 0px !important;
+margin: 0 !important;
+border: 0 !important;
+padding: 0 !important;
+}
+table[class=outer-container-width], td[class=outer-container-width] {
+width: 640px !important;
+}
+td[class=outer-container-padding-width] {
+width: 20px !important;
+}
+table[class=inner-container-width], td[class=inner-container-width] {
+width: 600px !important;
+}
+table[class=header-container-width] {
+width: 600px !important;
+height: 100px !important;
+}
+td[class=header_left_padding_width] {
+width: 25px !important;
+}
+td[class=logo_container_size] {
+width: 575px !important;
+height: 100px !important;
+}
+img[class=header_logo_size] {
+height: 47px !important;
+}
+table[class=footer-padding-width], td[class=footer-padding-width] {
+width: 30px !important;
+}
+table[class=footer-width], td[class=footer-width] {
+width: 540px !important;
+}
+td[class=footer-font], div[class=footer-font] {
+font-size: 20px !important;
+line-height: 30px !important;
+}
+table[class=footer-content-padding-height], td[class=footer-content-padding-height] {
+height: 30px !important;
+}
+table[class=large-section-padding-height], td[class=large-section-padding-height] {
+height: 16px !important;
+}
+table[class=small-section-padding-height], td[class=small-section-padding-height] {
+height: 20px !important;
+}
+table[class=content-container-padding-width], td[class=content-container-padding-width] {
+width: 30px !important;
+}
+table[class=content-container-padding-height], td[class=content-container-padding-height] {
+height: 30px !important;
+}
+table[class=content-container-width], td[class=content-container-width] {
+width: 540px !important;
+}
+span[class=video-title-font-class], td[class=video-title-font-class], div[class=greeting-font], td[class=greeting-font] {
+font-size: 24px !important;
+line-height: 30px !important;
+}
+a[class=video-link-font-class], div[class=video-link-font-class], td[class=video-link-font-class] {
+font-size: 20px !important;
+line-height: 30px !important;
+}
+span[class=meta-data-font], div[class=meta-data-font], a[class=meta-data-font], td[class=meta-data-font] {
+display: block !important;
+font-size: 20px !important;
+line-height: 36px !important;
+}
+td[class=small-meta-data-font] {
+font-size: 25px !important;
+line-height: 30px !important;
+}
+table[class=video-content-padding-height], td[class=video-content-padding-height] {
+height: 45px !important;
+}
+td[class=avatar-size], img[class=avatar-size] {
+width: 54px !important;
+height: 54px !important;
+}
+img[class=large-avatar-size] {
+width: 32px !important;
+}
+img[class=channel-avatar-size] {
+width: 80px !important;
+height: 80px !important;
+}
+table[class=more-videos-size] {
+height: 100px !important;
+}
+div[class=more-videos-font], td[class=more-videos-font] {
+font-size: 24px !important;
+line-height: 27px !important;
+}
+table[class=more-videos-button-size] {
+width: 230px !important;
+height: 60px !important;
+}
+td[class=more-videos-button-width] {
+width: 250px !important;
+}
+td[class=more-videos-text-width] {
+width: 270px !important;
+}
+table[class=video-spotlight-width] {
+width:600px !important;
+height:332px !important;
+}
+td[class=video-spotlight-size], img[class=video-spotlight-size] {
+width:600px !important;
+height:332px !important;
+}
+table[class=regular-button-height] {
+height:60px !important;
+}
+td[class=regular-button-padding-width] {
+width:20px !important;
+}
+td[class=regular-button-font] {
+font-size:27.5px !important;
+line-height:27.5px !important;
+}
+img[class=play-button-img-size] {
+width:20px !important;
+height:20px !important;
+}
+table[class=large-button-size] {
+width:600px !important;
+height:70px !important;
+}
+table[class=video-2col-size] {
+width:600px !important;
+}
+table[class=video-2col-width], td[class=video-2col-width] {
+width:600px !important;
+}
+img[class=video-2col-thumb-size] {
+width:600px !important;
+height:332px !important;
+}
+table[class=video-2col-outer-container-size], td[class=video-2col-outer-container-size] {
+width: 600px !important;
+}
+table[class=video-2col-inner-container-size], td[class=video-2col-inner-container-size] {
+width: 540px !important;
+}
+table[class=video-2col-inner-container-width], td[class=video-2col-inner-container-width] {
+width: 540px !important;
+}
+div[class=section-title-font], td[class=section-title-font] {
+font-size: 30px !important;
+line-height: 35px !important;
+}
+div[class=section-subtitle-font], td[class=section-subtitle-font] {
+font-size: 25px !important;
+line-height: 25px !important;
+}
+table[class=video-3col-padding-height], td[class=video-3col-padding-height] {
+height: 55px !important;
+}
+img[class=video-3col-thumb-size], table[class=video-3col-thumb-size] {
+width: 600px !important;
+height: 332px !important;
+}
+table[class=video-3col-width], td[class=video-3col-width] {
+width: 600px !important;
+}
+table[class=inner-3col-content-container-width], td[class=inner-3col-content-container-width] {
+width: 600px !important;
+}
+td[class=small-pad-width] {
+width: 20px !important;
+}
+img[class=channel-avatar-size] {
+width: 80px !important;
+height: 80px !important;
+}
+img[class=thumbnail-size-class], td[class=thumbnail-size-class] {
+width: 80px !important;
+height: 44px !important;
+}
+span[class=follow-and-subs-font] {
+display: block !important;
+font-size: 24px !important;
+line-height: 27px !important;
+max-height:30px !important;
+}
+td[class=social-logo-padding-width] {
+width: 32px !important;
+}
+table[class=channel-owner-block-content-width], td[class=channel-owner-block-content-width] {
+width: 420px !important;
+}
+td[class=show-only-on-mobile] {
+display: block !important;
+width: 100% !important;
+max-height: 100% !important;
+overflow: visible !important;
+}
+td[class=show-not-on-mobile], tr[class=show-not-on-mobile]{
+display: none !important;
+visibility: hidden !important;
+}
+table., td. {
+width: 500px !important;
+}
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body class="suppress-border-on-mobile">
+<span style="display: none !important; visibility: hidden; width: 0; height: 0; opacity: 0; color: transparent;mso-hide:all">The Fantasy Footballers: &quot;Fantasy Football 2017 - Week 16 Matchups + Holiday Movie Draft - Ep...&quot;</span>
+<table class="outer-container-width" width="680" bgcolor="transparent" align="center" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="outer-container-padding-width" width="40"></td>
+<td class="inner-container-width" width="600">
+<table class="inner-container-width" width="600" align="center" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table class="header-container-width" width="600" align="left" valign="center" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="logo_container_size" width="584" valign="center">
+<a href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/&amp;g=AIR_RmFPbrgxZH93_TjLv6rgEQdcIUgR5B74ux5qxIPjorwfq0qbvsxDFVCfx52rpQ0ht0qLDhKfPfR5KT3JJUDGBLeVcfSBqtGzIXnyqfT7LeLeEdYqT2mWK62RHwZ-siVf"><img alt="Youtube Logo" class="header_logo_size" height="30" src="http://www.gstatic.com/youtube/img/branding/youtubelogo/1x/youtubelogo_60.png" border="0" style="display:block;"></a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td style="max-height:0px; font-size:0; display:none;"><hr class="inner-container-width" width="600" style="height:0px; border:none; border-color:transparent; padding:0px; margin:0px;"></td></tr>
+<tr><td class="large-section-padding-height" height="20"></td></tr>
+<tr>
+<td>
+<table class="inner-container-width" width="600" align="center" valign="center" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+
+<script type="application/json" data-scope="inboxmarkup">
+{
+"api_version": "1.0",
+"publisher": {
+"api_key": "c4f99df5214ea4f584bb2e72588b237d",
+"name": "YouTube"
+},
+"entity": {
+"external_key": "YouTubeDigest",
+"title": "YouTube Digest",
+"subtitle": "Latest: December 23, 2017",
+"main_image_url": "https://lh3.googleusercontent.com/qzeDHEH4itIbIKtU0XAr-VMB7bKYCG4wsgWoJno2PaHuTxzMAPaWwPHMdvewrwgNcfq3Pdq8pg=s0",
+"avatar_image_url": "https://lh3.googleusercontent.com/-as5xbhkCeMo/VwKaPW6V_cI/AAAAAAAA6lA/5zsGHEaEd9YN4B-mQ1ABZNOGtTyfrBRegCL0B/s0/YouTube-avatar-generic%2B%252811%2529.png"
+},
+"cards": [
+{
+"title": "YouTube Digest",
+"subtitle": "Highlights from the latest email",
+"widgets": [
+{
+"type": "LINK",
+"title": "Fantasy Football 2017 - Week 16 Matchups + Holiday Movie Draft - Ep. #505",
+"description": "Fantasy Football Podcast for December 22nd, 2017. The Fantasy Footballers are back again as we head into Championship weekend! We’ll tackle the rest of the Week 16 Matchups in the Fantasy Forecast. Get the latest updates on who will be In or Out. And we’ll have some fun during our holiday movie draft! Manage your redraft, keeper, and dynasty fantasy football teams with insights you can only get on the #1 fantasy football podcast. 03:10- Holiday Movie Draft 09:25- NFL News \x26 Notes 11:25- In-or-Out 15:45- Week 16 Fantasy Forecast Part Two 16:05- Falcons at Saints 22:30- Chargers at Jets 25:30- Rams at Titans 30:35- Broncos at Redskins 33:40- Jaguars at 49ers 37:50- Giants at Cardinals 41:25- Seahawks at Cowboys 46:05- Steelers at Texans 50:25- Raiders at Eagles 55:35- Week 16 Daily Dose Live Draft Check out today\x27s sponsors: http:\x2F\x2FFantasyChamps.com -- Code:Ballers http:\x2F\x2FHarrys.com\x2FFootballers http:\x2F\x2FPristineAuction.com Our studio sponsor: Draft.com\x2FBallers Check out the Ultimate ... [+4 videos]",
+"url": "",
+"image_url": "http://i.ytimg.com/vi/jGLipCu2WbY/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3nagQ9gqvrQQdhXswGEfN9ylIX3QA&feature=em-subs_digest"
+},
+{
+"type": "LINK",
+"title": "Fantasy Football 2017 - Holiday Awards, Week 16 Matchups, Starts of the Week - Ep. #504",
+"description": "Fantasy Football Awards. We’ll tackle the latest NFL news and injury updates, reveal our Starts of the Week, and preview a number of Week 16 matchups. And finally, you don’t want to miss Jason’s Boom Boom Kicker! Manage your redraft, keeper, and dynasty fantasy football teams with insights you can only get on the #1 fantasy football podcast. 02:55- Holiday Fantasy Football Awards 10:50- NFL News \x26 Notes 14:35- Week 16 Fantasy Forecast 16:20- Colts at Ravens 22:50- Vikings at Packers 28:40- Buccaneers at Panthers 34:30- Browns at Bears 37:55- Lions at Bengals 40:55- Dolphins at Chiefs 44:55- Bills at Patriots 49:10- Starts of the Week 01:02:55- Jason Moore’s BOOM BOOM Kicker Check out today\x27s sponsors: http:\x2F\x2FFantasyChamps.com -- Code:Ballers http:\x2F\x2FHarrys.com\x2FFootballers http:\x2F\x2FUpside.com -- Code: FOOTBALLERS Our studio sponsor: Draft.com\x2FBallers Check out the Ultimate DFS Pass at http:\x2F\x2FDFSPass.com and subscribe to our DFS Podcast Join our Fantasy Football community at http:\x2F\x2Fw...",
+"url": "http://youtu.be/kTO0-LltOhg?em",
+"image_url": "http://i.ytimg.com/vi/kTO0-LltOhg/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3klqvyt43ghtDjIG7QBdYK6FQjSBA&feature=em-subs_digest-vrecs"
+},
+{
+"type": "LINK",
+"title": "Top 10 Most Anticipated Anime of 2018",
+"description": "Top 10 Most Anticipated Anime of 2018 Subscribe: http:\x2F\x2Fgoo.gl\x2FQ2kKrD \x2F\x2F Have a Top 10 idea? Submit it to us here! http:\x2F\x2Fwatchmojo.com\x2Fmy\x2Fsuggest.php 2017 was an awesome year for Japanese Animation, and next year looks pretty promising! Shows like Attack on Titan and My Hero Academia will be making their awesome return and we\x27re going to see some adaptations of great manga along the way too. Sequels, Spin offs and movies - it\x27s going to be great... and fingers crossed, we\x27re finally going to get that season 2 of One-Punch Man! REMINDER: We\x27re not including shows that don\x27t have a confirmed release date like Code Geass, Evangelion 3.33, A certain magical index, and Sword Art Online! Which shows are you looking forward to the most in 2018? Let us know in the comments below. #10. “High School DxD Hero” (2018) #9. “Tokyo Ghoul:re” (2018) #8. “Persona 5 The Animation” (2018) #7. The Seven Deadly Sins Revival of the Commandments\x22 (2018) #6. “FLCL and 3” (2018) #5. “Fairy Tail” Fi...",
+"url": "http://youtu.be/6QT1VMpYIeo?em",
+"image_url": "http://i.ytimg.com/vi/6QT1VMpYIeo/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3mmW45APEMPyJI2q3AcdfvWOMwL2Q&feature=em-subs_digest-vrecs"
+},
+{
+"type": "LINK",
+"title": "Top 10 Hard Bosses With Easy Exploits",
+"description": "Top 10 Hard Bosses With Easy Exploits Subscribe: http:\x2F\x2Fgoo.gl\x2FQ2kKrD \x2F\x2F Have a Top 10 idea? Submit it to us here! http:\x2F\x2Fwatchmojo.com\x2Fmy\x2Fsuggest.php Would you like your victory with a side of cheese? These are the bosses that hit real hard, but can easily be duped, tricked or cheesed out - to the point of becoming huge cakewalks. Welcome to http:\x2F\x2FWatchMojo.com\x2F and today we’re counting down our picks for the Top 10 Hard Bosses With Easy Exploits. #10. The Fear #9. Rocksteady #8. Old Demon King #7. General Di Ravello #6. Great Centipede #5. The Yellow Devil #4. Thresher Maw #3, #2 \x26 #1: ???? Special thanks to our user “Dan Paradis” for suggesting this topic using our interactive suggestion tool at http:\x2F\x2FWatchMojo.com\x2Fsuggest Our Magazine!! Learn the inner workings of WatchMojo and meet the voices behind the videos, articles by our specialists from gaming, film, tv, anime and more. VIEW INSTANTLY: http:\x2F\x2Fgoo.gl\x2FSivjcX WatchMojo\x27s Social Media Pages http:\x2F\x2Fwww.Facebook...",
+"url": "http://youtu.be/6XxXC6tyxW0?em",
+"image_url": "http://i.ytimg.com/vi/6XxXC6tyxW0/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3nKs5S8ArM7lxeIpwXU5ay3Ecsmbw&feature=em-subs_digest-vrecs"
+}
+]
+}
+],
+"updates": {
+"snippets": [
+{
+"icon": "VIDEO_PLAY",
+"message": "Fantasy Football 2017 - Week 16 Matchups + Holiday Movie Draft - Ep. #505"
+},
+{
+"icon": "VIDEO_PLAY",
+"message": "Fantasy Football 2017 - Holiday Awards, Week 16 Matchups, Starts of the Week - Ep. #504"
+},
+{
+"icon": "VIDEO_PLAY",
+"message": "Top 10 Most Anticipated Anime of 2018"
+},
+{
+"icon": "VIDEO_PLAY",
+"message": "Top 10 Hard Bosses With Easy Exploits"
+}
+]
+}
+}
+</script>
+<table class="inner-container-width" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="section-title-font" style="font-family:Roboto,sans-serif; font-size:16px; line-height:25px; letter-spacing:0px; color:#222222; -webkit-text-size-adjust:none;">
+Subscriptions
+</td>
+</tr>
+</table>
+<table class="small-section-padding-height" height="16" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="small-section-padding-height" height="16"></td>
+</tr>
+</table>
+<table class="video-spotlight-width" width="600" align="center" cellspacing="0" cellpadding="0" border="0">
+<!--[if gte mso 9]>
+<tr>
+<td class="video-spotlight-size" width="516" height="290" align="center">
+<a href="http://www.youtube.com/watch?v=jGLipCu2WbY&feature=em-subs_digest" style="text-decoration:none; display:block;" class="nonplayable">
+<img class="video-spotlight-size" src="http://i.ytimg.com/vi/jGLipCu2WbY/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3nagQ9gqvrQQdhXswGEfN9ylIX3QA&feature=em-subs_digest" width="516" height="290" border="0">
+</a>
+</td>
+</tr>
+<![endif]-->
+<!--[if !mso]><!-- -->
+<tr style="mso-hide:all">
+<td colspan="3">
+<a href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/watch?v%3DjGLipCu2WbY%26feature%3Dem-subs_digest&amp;g=AIR_RmG1RXGI7AiAHJ63KtmopQw_f5F-AgPOjxOjKHorut9Dv0dbqWHlnX1HX3wyosWs5EiG-i7-5XAFqGRV9uvckswfwptzwNdRtt2Wn-SYF6fOhf2_4t6CEwy3Nb1Tfh4Us8198fl-hC2Ta7boYieI27iuD64Jc4SbIsW10qDaqAtgpbHR97xOQ25O4Qs61fOkgRo" style="text-decoration:none; display:block;" class="nonplayable">
+<table aria-label="Fantasy Football 2017 - Week 16 Matchups + Holiday Movie Draft - Ep..." class="video-spotlight-width" width="600" align="center" background="http://i.ytimg.com/vi/jGLipCu2WbY/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&amp;rs=AMzJL3nagQ9gqvrQQdhXswGEfN9ylIX3QA&amp;feature=em-subs_digest" style="background-repeat:no-repeat; background-size:100% 100%;mso-hide:all" height="338" cellspacing="0" cellpadding="0" border="0">
+<tr style="mso-hide:all"><td aria-label="Fantasy Football 2017 - Week 16 Matchups + Holiday Movie Draft - Ep...">
+<img src="https://www.gstatic.com/youtube/img/email/transparent_pixel.png" alt="Fantasy Football 2017 - Week 16 Matchups + Holiday Movie Draft - Ep..." width="600" style="height: 300px;">
+</td></tr>
+<tr aria-label="Fantasy Football 2017 - Week 16 Matchups + Holiday Movie Draft - Ep..." scope="row" style="mso-hide:all">
+<td aria-label="Fantasy Football 2017 - Week 16 Matchups + Holiday Movie Draft - Ep..." class="footer-font" style="color:#fff; text-align:right; font-size: 12px;" valign="bottom" width="600">
+<div style="margin-bottom:8px; margin-right:8px; border-radius:2px; background-color: #212121; padding:2px 4px; display:inline-block;">59:57</div>
+</td>
+</tr>
+</table>
+</a>
+</td>
+</tr>
+<!--<![endif]-->
+<tr><td>
+<table class="large-section-padding-height" height="16" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="large-section-padding-height" height="16"></td>
+</tr>
+</table>
+</td></tr>
+<tr>
+<td>
+<table class="content-container-width" width="560" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<tr>
+<td class="avatar-size" width="32" style="vertical-align:top;">
+<a href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/channel/UC-No2ITxJsNt50oJQ3fLmUA?feature%3Dem-subs_digest&amp;g=AIR_RmECosMdpxNxti6E_HvoUYLrH_BERfNQQvCxeV2_f5cFEQmO9wDa3MdftEdKIlqInuH92EE6jpga_Qg69ixdezxgPZ_g0Ewl90cbPXJw58oAm6mW6uGq_-6cjfS2kcci5agbU8l8pnYHOF1x4d7iuCWv39YURrwRctVV736_cVbbhJDC36_2R-GGAz-Uxr5bWl6xLs43HifVxq0">
+<img class="avatar-size" src="https://lh3.googleusercontent.com/-efowdyDUsnM/AAAAAAAAAAI/AAAAAAAAAAA/BQEp7-R4OYU/s50-mo/photo.jpg" width="32" style="display:block; border-radius: 50%;" border="0">
+</a>
+</td>
+<td class="small-pad-width" width="16"></td>
+<td>
+<table class="content-container-width" width="540" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<td valign="center">
+<table class="content-container-width" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<tr>
+<td style="padding-bottom:4px">
+<a href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/watch?v%3DjGLipCu2WbY%26feature%3Dem-subs_digest&amp;g=AIR_RmG1RXGI7AiAHJ63KtmopQw_f5F-AgPOjxOjKHorut9Dv0dbqWHlnX1HX3wyosWs5EiG-i7-5XAFqGRV9uvckswfwptzwNdRtt2Wn-SYF6fOhf2_4t6CEwy3Nb1Tfh4Us8198fl-hC2Ta7boYieI27iuD64Jc4SbIsW10qDaqAtgpbHR97xOQ25O4Qs61fOkgRo" style="text-decoration:none;">
+<span class="video-title-font-class" valign="center" style="font-family:Roboto,sans-serif; font-size:14px; color:#212121; line-height:20px; -webkit-text-size-adjust:none;">
+Fantasy Football 2017 - Week 16 Matchups + Holiday Movie Draft - Ep...
+</span>
+</a>
+</td>
+</tr>
+<tr>
+<td>
+<a class="video-link-font-class" href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/channel/UC-No2ITxJsNt50oJQ3fLmUA?feature%3Dem-subs_digest&amp;g=AIR_RmECosMdpxNxti6E_HvoUYLrH_BERfNQQvCxeV2_f5cFEQmO9wDa3MdftEdKIlqInuH92EE6jpga_Qg69ixdezxgPZ_g0Ewl90cbPXJw58oAm6mW6uGq_-6cjfS2kcci5agbU8l8pnYHOF1x4d7iuCWv39YURrwRctVV736_cVbbhJDC36_2R-GGAz-Uxr5bWl6xLs43HifVxq0" style="font-family:Roboto,sans-serif;font-size:12px; color: #757575;; line-height:16px; letter-spacing:0px; -webkit-text-size-adjust:none; text-decoration:none;">
+The Fantasy Footballers
+</a>
+</td>
+</tr>
+</table>
+</td>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td>
+<table class="large-section-padding-height" height="16" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="large-section-padding-height" height="16"></td>
+</tr>
+</table>
+</td></tr>
+</table>
+
+<hr style="display: block;height: 1px;border: 0;border-top: 1px solid #eaeaea;padding: 0;"></hr>
+<table class="inner-container-width" width="600" cellspacing="0" cellpadding="0" border="0">
+<tbody>
+<tr><td>
+<table class="content-container-padding-height" height="16" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="content-container-padding-height" height="16"></td>
+</tr>
+</table>
+</td></tr>
+<tr>
+<td>
+<table class="inner-container-width" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="section-title-font" style="font-family:Roboto,sans-serif; font-size:16px; line-height:25px; letter-spacing:0px; color:#222222; -webkit-text-size-adjust:none;">
+Recommended
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td>
+<table class="content-container-padding-height" height="16" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="content-container-padding-height" height="16"></td>
+</tr>
+</table>
+</td></tr>
+<tr><td>
+<table class="inner-container-width" width="600" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="inner-container-width" width="600">
+<table class="inner-container-width" width="600" cellspacing="0" cellpadding="0" border="0">
+<tr><td class="inner-container-width" width="600">
+<table align="left" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table class="video-spotlight-width" width="290" cellspacing="0" cellpadding="0" border="0">
+<!--[if gte mso 9]>
+<tr>
+<td class="video-spotlight-size" width="290" align="center">
+<a href="http://www.youtube.com/watch?v=kTO0-LltOhg&feature=em-subs_digest-vrecs" style="text-decoration:none; display:block;" class="nonplayable">
+<img class="video-spotlight-size" src="http://i.ytimg.com/vi/kTO0-LltOhg/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3klqvyt43ghtDjIG7QBdYK6FQjSBA&feature=em-subs_digest-vrecs" width="290" border="0">
+</a>
+</td>
+</tr>
+<![endif]-->
+<!--[if !mso]><!-- -->
+<tr style="mso-hide:all">
+<td class="video-2col-outer-container-size" width="290">
+<a href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/watch?v%3DkTO0-LltOhg%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmFipNhdv2wEgj80HgSoLQGIGidYGaP4B84lJLbREeI24gnbkQ9r0IS3Si7sMa-U0u0lYQIxzsSCuNHMd3bAsE_4z7ga-6JXICIYtC6O4QUR-IV3Br6Kco1XEAfxG6SPDvNl9Z5-R5HE0awoQCowX9T7cWLnYJLu6-6T8EHXNlUqrpzxfhjvCgBm8FZM5pzq47IooC_whNo" style="text-decoration:none;" target="_blank" ; class="nonplayable">
+<table aria-label="Fantasy Football 2017 - Holiday Awards, Week 16 Matchup... link" class="video-spotlight-width" width="290" align="center" background="http://i.ytimg.com/vi/kTO0-LltOhg/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&amp;rs=AMzJL3klqvyt43ghtDjIG7QBdYK6FQjSBA&amp;feature=em-subs_digest-vrecs" style="background-repeat:no-repeat; background-size:100% 100%;" cellspacing="0" cellpadding="0" border="0" height="162">
+<tr style="mso-hide:all"><td aria-label="Fantasy Football 2017 - Holiday Awards, Week 16 Matchup..." class="video-2col-thumb-size" width="290">
+<img src="https://www.gstatic.com/youtube/img/email/transparent_pixel.png" alt="Fantasy Football 2017 - Holiday Awards, Week 16 Matchup..." class="video-2col-thumb-size" width="290" height="132">
+</td></tr>
+<tr style="mso-hide:all">
+<td class="footer-font" style="color:#fff; text-align:right; font-size: 12px;" valign="bottom" width="290">
+<div style="margin-bottom:8px; margin-right:8px; border-radius:2px; background-color: #212121; padding:2px 4px; display:inline-block;">1:04:20</div>
+</td>
+</tr>
+</table>
+</a>
+</td>
+</tr>
+<!--<![endif]-->
+<tr><td height="16"></td></tr>
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="270" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table width="270" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="270" valign="top">
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="250" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="250" valign="top">
+<table class="content-container-width" width="250" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<td valign="center">
+<table class="content-container-width" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<tr><td style="padding-bottom:4px">
+<a href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/watch?v%3DkTO0-LltOhg%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmFipNhdv2wEgj80HgSoLQGIGidYGaP4B84lJLbREeI24gnbkQ9r0IS3Si7sMa-U0u0lYQIxzsSCuNHMd3bAsE_4z7ga-6JXICIYtC6O4QUR-IV3Br6Kco1XEAfxG6SPDvNl9Z5-R5HE0awoQCowX9T7cWLnYJLu6-6T8EHXNlUqrpzxfhjvCgBm8FZM5pzq47IooC_whNo" style="text-decoration:none;">
+<span class="video-title-font-class" valign="center" style="font-family:Roboto,sans-serif; font-size:14px; color:#212121; line-height:20px; -webkit-text-size-adjust:none;">
+Fantasy Football 2017 - Holiday Awards, Week 16 Matchup...
+</span>
+</a>
+</td></tr>
+<tr><td>
+<a class="video-link-font-class" href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/channel/UC-No2ITxJsNt50oJQ3fLmUA?feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmHgW3-AYUkfSmgecE5nmvhUFTHpjeGF8M_oQ5jHJJGVfF7NsRMOKNwpbT_XGhiPwrB0I2GdXYBKPUBKNXfyOa3rdWGWy-IpBAYYYlTwsyE2Fo5OtqDeAvtQg4vccTDdKonIXFJa6KAEVK5jLSdKAf5LZVCbwVzKjdPf36TOdhPN5fn6NHKtDnXET4_pzq_is8uZak4DfhuHu7VdWM2J-bZw" style="font-family:Roboto,sans-serif;font-size:12px; color: #757575;; line-height:16px; letter-spacing:0px; -webkit-text-size-adjust:none; text-decoration:none;">
+The Fantasy Footballers
+</a>
+</td></tr>
+</table>
+</td>
+</table>
+</td>
+</tr>
+<tr>
+<td class="video-2col-width" width="250" valign="top">
+<div class="meta-data-font" style="font-family:Roboto,sans-serif; color:#999999; font-size:12px; letter-spacing:0px; line-height:20px; -webkit-text-size-adjust:none;">
+16,369 views
+ • 
+1 day ago
+</div>
+</td>
+</tr>
+<tr><td height="16"></td></tr>
+</table>
+</td>
+</tr>
+</td>
+</tr>
+<tr><td height="16"></td>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table align="right" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table class="video-spotlight-width" width="290" cellspacing="0" cellpadding="0" border="0">
+<!--[if gte mso 9]>
+<tr>
+<td class="video-spotlight-size" width="290" align="center">
+<a href="http://www.youtube.com/watch?v=6QT1VMpYIeo&feature=em-subs_digest-vrecs" style="text-decoration:none; display:block;" class="nonplayable">
+<img class="video-spotlight-size" src="http://i.ytimg.com/vi/6QT1VMpYIeo/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3mmW45APEMPyJI2q3AcdfvWOMwL2Q&feature=em-subs_digest-vrecs" width="290" border="0">
+</a>
+</td>
+</tr>
+<![endif]-->
+<!--[if !mso]><!-- -->
+<tr style="mso-hide:all">
+<td class="video-2col-outer-container-size" width="290">
+<a href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/watch?v%3D6QT1VMpYIeo%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmG6j6xThF2QqS3C_9UCwd2A29rjgrl9oHjjFqUoCvPM5JB0JTtaITxWk2MQgwvPBiV-PB6kfR2B-s_fpjYlP3LwwAwrrKuNyCtk2ytIN0wgWyKEAUm5quz-xBnse1fCMCrgsnPsf8OE9QPro1uhsXFJK_Ld-EZuYLx-1Pw_TE42LAWL5mY1aUZ9_JjQKSVRCsFcuc6VHHQ" style="text-decoration:none;" target="_blank" ; class="nonplayable">
+<table aria-label="Top 10 Most Anticipated Anime of 2018 link" class="video-spotlight-width" width="290" align="center" background="http://i.ytimg.com/vi/6QT1VMpYIeo/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&amp;rs=AMzJL3mmW45APEMPyJI2q3AcdfvWOMwL2Q&amp;feature=em-subs_digest-vrecs" style="background-repeat:no-repeat; background-size:100% 100%;" cellspacing="0" cellpadding="0" border="0" height="162">
+<tr style="mso-hide:all"><td aria-label="Top 10 Most Anticipated Anime of 2018" class="video-2col-thumb-size" width="290">
+<img src="https://www.gstatic.com/youtube/img/email/transparent_pixel.png" alt="Top 10 Most Anticipated Anime of 2018" class="video-2col-thumb-size" width="290" height="132">
+</td></tr>
+<tr style="mso-hide:all">
+<td class="footer-font" style="color:#fff; text-align:right; font-size: 12px;" valign="bottom" width="290">
+<div style="margin-bottom:8px; margin-right:8px; border-radius:2px; background-color: #212121; padding:2px 4px; display:inline-block;">8:20</div>
+</td>
+</tr>
+</table>
+</a>
+</td>
+</tr>
+<!--<![endif]-->
+<tr><td height="16"></td></tr>
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="270" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table width="270" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="270" valign="top">
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="250" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="250" valign="top">
+<table class="content-container-width" width="250" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<td valign="center">
+<table class="content-container-width" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<tr><td style="padding-bottom:4px">
+<a href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/watch?v%3D6QT1VMpYIeo%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmG6j6xThF2QqS3C_9UCwd2A29rjgrl9oHjjFqUoCvPM5JB0JTtaITxWk2MQgwvPBiV-PB6kfR2B-s_fpjYlP3LwwAwrrKuNyCtk2ytIN0wgWyKEAUm5quz-xBnse1fCMCrgsnPsf8OE9QPro1uhsXFJK_Ld-EZuYLx-1Pw_TE42LAWL5mY1aUZ9_JjQKSVRCsFcuc6VHHQ" style="text-decoration:none;">
+<span class="video-title-font-class" valign="center" style="font-family:Roboto,sans-serif; font-size:14px; color:#212121; line-height:20px; -webkit-text-size-adjust:none;">
+Top 10 Most Anticipated Anime of 2018
+</span>
+</a>
+</td></tr>
+<tr><td>
+<a class="video-link-font-class" href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/user/WatchMojo?feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmFnNOvAicPw9IwPO0yCcYCsa54H5ysjyeQK56zaCSget58qKgZpamOpvJRZ9i-7BiLj-AlWzVNoULPZnCEnVwR84u8766RFsx6DnrdaA1zGFgDRhqKLphub91oU7oPvEdQVRqWWn_DGX8q30E_r-POJRUs7tJb8S4cY2gWsatDnJdhDtL1xCc33iZYc77g" style="font-family:Roboto,sans-serif;font-size:12px; color: #757575;; line-height:16px; letter-spacing:0px; -webkit-text-size-adjust:none; text-decoration:none;">
+WatchMojo.com
+</a>
+</td></tr>
+</table>
+</td>
+</table>
+</td>
+</tr>
+<tr>
+<td class="video-2col-width" width="250" valign="top">
+<div class="meta-data-font" style="font-family:Roboto,sans-serif; color:#999999; font-size:12px; letter-spacing:0px; line-height:20px; -webkit-text-size-adjust:none;">
+393,864 views
+ • 
+5 days ago
+</div>
+</td>
+</tr>
+<tr><td height="16"></td></tr>
+</table>
+</td>
+</tr>
+</td>
+</tr>
+<tr><td height="16"></td>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td></tr>
+<tr><td class="inner-container-width" width="600">
+<table align="left" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table class="video-spotlight-width" width="290" cellspacing="0" cellpadding="0" border="0">
+<!--[if gte mso 9]>
+<tr>
+<td class="video-spotlight-size" width="290" align="center">
+<a href="http://www.youtube.com/watch?v=6XxXC6tyxW0&feature=em-subs_digest-vrecs" style="text-decoration:none; display:block;" class="nonplayable">
+<img class="video-spotlight-size" src="http://i.ytimg.com/vi/6XxXC6tyxW0/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3nKs5S8ArM7lxeIpwXU5ay3Ecsmbw&feature=em-subs_digest-vrecs" width="290" border="0">
+</a>
+</td>
+</tr>
+<![endif]-->
+<!--[if !mso]><!-- -->
+<tr style="mso-hide:all">
+<td class="video-2col-outer-container-size" width="290">
+<a href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/watch?v%3D6XxXC6tyxW0%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmHn8otdhqiM_RrVMYIuemDf7k5xd9GFOHuwl1usRJfCf2hrl8vH1A3ElCldmmS-6ESdFcsnwe1360qK3FP5vffwu4fvMCjP4w_0j3V-qU5Be1QKQ-5wk8hISpFbdWj1Si7DbQtRXSB4-OwQ8YYYxvdz6kDtHuxK_kBphlt1yJwSBZUzK8_HFtiLJdno6Xc5YnUrosgIZK4" style="text-decoration:none;" target="_blank" ; class="nonplayable">
+<table aria-label="Top 10 Hard Bosses With Easy Exploits link" class="video-spotlight-width" width="290" align="center" background="http://i.ytimg.com/vi/6XxXC6tyxW0/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&amp;rs=AMzJL3nKs5S8ArM7lxeIpwXU5ay3Ecsmbw&amp;feature=em-subs_digest-vrecs" style="background-repeat:no-repeat; background-size:100% 100%;" cellspacing="0" cellpadding="0" border="0" height="162">
+<tr style="mso-hide:all"><td aria-label="Top 10 Hard Bosses With Easy Exploits" class="video-2col-thumb-size" width="290">
+<img src="https://www.gstatic.com/youtube/img/email/transparent_pixel.png" alt="Top 10 Hard Bosses With Easy Exploits" class="video-2col-thumb-size" width="290" height="132">
+</td></tr>
+<tr style="mso-hide:all">
+<td class="footer-font" style="color:#fff; text-align:right; font-size: 12px;" valign="bottom" width="290">
+<div style="margin-bottom:8px; margin-right:8px; border-radius:2px; background-color: #212121; padding:2px 4px; display:inline-block;">7:58</div>
+</td>
+</tr>
+</table>
+</a>
+</td>
+</tr>
+<!--<![endif]-->
+<tr><td height="16"></td></tr>
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="270" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table width="270" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="270" valign="top">
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="250" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="250" valign="top">
+<table class="content-container-width" width="250" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<td valign="center">
+<table class="content-container-width" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<tr><td style="padding-bottom:4px">
+<a href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/watch?v%3D6XxXC6tyxW0%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmHn8otdhqiM_RrVMYIuemDf7k5xd9GFOHuwl1usRJfCf2hrl8vH1A3ElCldmmS-6ESdFcsnwe1360qK3FP5vffwu4fvMCjP4w_0j3V-qU5Be1QKQ-5wk8hISpFbdWj1Si7DbQtRXSB4-OwQ8YYYxvdz6kDtHuxK_kBphlt1yJwSBZUzK8_HFtiLJdno6Xc5YnUrosgIZK4" style="text-decoration:none;">
+<span class="video-title-font-class" valign="center" style="font-family:Roboto,sans-serif; font-size:14px; color:#212121; line-height:20px; -webkit-text-size-adjust:none;">
+Top 10 Hard Bosses With Easy Exploits
+</span>
+</a>
+</td></tr>
+<tr><td>
+<a class="video-link-font-class" href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/user/WatchMojo?feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmFnNOvAicPw9IwPO0yCcYCsa54H5ysjyeQK56zaCSget58qKgZpamOpvJRZ9i-7BiLj-AlWzVNoULPZnCEnVwR84u8766RFsx6DnrdaA1zGFgDRhqKLphub91oU7oPvEdQVRqWWn_DGX8q30E_r-POJRUs7tJb8S4cY2gWsatDnJdhDtL1xCc33iZYc77g" style="font-family:Roboto,sans-serif;font-size:12px; color: #757575;; line-height:16px; letter-spacing:0px; -webkit-text-size-adjust:none; text-decoration:none;">
+WatchMojo.com
+</a>
+</td></tr>
+</table>
+</td>
+</table>
+</td>
+</tr>
+<tr>
+<td class="video-2col-width" width="250" valign="top">
+<div class="meta-data-font" style="font-family:Roboto,sans-serif; color:#999999; font-size:12px; letter-spacing:0px; line-height:20px; -webkit-text-size-adjust:none;">
+282,719 views
+ • 
+4 days ago
+</div>
+</td>
+</tr>
+<tr><td height="16"></td></tr>
+</table>
+</td>
+</tr>
+</td>
+</tr>
+<tr><td height="16"></td>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table align="right" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table class="video-spotlight-width" width="290" cellspacing="0" cellpadding="0" border="0">
+<!--[if gte mso 9]>
+<tr>
+<td class="video-spotlight-size" width="290" align="center">
+<a href="http://www.youtube.com/watch?v=Fj8G9dGuNkU&feature=em-subs_digest-vrecs" style="text-decoration:none; display:block;" class="nonplayable">
+<img class="video-spotlight-size" src="http://i.ytimg.com/vi/Fj8G9dGuNkU/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3maHEEbmc7YaKhs4nEw_aq-k1ldmw&feature=em-subs_digest-vrecs" width="290" border="0">
+</a>
+</td>
+</tr>
+<![endif]-->
+<!--[if !mso]><!-- -->
+<tr style="mso-hide:all">
+<td class="video-2col-outer-container-size" width="290">
+<a href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/watch?v%3DFj8G9dGuNkU%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmHlQ1wK5cOyjTSdRLp-R8RjEDIbknsOK1GwibUYQ2yaX1SH-OahPhKOoRbMdDOk08KGetKf3u_Vk6JHlK9My-gL8nTEtMZsAmgT-ce-3XYtZzgBplbbjqMJCCT3FewEDxj3GWg9o51kAtdTphCw6XMAjjA__0eyvitZA5WLQmVxeGTc3cEkoddMFO7Pz65vXUo_tt8SFm8" style="text-decoration:none;" target="_blank" ; class="nonplayable">
+<table aria-label="Greatest Trick Plays in Football History link" class="video-spotlight-width" width="290" align="center" background="http://i.ytimg.com/vi/Fj8G9dGuNkU/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&amp;rs=AMzJL3maHEEbmc7YaKhs4nEw_aq-k1ldmw&amp;feature=em-subs_digest-vrecs" style="background-repeat:no-repeat; background-size:100% 100%;" cellspacing="0" cellpadding="0" border="0" height="162">
+<tr style="mso-hide:all"><td aria-label="Greatest Trick Plays in Football History" class="video-2col-thumb-size" width="290">
+<img src="https://www.gstatic.com/youtube/img/email/transparent_pixel.png" alt="Greatest Trick Plays in Football History" class="video-2col-thumb-size" width="290" height="132">
+</td></tr>
+<tr style="mso-hide:all">
+<td class="footer-font" style="color:#fff; text-align:right; font-size: 12px;" valign="bottom" width="290">
+<div style="margin-bottom:8px; margin-right:8px; border-radius:2px; background-color: #212121; padding:2px 4px; display:inline-block;">13:39</div>
+</td>
+</tr>
+</table>
+</a>
+</td>
+</tr>
+<!--<![endif]-->
+<tr><td height="16"></td></tr>
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="270" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table width="270" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="270" valign="top">
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="250" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="250" valign="top">
+<table class="content-container-width" width="250" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<td valign="center">
+<table class="content-container-width" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<tr><td style="padding-bottom:4px">
+<a href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/watch?v%3DFj8G9dGuNkU%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmHlQ1wK5cOyjTSdRLp-R8RjEDIbknsOK1GwibUYQ2yaX1SH-OahPhKOoRbMdDOk08KGetKf3u_Vk6JHlK9My-gL8nTEtMZsAmgT-ce-3XYtZzgBplbbjqMJCCT3FewEDxj3GWg9o51kAtdTphCw6XMAjjA__0eyvitZA5WLQmVxeGTc3cEkoddMFO7Pz65vXUo_tt8SFm8" style="text-decoration:none;">
+<span class="video-title-font-class" valign="center" style="font-family:Roboto,sans-serif; font-size:14px; color:#212121; line-height:20px; -webkit-text-size-adjust:none;">
+Greatest Trick Plays in Football History
+</span>
+</a>
+</td></tr>
+<tr><td>
+<a class="video-link-font-class" href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/channel/UCr1TEhHFn8jEXraaZ1lslhQ?feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmFJNa7-93dW5wi9mMdpEtRS6BluhlJvKFsYBDtc9WLckzldSz6TGRcIcUNkuKbN7xs8QVCDl0pbdya-9B1ADz-zQgHjxBcA3OlKGnigvdaXPAy--uBu1hXxbneAZJy1LayALXfqtPH6QDDMxNel2eycKawgeBTTOt5dbD2DeaZUCnmxoZoSca4wuLknvi1Az-kJAdqBQDjFvDM_aC9OnhmD" style="font-family:Roboto,sans-serif;font-size:12px; color: #757575;; line-height:16px; letter-spacing:0px; -webkit-text-size-adjust:none; text-decoration:none;">
+Jaydon
+</a>
+</td></tr>
+</table>
+</td>
+</table>
+</td>
+</tr>
+<tr>
+<td class="video-2col-width" width="250" valign="top">
+<div class="meta-data-font" style="font-family:Roboto,sans-serif; color:#999999; font-size:12px; letter-spacing:0px; line-height:20px; -webkit-text-size-adjust:none;">
+40,329,714 views
+ • 
+over a year ago
+</div>
+</td>
+</tr>
+<tr><td height="16"></td></tr>
+</table>
+</td>
+</tr>
+</td>
+</tr>
+<tr><td height="16"></td>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td></tr>
+<tr><td class="inner-container-width" width="600">
+<table align="left" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table class="video-spotlight-width" width="290" cellspacing="0" cellpadding="0" border="0">
+<!--[if gte mso 9]>
+<tr>
+<td class="video-spotlight-size" width="290" align="center">
+<a href="http://www.youtube.com/watch?v=kpAigzGfV-g&feature=em-subs_digest-vrecs" style="text-decoration:none; display:block;" class="nonplayable">
+<img class="video-spotlight-size" src="http://i.ytimg.com/vi/kpAigzGfV-g/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3mt8hUhUlReT9EmvZAF5GCiTSC50w&feature=em-subs_digest-vrecs" width="290" border="0">
+</a>
+</td>
+</tr>
+<![endif]-->
+<!--[if !mso]><!-- -->
+<tr style="mso-hide:all">
+<td class="video-2col-outer-container-size" width="290">
+<a href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/watch?v%3DkpAigzGfV-g%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmFPgsjZtV4cBwq9ZHy7y0gfzW6FNOLz3OHB-jA5poym7RgX9fI3hOv2lUps4KK3nHU2MnrUcfCmXBNavWQqhD_E3h5BT8j4imYx07A8Xgv7jxCNUnf7B1yXNRLpnkaT1T2cHUMXXUYxj1EVuguh-5K2cmW8G8Omh65_Y9nOseR9dyLnLov0rI-SWy0fH1UA4ESZ2-yywNI" style="text-decoration:none;" target="_blank" ; class="nonplayable">
+<table aria-label="Top 10 Most Annoying Dark Souls Enemies link" class="video-spotlight-width" width="290" align="center" background="http://i.ytimg.com/vi/kpAigzGfV-g/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&amp;rs=AMzJL3mt8hUhUlReT9EmvZAF5GCiTSC50w&amp;feature=em-subs_digest-vrecs" style="background-repeat:no-repeat; background-size:100% 100%;" cellspacing="0" cellpadding="0" border="0" height="162">
+<tr style="mso-hide:all"><td aria-label="Top 10 Most Annoying Dark Souls Enemies" class="video-2col-thumb-size" width="290">
+<img src="https://www.gstatic.com/youtube/img/email/transparent_pixel.png" alt="Top 10 Most Annoying Dark Souls Enemies" class="video-2col-thumb-size" width="290" height="132">
+</td></tr>
+<tr style="mso-hide:all">
+<td class="footer-font" style="color:#fff; text-align:right; font-size: 12px;" valign="bottom" width="290">
+<div style="margin-bottom:8px; margin-right:8px; border-radius:2px; background-color: #212121; padding:2px 4px; display:inline-block;">9:01</div>
+</td>
+</tr>
+</table>
+</a>
+</td>
+</tr>
+<!--<![endif]-->
+<tr><td height="16"></td></tr>
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="270" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table width="270" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="270" valign="top">
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="250" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="250" valign="top">
+<table class="content-container-width" width="250" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<td valign="center">
+<table class="content-container-width" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<tr><td style="padding-bottom:4px">
+<a href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/watch?v%3DkpAigzGfV-g%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmFPgsjZtV4cBwq9ZHy7y0gfzW6FNOLz3OHB-jA5poym7RgX9fI3hOv2lUps4KK3nHU2MnrUcfCmXBNavWQqhD_E3h5BT8j4imYx07A8Xgv7jxCNUnf7B1yXNRLpnkaT1T2cHUMXXUYxj1EVuguh-5K2cmW8G8Omh65_Y9nOseR9dyLnLov0rI-SWy0fH1UA4ESZ2-yywNI" style="text-decoration:none;">
+<span class="video-title-font-class" valign="center" style="font-family:Roboto,sans-serif; font-size:14px; color:#212121; line-height:20px; -webkit-text-size-adjust:none;">
+Top 10 Most Annoying Dark Souls Enemies
+</span>
+</a>
+</td></tr>
+<tr><td>
+<a class="video-link-font-class" href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/user/WatchMojo?feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmFnNOvAicPw9IwPO0yCcYCsa54H5ysjyeQK56zaCSget58qKgZpamOpvJRZ9i-7BiLj-AlWzVNoULPZnCEnVwR84u8766RFsx6DnrdaA1zGFgDRhqKLphub91oU7oPvEdQVRqWWn_DGX8q30E_r-POJRUs7tJb8S4cY2gWsatDnJdhDtL1xCc33iZYc77g" style="font-family:Roboto,sans-serif;font-size:12px; color: #757575;; line-height:16px; letter-spacing:0px; -webkit-text-size-adjust:none; text-decoration:none;">
+WatchMojo.com
+</a>
+</td></tr>
+</table>
+</td>
+</table>
+</td>
+</tr>
+<tr>
+<td class="video-2col-width" width="250" valign="top">
+<div class="meta-data-font" style="font-family:Roboto,sans-serif; color:#999999; font-size:12px; letter-spacing:0px; line-height:20px; -webkit-text-size-adjust:none;">
+513,767 views
+ • 
+9 months ago
+</div>
+</td>
+</tr>
+<tr><td height="16"></td></tr>
+</table>
+</td>
+</tr>
+</td>
+</tr>
+<tr><td height="16"></td>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table align="right" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table class="video-spotlight-width" width="290" cellspacing="0" cellpadding="0" border="0">
+<!--[if gte mso 9]>
+<tr>
+<td class="video-spotlight-size" width="290" align="center">
+<a href="http://www.youtube.com/watch?v=TTfe2Manwmo&feature=em-subs_digest-vrecs" style="text-decoration:none; display:block;" class="nonplayable">
+<img class="video-spotlight-size" src="http://i.ytimg.com/vi/TTfe2Manwmo/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3lBvSn0PFtylRjbmJN4o1w5_j-X1g&feature=em-subs_digest-vrecs" width="290" border="0">
+</a>
+</td>
+</tr>
+<![endif]-->
+<!--[if !mso]><!-- -->
+<tr style="mso-hide:all">
+<td class="video-2col-outer-container-size" width="290">
+<a href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/watch?v%3DTTfe2Manwmo%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmHTfSwIfCVZNzQ9p4JyP8ruwfSC6pnuIz8I3HdqozJqxhcueHbnaO5xURk0DPEGMc1F6gG1mv1MAXPkBP1BtwRKpadY_xl9MVeZekM4p0Ogb1W0iq79GgzBEP5Znn3Fgx7p4KEprXV-_73rqJFP7QHaQa7IYq7LcN1XvPNTy4B87vrZ2D_tTy8TRgUl-ocnkhYRENrHKc4" style="text-decoration:none;" target="_blank" ; class="nonplayable">
+<table aria-label="OCEAN&#39;S 8 Official Trailer (2018) Rihanna, Anne Hathawa... link" class="video-spotlight-width" width="290" align="center" background="http://i.ytimg.com/vi/TTfe2Manwmo/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&amp;rs=AMzJL3lBvSn0PFtylRjbmJN4o1w5_j-X1g&amp;feature=em-subs_digest-vrecs" style="background-repeat:no-repeat; background-size:100% 100%;" cellspacing="0" cellpadding="0" border="0" height="162">
+<tr style="mso-hide:all"><td aria-label="OCEAN&#39;S 8 Official Trailer (2018) Rihanna, Anne Hathawa..." class="video-2col-thumb-size" width="290">
+<img src="https://www.gstatic.com/youtube/img/email/transparent_pixel.png" alt="OCEAN&#39;S 8 Official Trailer (2018) Rihanna, Anne Hathawa..." class="video-2col-thumb-size" width="290" height="132">
+</td></tr>
+<tr style="mso-hide:all">
+<td class="footer-font" style="color:#fff; text-align:right; font-size: 12px;" valign="bottom" width="290">
+<div style="margin-bottom:8px; margin-right:8px; border-radius:2px; background-color: #212121; padding:2px 4px; display:inline-block;">2:36</div>
+</td>
+</tr>
+</table>
+</a>
+</td>
+</tr>
+<!--<![endif]-->
+<tr><td height="16"></td></tr>
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="270" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table width="270" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="270" valign="top">
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="250" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="250" valign="top">
+<table class="content-container-width" width="250" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<td valign="center">
+<table class="content-container-width" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<tr><td style="padding-bottom:4px">
+<a href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/watch?v%3DTTfe2Manwmo%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmHTfSwIfCVZNzQ9p4JyP8ruwfSC6pnuIz8I3HdqozJqxhcueHbnaO5xURk0DPEGMc1F6gG1mv1MAXPkBP1BtwRKpadY_xl9MVeZekM4p0Ogb1W0iq79GgzBEP5Znn3Fgx7p4KEprXV-_73rqJFP7QHaQa7IYq7LcN1XvPNTy4B87vrZ2D_tTy8TRgUl-ocnkhYRENrHKc4" style="text-decoration:none;">
+<span class="video-title-font-class" valign="center" style="font-family:Roboto,sans-serif; font-size:14px; color:#212121; line-height:20px; -webkit-text-size-adjust:none;">
+OCEAN&#39;S 8 Official Trailer (2018) Rihanna, Anne Hathawa...
+</span>
+</a>
+</td></tr>
+<tr><td>
+<a class="video-link-font-class" href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/user/movietrailers?feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmH4V-7YX-2zzqMSEXIY1FCPegtWO1PX_Iy71NzKXOAQYyGTZH0oEUv7m6H6YCxOM2jXVX0fHi-TbLsS2_w9jkevJkB0gYCEu9Xoi3w-vpPK4xXqZ4obtAlMwtQGuJ7limtLm89SmHiQue_lGwgIo-I2ZgUqixUIv2j1qEVYPCArS55tslSbOCMq_R2UCPO-g1y4" style="font-family:Roboto,sans-serif;font-size:12px; color: #757575;; line-height:16px; letter-spacing:0px; -webkit-text-size-adjust:none; text-decoration:none;">
+ONE Media
+</a>
+</td></tr>
+</table>
+</td>
+</table>
+</td>
+</tr>
+<tr>
+<td class="video-2col-width" width="250" valign="top">
+<div class="meta-data-font" style="font-family:Roboto,sans-serif; color:#999999; font-size:12px; letter-spacing:0px; line-height:20px; -webkit-text-size-adjust:none;">
+2,601,526 views
+ • 
+3 days ago
+</div>
+</td>
+</tr>
+<tr><td height="16"></td></tr>
+</table>
+</td>
+</tr>
+</td>
+</tr>
+<tr><td height="16"></td>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td></tr>
+</tbody>
+</table>
+
+<img class="open_tracking_img" src="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/gen_204%3Fa%3Dem-subs_digest" width="1" height="1" style="display:none !important; visibility: hidden; width: 0; height: 0; opacity: 0; color: transparent;">
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<hr style="display: block;height: 1px;border: 0;border-top: 1px solid #eaeaea;margin-bottom: 16px;padding: 0;"></hr>
+<tr>
+<td>
+<table class="inner-container-width" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="footer-font" style="color: #757575; font-size:12px; line-height:16px; font-family:Roboto, sans-serif; letter-spacing:0px; -webkit-text-size-adjust:none; word-wrap:break-word;">
+YouTube sends email summaries like these so you can keep up with your channel subscriptions.
+If you no longer want to receive these updates, you may edit your preferences <a href="https://www.youtube.com/attribution_link?noapp=1&amp;a=jgLJ7LPCgbRlT5Bb&amp;u=/account_notifications?feature%3Dem-subs_digest&amp;g=AIR_RmG8sjhg9ryyGFjegGh-1a_rjyq0PS50cBhP7_SeXfxOXTmgy0FiMxQgcMkJpeutqStZroFbnYbuXBjjAHPewAcsjDo-YXjh-eL9dCyykA8cCbLi3c5oolKWp8Bndotmdscm7i48o9vPnisg4SLbFaEUOy8UD84FRTXZVb7HrfpBb2tC-yEXyQlWuFk9nIUmHQruY9seyCM" style="color:#2793E6; text-decoration:none;">here</a> or <a href="https://www.youtube.com/attribution_link?noapp=1&amp;a=jgLJ7LPCgbRlT5Bb&amp;u=/email_unsubscribe?uid%3DMfxBhDYBg7rrycMVIMKZsw%26action_unsubscribe%3DC4YEbkRb3O9yNqYekq96f73RA9Z8MTUxNDAxNjYzMUAxNTE0MDE2NjMx%26feature%3Dem-subs_digest&amp;g=AIR_RmGaiqU4XuqMFkQUqSKc5NwNfEryRtoGr-34zGyKvGXeB9x3CRxQ15G1c6SIdayVS_KOXx4MyeGoUdkNeaOoXp1Q2D1xq7Xsi7g11k5ejCcXPJlosRldaQiB91EhW6QTYTgOi1hcGTfojmzsxd_Nl2VZs_fs-YIRNsIUj-uD4LD-CpX3qpYMl75VVGEa_TmOuKC3uQ9Wpetj89pgJ7f87gdUnmiGY0OE2dWsGF4x_7NlpE-J7WllR30Qb4WBkS1R5WKNKH-gyyhjMUE3nc_84zQjHMqQo8nObek7gj2RKiy2LdoBvmRzP1om-CBbeV7TZ0N5gmNXzbZoVTJrk3OQNR6yVyQ" style="color:#2793E6; text-decoration:none;">unsubscribe</a>.
+</td>
+</tr>
+<tr><td>
+<table class="footer-content-padding-height" height="16" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="footer-content-padding-height" height="16"></td>
+</tr>
+</table>
+</td></tr>
+<tr>
+<td class="footer-font" style="color: #757575; font-size:12px; line-height:16px; font-family:Roboto, sans-serif; letter-spacing:0px; text-decoration:none; -webkit-text-size-adjust:none;">
+© 2017 YouTube, LLC 901 Cherry Ave, San Bruno, CA 94066
+</td>
+</tr>
+<tr><td>
+<table class="footer-content-padding-height" height="16" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="footer-content-padding-height" height="16"></td>
+</tr>
+</table>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+<td class="outer-container-padding-width" width="40"></td>
+</tr>
+<tr>
+<td colspan="3">
+<table class="content-container-width" width="600" height="18" align="left" style="background-repeat:no-repeat; background-size:100% 100%;" height="332" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="outer-container-padding-width" width="40"></td>
+<td width="20" aria-label="YouTube Link">
+<a href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/youtube&amp;g=AIR_RmHatV8IiR_Sn8_Ru-95X2pubv_FP-IBC_LxjfrEO6MAVo__CT81ar1dZ0TFn-OYNXDLqBrF4kjgYxq7Yv1WrPCw052oDLvZJdjbVlB656-0JQLkXVkiCfRMRa-jeuihyFsojR4R9g" target="_blank">
+<img alt="YouTube" class="large-avatar-size" src="https://www.gstatic.com/youtube/img/email/youtube_email_icon_grey.png" height="18" border="0">
+</a>
+</td>
+<td class="social-logo-padding-width" width="16"></td>
+<td aria-label="Twitter Link">
+<a href="https://www.google.com/appserve/mkt/p/AIR_RmGiNYQ3Dn8min_21ZQa0ldy_RHrrSPQ3gosSbj9objWFnFaCDVUDF5hXDXs5lfqBKXK5y7NFjIWNPqA7Us" target="_blank">
+<img alt="Twitter" class="large-avatar-size" src="https://www.gstatic.com/youtube/img/email/twitter_email_icon_grey.png" height="18" border="0">
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<img height="1" width="3" src="https://www.google.com/appserve/mkt/img/AIR_RmGlNviWug-BLk4KeFRgPlhcBKvFae6yb3SeqjFgsGiY.gif"></body>
+</html>
+
+<html lang="en">
+<head>
+<title>
+The Fantasy Footballers: &quot;Fantasy Football 2017 - Week 16 Matchups + Holiday Movie Draft - Ep...&quot;
+</title>
+<style type="text/css">
+* {
+font-family: arial, Arial, sans-serif;
+}
+@media only screen and (max-device-width: 480px) {
+body.suppress-border-on-mobile {
+margin: 0 !important;
+border: 0 !important;
+padding: 0 !important;
+}
+table.suppress-on-mobile, td.suppress-on-mobile, div.suppress-on-mobile, img.suppress-on-mobile, span.suppress-on-mobile {
+display: none !important;
+width: 0px !important;
+height: 0px !important;
+line-height: 0px !important;
+margin: 0 !important;
+border: 0 !important;
+padding: 0 !important;
+}
+table.outer-container-width, td.outer-container-width {
+width: 640px !important;
+}
+td.outer-container-padding-width {
+width: 20px !important;
+}
+table.inner-container-width, td.inner-container-width {
+width: 600px !important;
+}
+table.header-container-width {
+width: 600px !important;
+height: 100px !important;
+}
+td.header_left_padding_width {
+width: 25px !important;
+}
+td.logo_container_size {
+width: 575px !important;
+height: 100px !important;
+}
+img.header_logo_size {
+height: 47px !important;
+}
+table.footer-padding-width, td.footer-padding-width {
+width: 30px !important;
+}
+table.footer-width, td.footer-width {
+width: 540px !important;
+}
+td.footer-font, div.footer-font {
+font-size: 20px !important;
+line-height: 30px !important;
+}
+table.footer-content-padding-height, td.footer-content-padding-height {
+height: 30px !important;
+}
+table.large-section-padding-height, td.large-section-padding-height {
+height: 16px !important;
+}
+table.small-section-padding-height, td.small-section-padding-height {
+height: 20px !important;
+}
+table.content-container-padding-width, td.content-container-padding-width {
+width: 30px !important;
+}
+table.content-container-padding-height, td.content-container-padding-height {
+height: 30px !important;
+}
+table.content-container-width, td.content-container-width {
+width: 540px !important;
+}
+span.video-title-font-class, td.video-title-font-class, div.greeting-font, td.greeting-font {
+font-size: 24px !important;
+line-height: 30px !important;
+}
+a.video-link-font-class, div.video-link-font-class, td.video-link-font-class {
+font-size: 20px !important;
+line-height: 30px !important;
+}
+span.meta-data-font, div.meta-data-font, a.meta-data-font, td.meta-data-font {
+display: block !important;
+font-size: 20px !important;
+line-height: 36px !important;
+}
+td.small-meta-data-font {
+font-size: 25px !important;
+line-height: 30px !important;
+}
+table.video-content-padding-height, td.video-content-padding-height {
+height: 45px !important;
+}
+td.avatar-size, img.avatar-size {
+width: 54px !important;
+height: 54px !important;
+}
+img.large-avatar-size {
+height: 32px !important;
+}
+img.channel-avatar-size {
+width: 80px !important;
+height: 80px !important;
+}
+img.thumbnail-size-class, td.thumbnail-size-class{
+width: 100px !important;
+height: 56px !important;
+}
+table.more-videos-size {
+height: 100px !important;
+}
+div.more-videos-font, td.more-videos-font {
+font-size: 24px !important;
+line-height: 27px !important;
+}
+table.more-videos-button-size {
+width: 230px !important;
+height: 60px !important;
+}
+td.more-videos-button-width {
+width: 250px !important;
+}
+td.more-videos-text-width {
+width: 270px !important;
+}
+table.video-spotlight-width {
+width:600px !important;
+height:332px !important;
+}
+td.video-spotlight-size, img.video-spotlight-size {
+width:600px !important;
+height:332px !important;
+}
+table.regular-button-height {
+height:60px !important;
+}
+td.regular-button-padding-width {
+width:20px !important;
+}
+td.regular-button-font {
+font-size:27.5px !important;
+line-height:27.5px !important;
+}
+img.play-button-img-size {
+width:20px !important;
+height:20px !important;
+}
+table.large-button-size {
+width:600px !important;
+height:70px !important;
+}
+table.video-2col-size {
+width:600px !important;
+}
+table.video-2col-width, td.video-2col-width {
+width:600px !important;
+}
+img.video-2col-thumb-size {
+width:600px !important;
+height:332px !important;
+}
+table.video-2col-outer-container-size, td.video-2col-outer-container-size {
+width: 600px !important;
+}
+table.video-2col-inner-container-size, td.video-2col-inner-container-size {
+width: 540px !important;
+}
+table.video-2col-inner-container-width, td.video-2col-inner-container-width {
+width: 540px !important;
+}
+div.section-title-font, td.section-title-font {
+font-size: 30px !important;
+line-height: 35px !important;
+}
+div.section-subtitle-font, td.section-subtitle-font {
+font-size: 25px !important;
+line-height: 25px !important;
+}
+table.video-3col-padding-height, td.video-3col-padding-height {
+height: 55px !important;
+}
+img.video-3col-thumb-size, table.video-3col-thumb-size {
+width: 600px !important;
+height: 332px !important;
+}
+table.video-3col-width, td.video-3col-width {
+width: 600px !important;
+}
+table.inner-3col-content-container-width, td.inner-3col-content-container-width {
+width: 600px !important;
+}
+td.small-pad-width {
+width: 20px !important;
+}
+img.channel-avatar-size {
+width: 80px !important;
+height: 80px !important;
+}
+span.follow-and-subs-font {
+display: block !important;
+font-size: 24px !important;
+line-height: 27px !important;
+max-height:30px !important;
+}
+td.social-logo-padding-width {
+width: 32px !important;
+}
+table.channel-owner-block-content-width, td.channel-owner-block-content-width {
+width: 420px !important;
+}
+td.show-only-on-mobile {
+display: block !important;
+width: 100% !important;
+max-height: 100% !important;
+overflow: visible !important;
+}
+td.show-not-on-mobile, tr.show-not-on-mobile {
+display: none !important;
+visibility: hidden !important;
+}
+}
+</style>
+<style type="text/css">
+* {
+font-family: arial, Arial, sans-serif;
+}
+@media only screen and (max-device-width: 480px) {
+body[class=suppress-border-on-mobile] {
+margin: 0 !important;
+border: 0 !important;
+padding: 0 !important;
+}
+table[class=suppress-on-mobile], td[class=suppress-on-mobile], div[class=suppress-on-mobile], img[class=suppress-on-mobile], span[class=suppress-on-mobile] {
+display: none !important;
+width: 0px !important;
+height: 0px !important;
+line-height: 0px !important;
+margin: 0 !important;
+border: 0 !important;
+padding: 0 !important;
+}
+table[class=outer-container-width], td[class=outer-container-width] {
+width: 640px !important;
+}
+td[class=outer-container-padding-width] {
+width: 20px !important;
+}
+table[class=inner-container-width], td[class=inner-container-width] {
+width: 600px !important;
+}
+table[class=header-container-width] {
+width: 600px !important;
+height: 100px !important;
+}
+td[class=header_left_padding_width] {
+width: 25px !important;
+}
+td[class=logo_container_size] {
+width: 575px !important;
+height: 100px !important;
+}
+img[class=header_logo_size] {
+height: 47px !important;
+}
+table[class=footer-padding-width], td[class=footer-padding-width] {
+width: 30px !important;
+}
+table[class=footer-width], td[class=footer-width] {
+width: 540px !important;
+}
+td[class=footer-font], div[class=footer-font] {
+font-size: 20px !important;
+line-height: 30px !important;
+}
+table[class=footer-content-padding-height], td[class=footer-content-padding-height] {
+height: 30px !important;
+}
+table[class=large-section-padding-height], td[class=large-section-padding-height] {
+height: 16px !important;
+}
+table[class=small-section-padding-height], td[class=small-section-padding-height] {
+height: 20px !important;
+}
+table[class=content-container-padding-width], td[class=content-container-padding-width] {
+width: 30px !important;
+}
+table[class=content-container-padding-height], td[class=content-container-padding-height] {
+height: 30px !important;
+}
+table[class=content-container-width], td[class=content-container-width] {
+width: 540px !important;
+}
+span[class=video-title-font-class], td[class=video-title-font-class], div[class=greeting-font], td[class=greeting-font] {
+font-size: 24px !important;
+line-height: 30px !important;
+}
+a[class=video-link-font-class], div[class=video-link-font-class], td[class=video-link-font-class] {
+font-size: 20px !important;
+line-height: 30px !important;
+}
+span[class=meta-data-font], div[class=meta-data-font], a[class=meta-data-font], td[class=meta-data-font] {
+display: block !important;
+font-size: 20px !important;
+line-height: 36px !important;
+}
+td[class=small-meta-data-font] {
+font-size: 25px !important;
+line-height: 30px !important;
+}
+table[class=video-content-padding-height], td[class=video-content-padding-height] {
+height: 45px !important;
+}
+td[class=avatar-size], img[class=avatar-size] {
+width: 54px !important;
+height: 54px !important;
+}
+img[class=large-avatar-size] {
+width: 32px !important;
+}
+img[class=channel-avatar-size] {
+width: 80px !important;
+height: 80px !important;
+}
+table[class=more-videos-size] {
+height: 100px !important;
+}
+div[class=more-videos-font], td[class=more-videos-font] {
+font-size: 24px !important;
+line-height: 27px !important;
+}
+table[class=more-videos-button-size] {
+width: 230px !important;
+height: 60px !important;
+}
+td[class=more-videos-button-width] {
+width: 250px !important;
+}
+td[class=more-videos-text-width] {
+width: 270px !important;
+}
+table[class=video-spotlight-width] {
+width:600px !important;
+height:332px !important;
+}
+td[class=video-spotlight-size], img[class=video-spotlight-size] {
+width:600px !important;
+height:332px !important;
+}
+table[class=regular-button-height] {
+height:60px !important;
+}
+td[class=regular-button-padding-width] {
+width:20px !important;
+}
+td[class=regular-button-font] {
+font-size:27.5px !important;
+line-height:27.5px !important;
+}
+img[class=play-button-img-size] {
+width:20px !important;
+height:20px !important;
+}
+table[class=large-button-size] {
+width:600px !important;
+height:70px !important;
+}
+table[class=video-2col-size] {
+width:600px !important;
+}
+table[class=video-2col-width], td[class=video-2col-width] {
+width:600px !important;
+}
+img[class=video-2col-thumb-size] {
+width:600px !important;
+height:332px !important;
+}
+table[class=video-2col-outer-container-size], td[class=video-2col-outer-container-size] {
+width: 600px !important;
+}
+table[class=video-2col-inner-container-size], td[class=video-2col-inner-container-size] {
+width: 540px !important;
+}
+table[class=video-2col-inner-container-width], td[class=video-2col-inner-container-width] {
+width: 540px !important;
+}
+div[class=section-title-font], td[class=section-title-font] {
+font-size: 30px !important;
+line-height: 35px !important;
+}
+div[class=section-subtitle-font], td[class=section-subtitle-font] {
+font-size: 25px !important;
+line-height: 25px !important;
+}
+table[class=video-3col-padding-height], td[class=video-3col-padding-height] {
+height: 55px !important;
+}
+img[class=video-3col-thumb-size], table[class=video-3col-thumb-size] {
+width: 600px !important;
+height: 332px !important;
+}
+table[class=video-3col-width], td[class=video-3col-width] {
+width: 600px !important;
+}
+table[class=inner-3col-content-container-width], td[class=inner-3col-content-container-width] {
+width: 600px !important;
+}
+td[class=small-pad-width] {
+width: 20px !important;
+}
+img[class=channel-avatar-size] {
+width: 80px !important;
+height: 80px !important;
+}
+img[class=thumbnail-size-class], td[class=thumbnail-size-class] {
+width: 80px !important;
+height: 44px !important;
+}
+span[class=follow-and-subs-font] {
+display: block !important;
+font-size: 24px !important;
+line-height: 27px !important;
+max-height:30px !important;
+}
+td[class=social-logo-padding-width] {
+width: 32px !important;
+}
+table[class=channel-owner-block-content-width], td[class=channel-owner-block-content-width] {
+width: 420px !important;
+}
+td[class=show-only-on-mobile] {
+display: block !important;
+width: 100% !important;
+max-height: 100% !important;
+overflow: visible !important;
+}
+td[class=show-not-on-mobile], tr[class=show-not-on-mobile]{
+display: none !important;
+visibility: hidden !important;
+}
+table., td. {
+width: 500px !important;
+}
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body class="suppress-border-on-mobile">
+<span style="display: none !important; visibility: hidden; width: 0; height: 0; opacity: 0; color: transparent;mso-hide:all">The Fantasy Footballers: &quot;Fantasy Football 2017 - Week 16 Matchups + Holiday Movie Draft - Ep...&quot;</span>
+<table class="outer-container-width" width="680" bgcolor="transparent" align="center" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="outer-container-padding-width" width="40"></td>
+<td class="inner-container-width" width="600">
+<table class="inner-container-width" width="600" align="center" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table class="header-container-width" width="600" align="left" valign="center" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="logo_container_size" width="584" valign="center">
+<a href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/&amp;g=AIR_RmFPbrgxZH93_TjLv6rgEQdcIUgR5B74ux5qxIPjorwfq0qbvsxDFVCfx52rpQ0ht0qLDhKfPfR5KT3JJUDGBLeVcfSBqtGzIXnyqfT7LeLeEdYqT2mWK62RHwZ-siVf"><img alt="Youtube Logo" class="header_logo_size" height="30" src="http://www.gstatic.com/youtube/img/branding/youtubelogo/1x/youtubelogo_60.png" border="0" style="display:block;"></a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td style="max-height:0px; font-size:0; display:none;"><hr class="inner-container-width" width="600" style="height:0px; border:none; border-color:transparent; padding:0px; margin:0px;"></td></tr>
+<tr><td class="large-section-padding-height" height="20"></td></tr>
+<tr>
+<td>
+<table class="inner-container-width" width="600" align="center" valign="center" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+
+<script type="application/json" data-scope="inboxmarkup">
+{
+"api_version": "1.0",
+"publisher": {
+"api_key": "c4f99df5214ea4f584bb2e72588b237d",
+"name": "YouTube"
+},
+"entity": {
+"external_key": "YouTubeDigest",
+"title": "YouTube Digest",
+"subtitle": "Latest: December 23, 2017",
+"main_image_url": "https://lh3.googleusercontent.com/qzeDHEH4itIbIKtU0XAr-VMB7bKYCG4wsgWoJno2PaHuTxzMAPaWwPHMdvewrwgNcfq3Pdq8pg=s0",
+"avatar_image_url": "https://lh3.googleusercontent.com/-as5xbhkCeMo/VwKaPW6V_cI/AAAAAAAA6lA/5zsGHEaEd9YN4B-mQ1ABZNOGtTyfrBRegCL0B/s0/YouTube-avatar-generic%2B%252811%2529.png"
+},
+"cards": [
+{
+"title": "YouTube Digest",
+"subtitle": "Highlights from the latest email",
+"widgets": [
+{
+"type": "LINK",
+"title": "Fantasy Football 2017 - Week 16 Matchups + Holiday Movie Draft - Ep. #505",
+"description": "Fantasy Football Podcast for December 22nd, 2017. The Fantasy Footballers are back again as we head into Championship weekend! We’ll tackle the rest of the Week 16 Matchups in the Fantasy Forecast. Get the latest updates on who will be In or Out. And we’ll have some fun during our holiday movie draft! Manage your redraft, keeper, and dynasty fantasy football teams with insights you can only get on the #1 fantasy football podcast. 03:10- Holiday Movie Draft 09:25- NFL News \x26 Notes 11:25- In-or-Out 15:45- Week 16 Fantasy Forecast Part Two 16:05- Falcons at Saints 22:30- Chargers at Jets 25:30- Rams at Titans 30:35- Broncos at Redskins 33:40- Jaguars at 49ers 37:50- Giants at Cardinals 41:25- Seahawks at Cowboys 46:05- Steelers at Texans 50:25- Raiders at Eagles 55:35- Week 16 Daily Dose Live Draft Check out today\x27s sponsors: http:\x2F\x2FFantasyChamps.com -- Code:Ballers http:\x2F\x2FHarrys.com\x2FFootballers http:\x2F\x2FPristineAuction.com Our studio sponsor: Draft.com\x2FBallers Check out the Ultimate ... [+4 videos]",
+"url": "",
+"image_url": "http://i.ytimg.com/vi/jGLipCu2WbY/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3nagQ9gqvrQQdhXswGEfN9ylIX3QA&feature=em-subs_digest"
+},
+{
+"type": "LINK",
+"title": "Fantasy Football 2017 - Holiday Awards, Week 16 Matchups, Starts of the Week - Ep. #504",
+"description": "Fantasy Football Awards. We’ll tackle the latest NFL news and injury updates, reveal our Starts of the Week, and preview a number of Week 16 matchups. And finally, you don’t want to miss Jason’s Boom Boom Kicker! Manage your redraft, keeper, and dynasty fantasy football teams with insights you can only get on the #1 fantasy football podcast. 02:55- Holiday Fantasy Football Awards 10:50- NFL News \x26 Notes 14:35- Week 16 Fantasy Forecast 16:20- Colts at Ravens 22:50- Vikings at Packers 28:40- Buccaneers at Panthers 34:30- Browns at Bears 37:55- Lions at Bengals 40:55- Dolphins at Chiefs 44:55- Bills at Patriots 49:10- Starts of the Week 01:02:55- Jason Moore’s BOOM BOOM Kicker Check out today\x27s sponsors: http:\x2F\x2FFantasyChamps.com -- Code:Ballers http:\x2F\x2FHarrys.com\x2FFootballers http:\x2F\x2FUpside.com -- Code: FOOTBALLERS Our studio sponsor: Draft.com\x2FBallers Check out the Ultimate DFS Pass at http:\x2F\x2FDFSPass.com and subscribe to our DFS Podcast Join our Fantasy Football community at http:\x2F\x2Fw...",
+"url": "http://youtu.be/kTO0-LltOhg?em",
+"image_url": "http://i.ytimg.com/vi/kTO0-LltOhg/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3klqvyt43ghtDjIG7QBdYK6FQjSBA&feature=em-subs_digest-vrecs"
+},
+{
+"type": "LINK",
+"title": "Top 10 Most Anticipated Anime of 2018",
+"description": "Top 10 Most Anticipated Anime of 2018 Subscribe: http:\x2F\x2Fgoo.gl\x2FQ2kKrD \x2F\x2F Have a Top 10 idea? Submit it to us here! http:\x2F\x2Fwatchmojo.com\x2Fmy\x2Fsuggest.php 2017 was an awesome year for Japanese Animation, and next year looks pretty promising! Shows like Attack on Titan and My Hero Academia will be making their awesome return and we\x27re going to see some adaptations of great manga along the way too. Sequels, Spin offs and movies - it\x27s going to be great... and fingers crossed, we\x27re finally going to get that season 2 of One-Punch Man! REMINDER: We\x27re not including shows that don\x27t have a confirmed release date like Code Geass, Evangelion 3.33, A certain magical index, and Sword Art Online! Which shows are you looking forward to the most in 2018? Let us know in the comments below. #10. “High School DxD Hero” (2018) #9. “Tokyo Ghoul:re” (2018) #8. “Persona 5 The Animation” (2018) #7. The Seven Deadly Sins Revival of the Commandments\x22 (2018) #6. “FLCL and 3” (2018) #5. “Fairy Tail” Fi...",
+"url": "http://youtu.be/6QT1VMpYIeo?em",
+"image_url": "http://i.ytimg.com/vi/6QT1VMpYIeo/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3mmW45APEMPyJI2q3AcdfvWOMwL2Q&feature=em-subs_digest-vrecs"
+},
+{
+"type": "LINK",
+"title": "Top 10 Hard Bosses With Easy Exploits",
+"description": "Top 10 Hard Bosses With Easy Exploits Subscribe: http:\x2F\x2Fgoo.gl\x2FQ2kKrD \x2F\x2F Have a Top 10 idea? Submit it to us here! http:\x2F\x2Fwatchmojo.com\x2Fmy\x2Fsuggest.php Would you like your victory with a side of cheese? These are the bosses that hit real hard, but can easily be duped, tricked or cheesed out - to the point of becoming huge cakewalks. Welcome to http:\x2F\x2FWatchMojo.com\x2F and today we’re counting down our picks for the Top 10 Hard Bosses With Easy Exploits. #10. The Fear #9. Rocksteady #8. Old Demon King #7. General Di Ravello #6. Great Centipede #5. The Yellow Devil #4. Thresher Maw #3, #2 \x26 #1: ???? Special thanks to our user “Dan Paradis” for suggesting this topic using our interactive suggestion tool at http:\x2F\x2FWatchMojo.com\x2Fsuggest Our Magazine!! Learn the inner workings of WatchMojo and meet the voices behind the videos, articles by our specialists from gaming, film, tv, anime and more. VIEW INSTANTLY: http:\x2F\x2Fgoo.gl\x2FSivjcX WatchMojo\x27s Social Media Pages http:\x2F\x2Fwww.Facebook...",
+"url": "http://youtu.be/6XxXC6tyxW0?em",
+"image_url": "http://i.ytimg.com/vi/6XxXC6tyxW0/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3nKs5S8ArM7lxeIpwXU5ay3Ecsmbw&feature=em-subs_digest-vrecs"
+}
+]
+}
+],
+"updates": {
+"snippets": [
+{
+"icon": "VIDEO_PLAY",
+"message": "Fantasy Football 2017 - Week 16 Matchups + Holiday Movie Draft - Ep. #505"
+},
+{
+"icon": "VIDEO_PLAY",
+"message": "Fantasy Football 2017 - Holiday Awards, Week 16 Matchups, Starts of the Week - Ep. #504"
+},
+{
+"icon": "VIDEO_PLAY",
+"message": "Top 10 Most Anticipated Anime of 2018"
+},
+{
+"icon": "VIDEO_PLAY",
+"message": "Top 10 Hard Bosses With Easy Exploits"
+}
+]
+}
+}
+</script>
+<table class="inner-container-width" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="section-title-font" style="font-family:Roboto,sans-serif; font-size:16px; line-height:25px; letter-spacing:0px; color:#222222; -webkit-text-size-adjust:none;">
+Subscriptions
+</td>
+</tr>
+</table>
+<table class="small-section-padding-height" height="16" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="small-section-padding-height" height="16"></td>
+</tr>
+</table>
+<table class="video-spotlight-width" width="600" align="center" cellspacing="0" cellpadding="0" border="0">
+<!--[if gte mso 9]>
+<tr>
+<td class="video-spotlight-size" width="516" height="290" align="center">
+<a href="http://www.youtube.com/watch?v=jGLipCu2WbY&feature=em-subs_digest" style="text-decoration:none; display:block;" class="nonplayable">
+<img class="video-spotlight-size" src="http://i.ytimg.com/vi/jGLipCu2WbY/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3nagQ9gqvrQQdhXswGEfN9ylIX3QA&feature=em-subs_digest" width="516" height="290" border="0">
+</a>
+</td>
+</tr>
+<![endif]-->
+<!--[if !mso]><!-- -->
+<tr style="mso-hide:all">
+<td colspan="3">
+<a href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/watch?v%3DjGLipCu2WbY%26feature%3Dem-subs_digest&amp;g=AIR_RmG1RXGI7AiAHJ63KtmopQw_f5F-AgPOjxOjKHorut9Dv0dbqWHlnX1HX3wyosWs5EiG-i7-5XAFqGRV9uvckswfwptzwNdRtt2Wn-SYF6fOhf2_4t6CEwy3Nb1Tfh4Us8198fl-hC2Ta7boYieI27iuD64Jc4SbIsW10qDaqAtgpbHR97xOQ25O4Qs61fOkgRo" style="text-decoration:none; display:block;" class="nonplayable">
+<table aria-label="Fantasy Football 2017 - Week 16 Matchups + Holiday Movie Draft - Ep..." class="video-spotlight-width" width="600" align="center" background="http://i.ytimg.com/vi/jGLipCu2WbY/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&amp;rs=AMzJL3nagQ9gqvrQQdhXswGEfN9ylIX3QA&amp;feature=em-subs_digest" style="background-repeat:no-repeat; background-size:100% 100%;mso-hide:all" height="338" cellspacing="0" cellpadding="0" border="0">
+<tr style="mso-hide:all"><td aria-label="Fantasy Football 2017 - Week 16 Matchups + Holiday Movie Draft - Ep...">
+<img src="https://www.gstatic.com/youtube/img/email/transparent_pixel.png" alt="Fantasy Football 2017 - Week 16 Matchups + Holiday Movie Draft - Ep..." width="600" style="height: 300px;">
+</td></tr>
+<tr aria-label="Fantasy Football 2017 - Week 16 Matchups + Holiday Movie Draft - Ep..." scope="row" style="mso-hide:all">
+<td aria-label="Fantasy Football 2017 - Week 16 Matchups + Holiday Movie Draft - Ep..." class="footer-font" style="color:#fff; text-align:right; font-size: 12px;" valign="bottom" width="600">
+<div style="margin-bottom:8px; margin-right:8px; border-radius:2px; background-color: #212121; padding:2px 4px; display:inline-block;">59:57</div>
+</td>
+</tr>
+</table>
+</a>
+</td>
+</tr>
+<!--<![endif]-->
+<tr><td>
+<table class="large-section-padding-height" height="16" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="large-section-padding-height" height="16"></td>
+</tr>
+</table>
+</td></tr>
+<tr>
+<td>
+<table class="content-container-width" width="560" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<tr>
+<td class="avatar-size" width="32" style="vertical-align:top;">
+<a href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/channel/UC-No2ITxJsNt50oJQ3fLmUA?feature%3Dem-subs_digest&amp;g=AIR_RmECosMdpxNxti6E_HvoUYLrH_BERfNQQvCxeV2_f5cFEQmO9wDa3MdftEdKIlqInuH92EE6jpga_Qg69ixdezxgPZ_g0Ewl90cbPXJw58oAm6mW6uGq_-6cjfS2kcci5agbU8l8pnYHOF1x4d7iuCWv39YURrwRctVV736_cVbbhJDC36_2R-GGAz-Uxr5bWl6xLs43HifVxq0">
+<img class="avatar-size" src="https://lh3.googleusercontent.com/-efowdyDUsnM/AAAAAAAAAAI/AAAAAAAAAAA/BQEp7-R4OYU/s50-mo/photo.jpg" width="32" style="display:block; border-radius: 50%;" border="0">
+</a>
+</td>
+<td class="small-pad-width" width="16"></td>
+<td>
+<table class="content-container-width" width="540" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<td valign="center">
+<table class="content-container-width" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<tr>
+<td style="padding-bottom:4px">
+<a href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/watch?v%3DjGLipCu2WbY%26feature%3Dem-subs_digest&amp;g=AIR_RmG1RXGI7AiAHJ63KtmopQw_f5F-AgPOjxOjKHorut9Dv0dbqWHlnX1HX3wyosWs5EiG-i7-5XAFqGRV9uvckswfwptzwNdRtt2Wn-SYF6fOhf2_4t6CEwy3Nb1Tfh4Us8198fl-hC2Ta7boYieI27iuD64Jc4SbIsW10qDaqAtgpbHR97xOQ25O4Qs61fOkgRo" style="text-decoration:none;">
+<span class="video-title-font-class" valign="center" style="font-family:Roboto,sans-serif; font-size:14px; color:#212121; line-height:20px; -webkit-text-size-adjust:none;">
+Fantasy Football 2017 - Week 16 Matchups + Holiday Movie Draft - Ep...
+</span>
+</a>
+</td>
+</tr>
+<tr>
+<td>
+<a class="video-link-font-class" href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/channel/UC-No2ITxJsNt50oJQ3fLmUA?feature%3Dem-subs_digest&amp;g=AIR_RmECosMdpxNxti6E_HvoUYLrH_BERfNQQvCxeV2_f5cFEQmO9wDa3MdftEdKIlqInuH92EE6jpga_Qg69ixdezxgPZ_g0Ewl90cbPXJw58oAm6mW6uGq_-6cjfS2kcci5agbU8l8pnYHOF1x4d7iuCWv39YURrwRctVV736_cVbbhJDC36_2R-GGAz-Uxr5bWl6xLs43HifVxq0" style="font-family:Roboto,sans-serif;font-size:12px; color: #757575;; line-height:16px; letter-spacing:0px; -webkit-text-size-adjust:none; text-decoration:none;">
+The Fantasy Footballers
+</a>
+</td>
+</tr>
+</table>
+</td>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td>
+<table class="large-section-padding-height" height="16" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="large-section-padding-height" height="16"></td>
+</tr>
+</table>
+</td></tr>
+</table>
+
+<hr style="display: block;height: 1px;border: 0;border-top: 1px solid #eaeaea;padding: 0;"></hr>
+<table class="inner-container-width" width="600" cellspacing="0" cellpadding="0" border="0">
+<tbody>
+<tr><td>
+<table class="content-container-padding-height" height="16" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="content-container-padding-height" height="16"></td>
+</tr>
+</table>
+</td></tr>
+<tr>
+<td>
+<table class="inner-container-width" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="section-title-font" style="font-family:Roboto,sans-serif; font-size:16px; line-height:25px; letter-spacing:0px; color:#222222; -webkit-text-size-adjust:none;">
+Recommended
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td>
+<table class="content-container-padding-height" height="16" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="content-container-padding-height" height="16"></td>
+</tr>
+</table>
+</td></tr>
+<tr><td>
+<table class="inner-container-width" width="600" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="inner-container-width" width="600">
+<table class="inner-container-width" width="600" cellspacing="0" cellpadding="0" border="0">
+<tr><td class="inner-container-width" width="600">
+<table align="left" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table class="video-spotlight-width" width="290" cellspacing="0" cellpadding="0" border="0">
+<!--[if gte mso 9]>
+<tr>
+<td class="video-spotlight-size" width="290" align="center">
+<a href="http://www.youtube.com/watch?v=kTO0-LltOhg&feature=em-subs_digest-vrecs" style="text-decoration:none; display:block;" class="nonplayable">
+<img class="video-spotlight-size" src="http://i.ytimg.com/vi/kTO0-LltOhg/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3klqvyt43ghtDjIG7QBdYK6FQjSBA&feature=em-subs_digest-vrecs" width="290" border="0">
+</a>
+</td>
+</tr>
+<![endif]-->
+<!--[if !mso]><!-- -->
+<tr style="mso-hide:all">
+<td class="video-2col-outer-container-size" width="290">
+<a href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/watch?v%3DkTO0-LltOhg%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmFipNhdv2wEgj80HgSoLQGIGidYGaP4B84lJLbREeI24gnbkQ9r0IS3Si7sMa-U0u0lYQIxzsSCuNHMd3bAsE_4z7ga-6JXICIYtC6O4QUR-IV3Br6Kco1XEAfxG6SPDvNl9Z5-R5HE0awoQCowX9T7cWLnYJLu6-6T8EHXNlUqrpzxfhjvCgBm8FZM5pzq47IooC_whNo" style="text-decoration:none;" target="_blank" ; class="nonplayable">
+<table aria-label="Fantasy Football 2017 - Holiday Awards, Week 16 Matchup... link" class="video-spotlight-width" width="290" align="center" background="http://i.ytimg.com/vi/kTO0-LltOhg/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&amp;rs=AMzJL3klqvyt43ghtDjIG7QBdYK6FQjSBA&amp;feature=em-subs_digest-vrecs" style="background-repeat:no-repeat; background-size:100% 100%;" cellspacing="0" cellpadding="0" border="0" height="162">
+<tr style="mso-hide:all"><td aria-label="Fantasy Football 2017 - Holiday Awards, Week 16 Matchup..." class="video-2col-thumb-size" width="290">
+<img src="https://www.gstatic.com/youtube/img/email/transparent_pixel.png" alt="Fantasy Football 2017 - Holiday Awards, Week 16 Matchup..." class="video-2col-thumb-size" width="290" height="132">
+</td></tr>
+<tr style="mso-hide:all">
+<td class="footer-font" style="color:#fff; text-align:right; font-size: 12px;" valign="bottom" width="290">
+<div style="margin-bottom:8px; margin-right:8px; border-radius:2px; background-color: #212121; padding:2px 4px; display:inline-block;">1:04:20</div>
+</td>
+</tr>
+</table>
+</a>
+</td>
+</tr>
+<!--<![endif]-->
+<tr><td height="16"></td></tr>
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="270" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table width="270" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="270" valign="top">
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="250" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="250" valign="top">
+<table class="content-container-width" width="250" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<td valign="center">
+<table class="content-container-width" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<tr><td style="padding-bottom:4px">
+<a href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/watch?v%3DkTO0-LltOhg%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmFipNhdv2wEgj80HgSoLQGIGidYGaP4B84lJLbREeI24gnbkQ9r0IS3Si7sMa-U0u0lYQIxzsSCuNHMd3bAsE_4z7ga-6JXICIYtC6O4QUR-IV3Br6Kco1XEAfxG6SPDvNl9Z5-R5HE0awoQCowX9T7cWLnYJLu6-6T8EHXNlUqrpzxfhjvCgBm8FZM5pzq47IooC_whNo" style="text-decoration:none;">
+<span class="video-title-font-class" valign="center" style="font-family:Roboto,sans-serif; font-size:14px; color:#212121; line-height:20px; -webkit-text-size-adjust:none;">
+Fantasy Football 2017 - Holiday Awards, Week 16 Matchup...
+</span>
+</a>
+</td></tr>
+<tr><td>
+<a class="video-link-font-class" href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/channel/UC-No2ITxJsNt50oJQ3fLmUA?feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmHgW3-AYUkfSmgecE5nmvhUFTHpjeGF8M_oQ5jHJJGVfF7NsRMOKNwpbT_XGhiPwrB0I2GdXYBKPUBKNXfyOa3rdWGWy-IpBAYYYlTwsyE2Fo5OtqDeAvtQg4vccTDdKonIXFJa6KAEVK5jLSdKAf5LZVCbwVzKjdPf36TOdhPN5fn6NHKtDnXET4_pzq_is8uZak4DfhuHu7VdWM2J-bZw" style="font-family:Roboto,sans-serif;font-size:12px; color: #757575;; line-height:16px; letter-spacing:0px; -webkit-text-size-adjust:none; text-decoration:none;">
+The Fantasy Footballers
+</a>
+</td></tr>
+</table>
+</td>
+</table>
+</td>
+</tr>
+<tr>
+<td class="video-2col-width" width="250" valign="top">
+<div class="meta-data-font" style="font-family:Roboto,sans-serif; color:#999999; font-size:12px; letter-spacing:0px; line-height:20px; -webkit-text-size-adjust:none;">
+16,369 views
+ • 
+1 day ago
+</div>
+</td>
+</tr>
+<tr><td height="16"></td></tr>
+</table>
+</td>
+</tr>
+</td>
+</tr>
+<tr><td height="16"></td>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table align="right" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table class="video-spotlight-width" width="290" cellspacing="0" cellpadding="0" border="0">
+<!--[if gte mso 9]>
+<tr>
+<td class="video-spotlight-size" width="290" align="center">
+<a href="http://www.youtube.com/watch?v=6QT1VMpYIeo&feature=em-subs_digest-vrecs" style="text-decoration:none; display:block;" class="nonplayable">
+<img class="video-spotlight-size" src="http://i.ytimg.com/vi/6QT1VMpYIeo/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3mmW45APEMPyJI2q3AcdfvWOMwL2Q&feature=em-subs_digest-vrecs" width="290" border="0">
+</a>
+</td>
+</tr>
+<![endif]-->
+<!--[if !mso]><!-- -->
+<tr style="mso-hide:all">
+<td class="video-2col-outer-container-size" width="290">
+<a href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/watch?v%3D6QT1VMpYIeo%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmG6j6xThF2QqS3C_9UCwd2A29rjgrl9oHjjFqUoCvPM5JB0JTtaITxWk2MQgwvPBiV-PB6kfR2B-s_fpjYlP3LwwAwrrKuNyCtk2ytIN0wgWyKEAUm5quz-xBnse1fCMCrgsnPsf8OE9QPro1uhsXFJK_Ld-EZuYLx-1Pw_TE42LAWL5mY1aUZ9_JjQKSVRCsFcuc6VHHQ" style="text-decoration:none;" target="_blank" ; class="nonplayable">
+<table aria-label="Top 10 Most Anticipated Anime of 2018 link" class="video-spotlight-width" width="290" align="center" background="http://i.ytimg.com/vi/6QT1VMpYIeo/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&amp;rs=AMzJL3mmW45APEMPyJI2q3AcdfvWOMwL2Q&amp;feature=em-subs_digest-vrecs" style="background-repeat:no-repeat; background-size:100% 100%;" cellspacing="0" cellpadding="0" border="0" height="162">
+<tr style="mso-hide:all"><td aria-label="Top 10 Most Anticipated Anime of 2018" class="video-2col-thumb-size" width="290">
+<img src="https://www.gstatic.com/youtube/img/email/transparent_pixel.png" alt="Top 10 Most Anticipated Anime of 2018" class="video-2col-thumb-size" width="290" height="132">
+</td></tr>
+<tr style="mso-hide:all">
+<td class="footer-font" style="color:#fff; text-align:right; font-size: 12px;" valign="bottom" width="290">
+<div style="margin-bottom:8px; margin-right:8px; border-radius:2px; background-color: #212121; padding:2px 4px; display:inline-block;">8:20</div>
+</td>
+</tr>
+</table>
+</a>
+</td>
+</tr>
+<!--<![endif]-->
+<tr><td height="16"></td></tr>
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="270" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table width="270" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="270" valign="top">
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="250" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="250" valign="top">
+<table class="content-container-width" width="250" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<td valign="center">
+<table class="content-container-width" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<tr><td style="padding-bottom:4px">
+<a href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/watch?v%3D6QT1VMpYIeo%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmG6j6xThF2QqS3C_9UCwd2A29rjgrl9oHjjFqUoCvPM5JB0JTtaITxWk2MQgwvPBiV-PB6kfR2B-s_fpjYlP3LwwAwrrKuNyCtk2ytIN0wgWyKEAUm5quz-xBnse1fCMCrgsnPsf8OE9QPro1uhsXFJK_Ld-EZuYLx-1Pw_TE42LAWL5mY1aUZ9_JjQKSVRCsFcuc6VHHQ" style="text-decoration:none;">
+<span class="video-title-font-class" valign="center" style="font-family:Roboto,sans-serif; font-size:14px; color:#212121; line-height:20px; -webkit-text-size-adjust:none;">
+Top 10 Most Anticipated Anime of 2018
+</span>
+</a>
+</td></tr>
+<tr><td>
+<a class="video-link-font-class" href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/user/WatchMojo?feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmFnNOvAicPw9IwPO0yCcYCsa54H5ysjyeQK56zaCSget58qKgZpamOpvJRZ9i-7BiLj-AlWzVNoULPZnCEnVwR84u8766RFsx6DnrdaA1zGFgDRhqKLphub91oU7oPvEdQVRqWWn_DGX8q30E_r-POJRUs7tJb8S4cY2gWsatDnJdhDtL1xCc33iZYc77g" style="font-family:Roboto,sans-serif;font-size:12px; color: #757575;; line-height:16px; letter-spacing:0px; -webkit-text-size-adjust:none; text-decoration:none;">
+WatchMojo.com
+</a>
+</td></tr>
+</table>
+</td>
+</table>
+</td>
+</tr>
+<tr>
+<td class="video-2col-width" width="250" valign="top">
+<div class="meta-data-font" style="font-family:Roboto,sans-serif; color:#999999; font-size:12px; letter-spacing:0px; line-height:20px; -webkit-text-size-adjust:none;">
+393,864 views
+ • 
+5 days ago
+</div>
+</td>
+</tr>
+<tr><td height="16"></td></tr>
+</table>
+</td>
+</tr>
+</td>
+</tr>
+<tr><td height="16"></td>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td></tr>
+<tr><td class="inner-container-width" width="600">
+<table align="left" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table class="video-spotlight-width" width="290" cellspacing="0" cellpadding="0" border="0">
+<!--[if gte mso 9]>
+<tr>
+<td class="video-spotlight-size" width="290" align="center">
+<a href="http://www.youtube.com/watch?v=6XxXC6tyxW0&feature=em-subs_digest-vrecs" style="text-decoration:none; display:block;" class="nonplayable">
+<img class="video-spotlight-size" src="http://i.ytimg.com/vi/6XxXC6tyxW0/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3nKs5S8ArM7lxeIpwXU5ay3Ecsmbw&feature=em-subs_digest-vrecs" width="290" border="0">
+</a>
+</td>
+</tr>
+<![endif]-->
+<!--[if !mso]><!-- -->
+<tr style="mso-hide:all">
+<td class="video-2col-outer-container-size" width="290">
+<a href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/watch?v%3D6XxXC6tyxW0%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmHn8otdhqiM_RrVMYIuemDf7k5xd9GFOHuwl1usRJfCf2hrl8vH1A3ElCldmmS-6ESdFcsnwe1360qK3FP5vffwu4fvMCjP4w_0j3V-qU5Be1QKQ-5wk8hISpFbdWj1Si7DbQtRXSB4-OwQ8YYYxvdz6kDtHuxK_kBphlt1yJwSBZUzK8_HFtiLJdno6Xc5YnUrosgIZK4" style="text-decoration:none;" target="_blank" ; class="nonplayable">
+<table aria-label="Top 10 Hard Bosses With Easy Exploits link" class="video-spotlight-width" width="290" align="center" background="http://i.ytimg.com/vi/6XxXC6tyxW0/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&amp;rs=AMzJL3nKs5S8ArM7lxeIpwXU5ay3Ecsmbw&amp;feature=em-subs_digest-vrecs" style="background-repeat:no-repeat; background-size:100% 100%;" cellspacing="0" cellpadding="0" border="0" height="162">
+<tr style="mso-hide:all"><td aria-label="Top 10 Hard Bosses With Easy Exploits" class="video-2col-thumb-size" width="290">
+<img src="https://www.gstatic.com/youtube/img/email/transparent_pixel.png" alt="Top 10 Hard Bosses With Easy Exploits" class="video-2col-thumb-size" width="290" height="132">
+</td></tr>
+<tr style="mso-hide:all">
+<td class="footer-font" style="color:#fff; text-align:right; font-size: 12px;" valign="bottom" width="290">
+<div style="margin-bottom:8px; margin-right:8px; border-radius:2px; background-color: #212121; padding:2px 4px; display:inline-block;">7:58</div>
+</td>
+</tr>
+</table>
+</a>
+</td>
+</tr>
+<!--<![endif]-->
+<tr><td height="16"></td></tr>
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="270" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table width="270" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="270" valign="top">
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="250" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="250" valign="top">
+<table class="content-container-width" width="250" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<td valign="center">
+<table class="content-container-width" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<tr><td style="padding-bottom:4px">
+<a href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/watch?v%3D6XxXC6tyxW0%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmHn8otdhqiM_RrVMYIuemDf7k5xd9GFOHuwl1usRJfCf2hrl8vH1A3ElCldmmS-6ESdFcsnwe1360qK3FP5vffwu4fvMCjP4w_0j3V-qU5Be1QKQ-5wk8hISpFbdWj1Si7DbQtRXSB4-OwQ8YYYxvdz6kDtHuxK_kBphlt1yJwSBZUzK8_HFtiLJdno6Xc5YnUrosgIZK4" style="text-decoration:none;">
+<span class="video-title-font-class" valign="center" style="font-family:Roboto,sans-serif; font-size:14px; color:#212121; line-height:20px; -webkit-text-size-adjust:none;">
+Top 10 Hard Bosses With Easy Exploits
+</span>
+</a>
+</td></tr>
+<tr><td>
+<a class="video-link-font-class" href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/user/WatchMojo?feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmFnNOvAicPw9IwPO0yCcYCsa54H5ysjyeQK56zaCSget58qKgZpamOpvJRZ9i-7BiLj-AlWzVNoULPZnCEnVwR84u8766RFsx6DnrdaA1zGFgDRhqKLphub91oU7oPvEdQVRqWWn_DGX8q30E_r-POJRUs7tJb8S4cY2gWsatDnJdhDtL1xCc33iZYc77g" style="font-family:Roboto,sans-serif;font-size:12px; color: #757575;; line-height:16px; letter-spacing:0px; -webkit-text-size-adjust:none; text-decoration:none;">
+WatchMojo.com
+</a>
+</td></tr>
+</table>
+</td>
+</table>
+</td>
+</tr>
+<tr>
+<td class="video-2col-width" width="250" valign="top">
+<div class="meta-data-font" style="font-family:Roboto,sans-serif; color:#999999; font-size:12px; letter-spacing:0px; line-height:20px; -webkit-text-size-adjust:none;">
+282,719 views
+ • 
+4 days ago
+</div>
+</td>
+</tr>
+<tr><td height="16"></td></tr>
+</table>
+</td>
+</tr>
+</td>
+</tr>
+<tr><td height="16"></td>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table align="right" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table class="video-spotlight-width" width="290" cellspacing="0" cellpadding="0" border="0">
+<!--[if gte mso 9]>
+<tr>
+<td class="video-spotlight-size" width="290" align="center">
+<a href="http://www.youtube.com/watch?v=Fj8G9dGuNkU&feature=em-subs_digest-vrecs" style="text-decoration:none; display:block;" class="nonplayable">
+<img class="video-spotlight-size" src="http://i.ytimg.com/vi/Fj8G9dGuNkU/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3maHEEbmc7YaKhs4nEw_aq-k1ldmw&feature=em-subs_digest-vrecs" width="290" border="0">
+</a>
+</td>
+</tr>
+<![endif]-->
+<!--[if !mso]><!-- -->
+<tr style="mso-hide:all">
+<td class="video-2col-outer-container-size" width="290">
+<a href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/watch?v%3DFj8G9dGuNkU%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmHlQ1wK5cOyjTSdRLp-R8RjEDIbknsOK1GwibUYQ2yaX1SH-OahPhKOoRbMdDOk08KGetKf3u_Vk6JHlK9My-gL8nTEtMZsAmgT-ce-3XYtZzgBplbbjqMJCCT3FewEDxj3GWg9o51kAtdTphCw6XMAjjA__0eyvitZA5WLQmVxeGTc3cEkoddMFO7Pz65vXUo_tt8SFm8" style="text-decoration:none;" target="_blank" ; class="nonplayable">
+<table aria-label="Greatest Trick Plays in Football History link" class="video-spotlight-width" width="290" align="center" background="http://i.ytimg.com/vi/Fj8G9dGuNkU/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&amp;rs=AMzJL3maHEEbmc7YaKhs4nEw_aq-k1ldmw&amp;feature=em-subs_digest-vrecs" style="background-repeat:no-repeat; background-size:100% 100%;" cellspacing="0" cellpadding="0" border="0" height="162">
+<tr style="mso-hide:all"><td aria-label="Greatest Trick Plays in Football History" class="video-2col-thumb-size" width="290">
+<img src="https://www.gstatic.com/youtube/img/email/transparent_pixel.png" alt="Greatest Trick Plays in Football History" class="video-2col-thumb-size" width="290" height="132">
+</td></tr>
+<tr style="mso-hide:all">
+<td class="footer-font" style="color:#fff; text-align:right; font-size: 12px;" valign="bottom" width="290">
+<div style="margin-bottom:8px; margin-right:8px; border-radius:2px; background-color: #212121; padding:2px 4px; display:inline-block;">13:39</div>
+</td>
+</tr>
+</table>
+</a>
+</td>
+</tr>
+<!--<![endif]-->
+<tr><td height="16"></td></tr>
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="270" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table width="270" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="270" valign="top">
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="250" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="250" valign="top">
+<table class="content-container-width" width="250" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<td valign="center">
+<table class="content-container-width" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<tr><td style="padding-bottom:4px">
+<a href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/watch?v%3DFj8G9dGuNkU%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmHlQ1wK5cOyjTSdRLp-R8RjEDIbknsOK1GwibUYQ2yaX1SH-OahPhKOoRbMdDOk08KGetKf3u_Vk6JHlK9My-gL8nTEtMZsAmgT-ce-3XYtZzgBplbbjqMJCCT3FewEDxj3GWg9o51kAtdTphCw6XMAjjA__0eyvitZA5WLQmVxeGTc3cEkoddMFO7Pz65vXUo_tt8SFm8" style="text-decoration:none;">
+<span class="video-title-font-class" valign="center" style="font-family:Roboto,sans-serif; font-size:14px; color:#212121; line-height:20px; -webkit-text-size-adjust:none;">
+Greatest Trick Plays in Football History
+</span>
+</a>
+</td></tr>
+<tr><td>
+<a class="video-link-font-class" href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/channel/UCr1TEhHFn8jEXraaZ1lslhQ?feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmFJNa7-93dW5wi9mMdpEtRS6BluhlJvKFsYBDtc9WLckzldSz6TGRcIcUNkuKbN7xs8QVCDl0pbdya-9B1ADz-zQgHjxBcA3OlKGnigvdaXPAy--uBu1hXxbneAZJy1LayALXfqtPH6QDDMxNel2eycKawgeBTTOt5dbD2DeaZUCnmxoZoSca4wuLknvi1Az-kJAdqBQDjFvDM_aC9OnhmD" style="font-family:Roboto,sans-serif;font-size:12px; color: #757575;; line-height:16px; letter-spacing:0px; -webkit-text-size-adjust:none; text-decoration:none;">
+Jaydon
+</a>
+</td></tr>
+</table>
+</td>
+</table>
+</td>
+</tr>
+<tr>
+<td class="video-2col-width" width="250" valign="top">
+<div class="meta-data-font" style="font-family:Roboto,sans-serif; color:#999999; font-size:12px; letter-spacing:0px; line-height:20px; -webkit-text-size-adjust:none;">
+40,329,714 views
+ • 
+over a year ago
+</div>
+</td>
+</tr>
+<tr><td height="16"></td></tr>
+</table>
+</td>
+</tr>
+</td>
+</tr>
+<tr><td height="16"></td>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td></tr>
+<tr><td class="inner-container-width" width="600">
+<table align="left" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table class="video-spotlight-width" width="290" cellspacing="0" cellpadding="0" border="0">
+<!--[if gte mso 9]>
+<tr>
+<td class="video-spotlight-size" width="290" align="center">
+<a href="http://www.youtube.com/watch?v=kpAigzGfV-g&feature=em-subs_digest-vrecs" style="text-decoration:none; display:block;" class="nonplayable">
+<img class="video-spotlight-size" src="http://i.ytimg.com/vi/kpAigzGfV-g/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3mt8hUhUlReT9EmvZAF5GCiTSC50w&feature=em-subs_digest-vrecs" width="290" border="0">
+</a>
+</td>
+</tr>
+<![endif]-->
+<!--[if !mso]><!-- -->
+<tr style="mso-hide:all">
+<td class="video-2col-outer-container-size" width="290">
+<a href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/watch?v%3DkpAigzGfV-g%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmFPgsjZtV4cBwq9ZHy7y0gfzW6FNOLz3OHB-jA5poym7RgX9fI3hOv2lUps4KK3nHU2MnrUcfCmXBNavWQqhD_E3h5BT8j4imYx07A8Xgv7jxCNUnf7B1yXNRLpnkaT1T2cHUMXXUYxj1EVuguh-5K2cmW8G8Omh65_Y9nOseR9dyLnLov0rI-SWy0fH1UA4ESZ2-yywNI" style="text-decoration:none;" target="_blank" ; class="nonplayable">
+<table aria-label="Top 10 Most Annoying Dark Souls Enemies link" class="video-spotlight-width" width="290" align="center" background="http://i.ytimg.com/vi/kpAigzGfV-g/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&amp;rs=AMzJL3mt8hUhUlReT9EmvZAF5GCiTSC50w&amp;feature=em-subs_digest-vrecs" style="background-repeat:no-repeat; background-size:100% 100%;" cellspacing="0" cellpadding="0" border="0" height="162">
+<tr style="mso-hide:all"><td aria-label="Top 10 Most Annoying Dark Souls Enemies" class="video-2col-thumb-size" width="290">
+<img src="https://www.gstatic.com/youtube/img/email/transparent_pixel.png" alt="Top 10 Most Annoying Dark Souls Enemies" class="video-2col-thumb-size" width="290" height="132">
+</td></tr>
+<tr style="mso-hide:all">
+<td class="footer-font" style="color:#fff; text-align:right; font-size: 12px;" valign="bottom" width="290">
+<div style="margin-bottom:8px; margin-right:8px; border-radius:2px; background-color: #212121; padding:2px 4px; display:inline-block;">9:01</div>
+</td>
+</tr>
+</table>
+</a>
+</td>
+</tr>
+<!--<![endif]-->
+<tr><td height="16"></td></tr>
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="270" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table width="270" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="270" valign="top">
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="250" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="250" valign="top">
+<table class="content-container-width" width="250" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<td valign="center">
+<table class="content-container-width" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<tr><td style="padding-bottom:4px">
+<a href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/watch?v%3DkpAigzGfV-g%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmFPgsjZtV4cBwq9ZHy7y0gfzW6FNOLz3OHB-jA5poym7RgX9fI3hOv2lUps4KK3nHU2MnrUcfCmXBNavWQqhD_E3h5BT8j4imYx07A8Xgv7jxCNUnf7B1yXNRLpnkaT1T2cHUMXXUYxj1EVuguh-5K2cmW8G8Omh65_Y9nOseR9dyLnLov0rI-SWy0fH1UA4ESZ2-yywNI" style="text-decoration:none;">
+<span class="video-title-font-class" valign="center" style="font-family:Roboto,sans-serif; font-size:14px; color:#212121; line-height:20px; -webkit-text-size-adjust:none;">
+Top 10 Most Annoying Dark Souls Enemies
+</span>
+</a>
+</td></tr>
+<tr><td>
+<a class="video-link-font-class" href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/user/WatchMojo?feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmFnNOvAicPw9IwPO0yCcYCsa54H5ysjyeQK56zaCSget58qKgZpamOpvJRZ9i-7BiLj-AlWzVNoULPZnCEnVwR84u8766RFsx6DnrdaA1zGFgDRhqKLphub91oU7oPvEdQVRqWWn_DGX8q30E_r-POJRUs7tJb8S4cY2gWsatDnJdhDtL1xCc33iZYc77g" style="font-family:Roboto,sans-serif;font-size:12px; color: #757575;; line-height:16px; letter-spacing:0px; -webkit-text-size-adjust:none; text-decoration:none;">
+WatchMojo.com
+</a>
+</td></tr>
+</table>
+</td>
+</table>
+</td>
+</tr>
+<tr>
+<td class="video-2col-width" width="250" valign="top">
+<div class="meta-data-font" style="font-family:Roboto,sans-serif; color:#999999; font-size:12px; letter-spacing:0px; line-height:20px; -webkit-text-size-adjust:none;">
+513,767 views
+ • 
+9 months ago
+</div>
+</td>
+</tr>
+<tr><td height="16"></td></tr>
+</table>
+</td>
+</tr>
+</td>
+</tr>
+<tr><td height="16"></td>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table align="right" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table class="video-spotlight-width" width="290" cellspacing="0" cellpadding="0" border="0">
+<!--[if gte mso 9]>
+<tr>
+<td class="video-spotlight-size" width="290" align="center">
+<a href="http://www.youtube.com/watch?v=TTfe2Manwmo&feature=em-subs_digest-vrecs" style="text-decoration:none; display:block;" class="nonplayable">
+<img class="video-spotlight-size" src="http://i.ytimg.com/vi/TTfe2Manwmo/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3lBvSn0PFtylRjbmJN4o1w5_j-X1g&feature=em-subs_digest-vrecs" width="290" border="0">
+</a>
+</td>
+</tr>
+<![endif]-->
+<!--[if !mso]><!-- -->
+<tr style="mso-hide:all">
+<td class="video-2col-outer-container-size" width="290">
+<a href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/watch?v%3DTTfe2Manwmo%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmHTfSwIfCVZNzQ9p4JyP8ruwfSC6pnuIz8I3HdqozJqxhcueHbnaO5xURk0DPEGMc1F6gG1mv1MAXPkBP1BtwRKpadY_xl9MVeZekM4p0Ogb1W0iq79GgzBEP5Znn3Fgx7p4KEprXV-_73rqJFP7QHaQa7IYq7LcN1XvPNTy4B87vrZ2D_tTy8TRgUl-ocnkhYRENrHKc4" style="text-decoration:none;" target="_blank" ; class="nonplayable">
+<table aria-label="OCEAN&#39;S 8 Official Trailer (2018) Rihanna, Anne Hathawa... link" class="video-spotlight-width" width="290" align="center" background="http://i.ytimg.com/vi/TTfe2Manwmo/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&amp;rs=AMzJL3lBvSn0PFtylRjbmJN4o1w5_j-X1g&amp;feature=em-subs_digest-vrecs" style="background-repeat:no-repeat; background-size:100% 100%;" cellspacing="0" cellpadding="0" border="0" height="162">
+<tr style="mso-hide:all"><td aria-label="OCEAN&#39;S 8 Official Trailer (2018) Rihanna, Anne Hathawa..." class="video-2col-thumb-size" width="290">
+<img src="https://www.gstatic.com/youtube/img/email/transparent_pixel.png" alt="OCEAN&#39;S 8 Official Trailer (2018) Rihanna, Anne Hathawa..." class="video-2col-thumb-size" width="290" height="132">
+</td></tr>
+<tr style="mso-hide:all">
+<td class="footer-font" style="color:#fff; text-align:right; font-size: 12px;" valign="bottom" width="290">
+<div style="margin-bottom:8px; margin-right:8px; border-radius:2px; background-color: #212121; padding:2px 4px; display:inline-block;">2:36</div>
+</td>
+</tr>
+</table>
+</a>
+</td>
+</tr>
+<!--<![endif]-->
+<tr><td height="16"></td></tr>
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="270" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table width="270" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="270" valign="top">
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="250" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="250" valign="top">
+<table class="content-container-width" width="250" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<td valign="center">
+<table class="content-container-width" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<tr><td style="padding-bottom:4px">
+<a href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/watch?v%3DTTfe2Manwmo%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmHTfSwIfCVZNzQ9p4JyP8ruwfSC6pnuIz8I3HdqozJqxhcueHbnaO5xURk0DPEGMc1F6gG1mv1MAXPkBP1BtwRKpadY_xl9MVeZekM4p0Ogb1W0iq79GgzBEP5Znn3Fgx7p4KEprXV-_73rqJFP7QHaQa7IYq7LcN1XvPNTy4B87vrZ2D_tTy8TRgUl-ocnkhYRENrHKc4" style="text-decoration:none;">
+<span class="video-title-font-class" valign="center" style="font-family:Roboto,sans-serif; font-size:14px; color:#212121; line-height:20px; -webkit-text-size-adjust:none;">
+OCEAN&#39;S 8 Official Trailer (2018) Rihanna, Anne Hathawa...
+</span>
+</a>
+</td></tr>
+<tr><td>
+<a class="video-link-font-class" href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/user/movietrailers?feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmH4V-7YX-2zzqMSEXIY1FCPegtWO1PX_Iy71NzKXOAQYyGTZH0oEUv7m6H6YCxOM2jXVX0fHi-TbLsS2_w9jkevJkB0gYCEu9Xoi3w-vpPK4xXqZ4obtAlMwtQGuJ7limtLm89SmHiQue_lGwgIo-I2ZgUqixUIv2j1qEVYPCArS55tslSbOCMq_R2UCPO-g1y4" style="font-family:Roboto,sans-serif;font-size:12px; color: #757575;; line-height:16px; letter-spacing:0px; -webkit-text-size-adjust:none; text-decoration:none;">
+ONE Media
+</a>
+</td></tr>
+</table>
+</td>
+</table>
+</td>
+</tr>
+<tr>
+<td class="video-2col-width" width="250" valign="top">
+<div class="meta-data-font" style="font-family:Roboto,sans-serif; color:#999999; font-size:12px; letter-spacing:0px; line-height:20px; -webkit-text-size-adjust:none;">
+2,601,526 views
+ • 
+3 days ago
+</div>
+</td>
+</tr>
+<tr><td height="16"></td></tr>
+</table>
+</td>
+</tr>
+</td>
+</tr>
+<tr><td height="16"></td>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td></tr>
+</tbody>
+</table>
+
+<img class="open_tracking_img" src="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/gen_204%3Fa%3Dem-subs_digest" width="1" height="1" style="display:none !important; visibility: hidden; width: 0; height: 0; opacity: 0; color: transparent;">
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<hr style="display: block;height: 1px;border: 0;border-top: 1px solid #eaeaea;margin-bottom: 16px;padding: 0;"></hr>
+<tr>
+<td>
+<table class="inner-container-width" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="footer-font" style="color: #757575; font-size:12px; line-height:16px; font-family:Roboto, sans-serif; letter-spacing:0px; -webkit-text-size-adjust:none; word-wrap:break-word;">
+YouTube sends email summaries like these so you can keep up with your channel subscriptions.
+If you no longer want to receive these updates, you may edit your preferences <a href="https://www.youtube.com/attribution_link?noapp=1&amp;a=jgLJ7LPCgbRlT5Bb&amp;u=/account_notifications?feature%3Dem-subs_digest&amp;g=AIR_RmG8sjhg9ryyGFjegGh-1a_rjyq0PS50cBhP7_SeXfxOXTmgy0FiMxQgcMkJpeutqStZroFbnYbuXBjjAHPewAcsjDo-YXjh-eL9dCyykA8cCbLi3c5oolKWp8Bndotmdscm7i48o9vPnisg4SLbFaEUOy8UD84FRTXZVb7HrfpBb2tC-yEXyQlWuFk9nIUmHQruY9seyCM" style="color:#2793E6; text-decoration:none;">here</a> or <a href="https://www.youtube.com/attribution_link?noapp=1&amp;a=jgLJ7LPCgbRlT5Bb&amp;u=/email_unsubscribe?uid%3DMfxBhDYBg7rrycMVIMKZsw%26action_unsubscribe%3DC4YEbkRb3O9yNqYekq96f73RA9Z8MTUxNDAxNjYzMUAxNTE0MDE2NjMx%26feature%3Dem-subs_digest&amp;g=AIR_RmGaiqU4XuqMFkQUqSKc5NwNfEryRtoGr-34zGyKvGXeB9x3CRxQ15G1c6SIdayVS_KOXx4MyeGoUdkNeaOoXp1Q2D1xq7Xsi7g11k5ejCcXPJlosRldaQiB91EhW6QTYTgOi1hcGTfojmzsxd_Nl2VZs_fs-YIRNsIUj-uD4LD-CpX3qpYMl75VVGEa_TmOuKC3uQ9Wpetj89pgJ7f87gdUnmiGY0OE2dWsGF4x_7NlpE-J7WllR30Qb4WBkS1R5WKNKH-gyyhjMUE3nc_84zQjHMqQo8nObek7gj2RKiy2LdoBvmRzP1om-CBbeV7TZ0N5gmNXzbZoVTJrk3OQNR6yVyQ" style="color:#2793E6; text-decoration:none;">unsubscribe</a>.
+</td>
+</tr>
+<tr><td>
+<table class="footer-content-padding-height" height="16" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="footer-content-padding-height" height="16"></td>
+</tr>
+</table>
+</td></tr>
+<tr>
+<td class="footer-font" style="color: #757575; font-size:12px; line-height:16px; font-family:Roboto, sans-serif; letter-spacing:0px; text-decoration:none; -webkit-text-size-adjust:none;">
+© 2017 YouTube, LLC 901 Cherry Ave, San Bruno, CA 94066
+</td>
+</tr>
+<tr><td>
+<table class="footer-content-padding-height" height="16" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="footer-content-padding-height" height="16"></td>
+</tr>
+</table>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+<td class="outer-container-padding-width" width="40"></td>
+</tr>
+<tr>
+<td colspan="3">
+<table class="content-container-width" width="600" height="18" align="left" style="background-repeat:no-repeat; background-size:100% 100%;" height="332" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="outer-container-padding-width" width="40"></td>
+<td width="20" aria-label="YouTube Link">
+<a href="https://www.youtube.com/attribution_link?a=jgLJ7LPCgbRlT5Bb&amp;u=/youtube&amp;g=AIR_RmHatV8IiR_Sn8_Ru-95X2pubv_FP-IBC_LxjfrEO6MAVo__CT81ar1dZ0TFn-OYNXDLqBrF4kjgYxq7Yv1WrPCw052oDLvZJdjbVlB656-0JQLkXVkiCfRMRa-jeuihyFsojR4R9g" target="_blank">
+<img alt="YouTube" class="large-avatar-size" src="https://www.gstatic.com/youtube/img/email/youtube_email_icon_grey.png" height="18" border="0">
+</a>
+</td>
+<td class="social-logo-padding-width" width="16"></td>
+<td aria-label="Twitter Link">
+<a href="https://www.google.com/appserve/mkt/p/AIR_RmGiNYQ3Dn8min_21ZQa0ldy_RHrrSPQ3gosSbj9objWFnFaCDVUDF5hXDXs5lfqBKXK5y7NFjIWNPqA7Us" target="_blank">
+<img alt="Twitter" class="large-avatar-size" src="https://www.gstatic.com/youtube/img/email/twitter_email_icon_grey.png" height="18" border="0">
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<img height="1" width="3" src="https://www.google.com/appserve/mkt/img/AIR_RmGlNviWug-BLk4KeFRgPlhcBKvFae6yb3SeqjFgsGiY.gif"></body>
+</html>

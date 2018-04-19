@@ -21,7 +21,7 @@
 	 
 	</appenders>
 	<Loggers>
-		<logger name="io.switchfour" level="trace" additivity="false">
+		<logger name="kempf.jeff" level="trace" additivity="false">
 			<AppenderRef ref="INFO" level="info" />
 		</logger>
 	</Loggers>

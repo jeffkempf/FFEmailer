@@ -1,0 +1,2733 @@
+Contents of Itinerary Email
+Header Content
+
+Delivered-To: appjeffs@gmail.com
+Received: by 10.157.74.55 with SMTP id h52csp2200580otf;
+        Mon, 18 Dec 2017 00:55:20 -0800 (PST)
+X-Received: by 10.36.148.6 with SMTP id j6mr19025548ite.104.1513587320183;
+        Mon, 18 Dec 2017 00:55:20 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1513587320; cv=none;
+        d=google.com; s=arc-20160816;
+        b=ATGyw1Vw86butk04cbmXIqYG7o/Abk+WXww0/O8MbsNnyd/jkFizX9S5+F3DGVJwMM
+         b4dNLOyA4f0rKxm8AlkPRfqtPvLXE6DQbn+w7GPIwhhjxTHkNuxgmhPlXsgR1JKGx4aN
+         5JYwyEguwD539RN37r7G1YtdncE7xsp05V9hseystVkgRPwaiRMmR+JONI6uchnwnJRc
+         qp6xounSlhFUKzM3ov/pVO1vPOQ58H7hMoIYrfelNL0/VoXF/DBt8me6iyF3fve+h30Y
+         1Q0c0dHDj9XDSOdhuar0saTDpa1qY5hmT7mavXoqOrd1sUhlHHV3sKxOrWFIFI397Lql
+         z8Xg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:from:subject:message-id:list-unsubscribe:feedback-id:reply-to
+         :date:mime-version:dkim-signature:arc-authentication-results;
+        bh=F3ikeU9N1rcVF1YFZqy/dF/c8nrQR9tiDuE1oXbmS8Y=;
+        b=QEfw/JF71bROE7FFlhN0HqqKG6u4nJNARRn+5hO1xtoj0plzouyg7yicVjiE+XlYvX
+         Ax52KpR278AcNDStsn4rqP9tvLdzxd9SjVcfwOeSIgQYwxZuLbDnyJJbkW6aG4eroG8u
+         iZlauPFhoHUIYue9Jl72SykhEddaYuRXhzmquT8fApxc+wtH8Ou3wwYLwXvNMeyXswru
+         6aaZl77PfLwFu66GwZw9gpgZCCDxa87G7/oxSL+DCGSLYIOIYwJroN0qEvZbhp5Tqf0Y
+         3RonSE0Nddt0p2HKxOX4w2UwtS95YSPdexXrqmG56Mm+uZbOSLqmvkERTB1djiR93ZXD
+         sysA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@youtube.com header.s=20161025 header.b=Utj/ssTd;
+       spf=pass (google.com: domain of 3d4i3wgclcdibcfsdzmmcihips.qcaoddxsttguaowz.qca@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3d4I3WgcLCDIbcfSdZmmcihiPS.QcaOddXSTTgUaOWZ.Qca@scoutcamp.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=youtube.com
+Return-Path: <3d4I3WgcLCDIbcfSdZmmcihiPS.QcaOddXSTTgUaOWZ.Qca@scoutcamp.bounces.google.com>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id r64sor5517371ith.26.2017.12.18.00.55.19
+        for <appjeffs@gmail.com>
+        (Google Transport Security);
+        Mon, 18 Dec 2017 00:55:20 -0800 (PST)
+Received-SPF: pass (google.com: domain of 3d4i3wgclcdibcfsdzmmcihips.qcaoddxsttguaowz.qca@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@youtube.com header.s=20161025 header.b=Utj/ssTd;
+       spf=pass (google.com: domain of 3d4i3wgclcdibcfsdzmmcihips.qcaoddxsttguaowz.qca@scoutcamp.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3d4I3WgcLCDIbcfSdZmmcihiPS.QcaOddXSTTgUaOWZ.Qca@scoutcamp.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=youtube.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=youtube.com; s=20161025;
+        h=mime-version:date:reply-to:feedback-id:list-unsubscribe:message-id
+         :subject:from:to;
+        bh=F3ikeU9N1rcVF1YFZqy/dF/c8nrQR9tiDuE1oXbmS8Y=;
+        b=Utj/ssTd2oH5GUbpv0Unfb3n9QvTLEINyR073CwSmQtEIM7JfPb0p9QFop5SedurAw
+         P+EUI9PypUNaAyvr3JKYhdsGyuddVnClGZ8R8BV4XMzuByE6ARRYR1FbxTv4D0Up8O15
+         xMEocPGXxQP6+sySXyeO2KhJNn3VGagR+f0buM0hnJKKLr9OTeR6bSMQyOxeGd+l/z2o
+         seKwGl50gJdXatT4NcLKPed11V6F/yfk8BkssrWeAL91UfUQHSXzTAs2j9ZWDTg54rfd
+         ZA+ekNnQqaXr+ZyTmNRl8dTikc506RqvxDIBjZPna6UwiS1yb6JQvbx+WCyGjE6mdM/4
+         8XRQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:date:reply-to:feedback-id
+         :list-unsubscribe:message-id:subject:from:to;
+        bh=F3ikeU9N1rcVF1YFZqy/dF/c8nrQR9tiDuE1oXbmS8Y=;
+        b=qw/Cny8DCSf0lFcsC//uLhdd6mB1DEIaygJv4xNr1YHScajo/tL6k6ukvIw85ORi3C
+         s/capioBKzrNR8tGsjdu811BUKXW/3Dtwy6RM4vJIGvaf2VB0C4zpyrluSB8wReOpZAe
+         7WnU4ALIDlfuEUhrIt99zZ4ra5jWQNfep6X10d6UYQFB2xJv2FnIn2cPcGJM+rcSdkLQ
+         8E4B23ztwy7UMhQ/NzBvMmf41dwuR1SqZfz4rrhhYauCVAKrUXdoWF82H8sy4BG+OlS8
+         1IZQlGjrwHC1k1YYgrlQDQ4LWn8fiUc6C94o5I9plkTNT+5SFhCe0vtAA9RN/GGvy7sI
+         rWAg==
+X-Gm-Message-State: AKGB3mLIiqVYpvtY2P0huDmlOsF1O1R9nykN7Gx0cL4Wf8tG410UkBFP
+	hYyHTARDV5uNHw4=
+X-Google-Smtp-Source: ACJfBoumPfPkByEPEcQLhR7mLBfk0LC2CkSfmseolxqXoP5yk4aQIaRn3ZW3Mhbq/kPb02UjwmIbJac=
+MIME-Version: 1.0
+X-Received: by 10.36.73.19 with SMTP id z19mr9951461ita.42.1513587319645; Mon,
+ 18 Dec 2017 00:55:19 -0800 (PST)
+Date: Mon, 18 Dec 2017 00:55:19 -0800
+Reply-To: YouTube <noreply@youtube.com>
+X-Google-Id: yt-em-subs_digest
+Feedback-ID: Len-US:D3522017:C709701:gamma
+X-No-Auto-Attachment: 1
+List-Unsubscribe: <mailto:yt-mailto@google.com?subject=http://www.youtube.com/email_unsubscribe%3Fuid%3DMfxBhDYBg7rrycMVIMKZsw%26action_unsubscribe%3DXDeFq3dYbtuTMQAzwi9Lqm14OJV8MTUxMzU4NzMxOEAxNTEzNTg3MzE4%26feature%3Dem-subs_digest>,
+ <http://www.youtube.com/email_unsubscribe?uid=MfxBhDYBg7rrycMVIMKZsw&action_unsubscribe=XDeFq3dYbtuTMQAzwi9Lqm14OJV8MTUxMzU4NzMxOEAxNTEzNTg3MzE4&feature=em-subs_digest>
+X-Feedback-Id: em-subs_digest:UC-No2ITxJsNt50oJQ3fLmUA:4f1Z8Ay1h_E:YouTube
+X-Notifications: GAMMA:<2dd8bebb8dbcc603.1513587319325.826106.709701.en-US.b2904d6b10c5e289@google.com>
+Message-ID: <2dd8bebb8dbcc603.1513587319325.826106.709701.en-US.b2904d6b10c5e289@google.com>
+Subject: The Fantasy Footballers: "Fantasy Football 2017 - 500th Episode! Week
+ 15 Matchups + Greatest ..."
+From: YouTube <noreply@youtube.com>
+To: appjeffs@gmail.com
+Content-Type: multipart/alternative; boundary="001a11c14bc88628d505609982e8"
+Body Content
+---------------------------------
+
+This is a Multipart
+This is a string
+---------------------------
+Here are the newest videos from each of your subscriptions. To change the  
+subscriptions for which you receive updates, or to turn off updates, go to  
+your email options:
+http://www.youtube.com/account_notifications?feature=em-subs_digest
+----------------------------------------------------------------
+Latest subscription updates
+----------------------------------------------------------------
+http://youtu.be/4f1Z8Ay1h_E?em
+Fantasy Football 2017 - 500th Episode! Week 15 Matchups + Greatest Moments  
+- Ep. #500
+[+4 videos]
+by The Fantasy Footballers
+----------------------------------------------------------------We think  
+you'd like...
+----------------------------------------------------------------
+http://youtu.be/4f1Z8Ay1h_E?em
+Fantasy Football 2017 - 500th Episode! Week 15 Matchups + Greatest Moments  
+- Ep. #500
+by The Fantasy Footballers
+--
+http://youtu.be/yhpTinbzhpg?em
+10 People You Won't Believe Actually Exist
+by Interesting Facts
+--
+http://youtu.be/kpAigzGfV-g?em
+Top 10 Most Annoying Dark Souls Enemies
+by WatchMojo.com
+--
+http://youtu.be/rEz16K3BNuQ?em
+Top 10 Funniest Family Feud Moments of 2017
+by Top Ten Daily
+--
+http://youtu.be/Sh4rC6KxYpE?em
+Funniest TV Game Show Answers Compilation Ever
+by DJBobbyFX
+--
+http://youtu.be/Fj8G9dGuNkU?em
+Greatest Trick Plays in Football History
+by Jaydon
+----------------------------------------------------------------
+
+This is a string
+---------------------------
+
+<html lang="en">
+<head>
+<title>
+The Fantasy Footballers: &quot;Fantasy Football 2017 - 500th Episode! Week 15 Matchups + Greatest ...&quot;
+</title>
+<style type="text/css">
+* {
+font-family: arial, Arial, sans-serif;
+}
+@media only screen and (max-device-width: 480px) {
+body.suppress-border-on-mobile {
+margin: 0 !important;
+border: 0 !important;
+padding: 0 !important;
+}
+table.suppress-on-mobile, td.suppress-on-mobile, div.suppress-on-mobile, img.suppress-on-mobile, span.suppress-on-mobile {
+display: none !important;
+width: 0px !important;
+height: 0px !important;
+line-height: 0px !important;
+margin: 0 !important;
+border: 0 !important;
+padding: 0 !important;
+}
+table.outer-container-width, td.outer-container-width {
+width: 640px !important;
+}
+td.outer-container-padding-width {
+width: 20px !important;
+}
+table.inner-container-width, td.inner-container-width {
+width: 600px !important;
+}
+table.header-container-width {
+width: 600px !important;
+height: 100px !important;
+}
+td.header_left_padding_width {
+width: 25px !important;
+}
+td.logo_container_size {
+width: 575px !important;
+height: 100px !important;
+}
+img.header_logo_size {
+height: 47px !important;
+}
+table.footer-padding-width, td.footer-padding-width {
+width: 30px !important;
+}
+table.footer-width, td.footer-width {
+width: 540px !important;
+}
+td.footer-font, div.footer-font {
+font-size: 20px !important;
+line-height: 30px !important;
+}
+table.footer-content-padding-height, td.footer-content-padding-height {
+height: 30px !important;
+}
+table.large-section-padding-height, td.large-section-padding-height {
+height: 16px !important;
+}
+table.small-section-padding-height, td.small-section-padding-height {
+height: 20px !important;
+}
+table.content-container-padding-width, td.content-container-padding-width {
+width: 30px !important;
+}
+table.content-container-padding-height, td.content-container-padding-height {
+height: 30px !important;
+}
+table.content-container-width, td.content-container-width {
+width: 540px !important;
+}
+span.video-title-font-class, td.video-title-font-class, div.greeting-font, td.greeting-font {
+font-size: 24px !important;
+line-height: 30px !important;
+}
+a.video-link-font-class, div.video-link-font-class, td.video-link-font-class {
+font-size: 20px !important;
+line-height: 30px !important;
+}
+span.meta-data-font, div.meta-data-font, a.meta-data-font, td.meta-data-font {
+display: block !important;
+font-size: 20px !important;
+line-height: 36px !important;
+}
+td.small-meta-data-font {
+font-size: 25px !important;
+line-height: 30px !important;
+}
+table.video-content-padding-height, td.video-content-padding-height {
+height: 45px !important;
+}
+td.avatar-size, img.avatar-size {
+width: 54px !important;
+height: 54px !important;
+}
+img.large-avatar-size {
+height: 32px !important;
+}
+img.channel-avatar-size {
+width: 80px !important;
+height: 80px !important;
+}
+img.thumbnail-size-class, td.thumbnail-size-class{
+width: 100px !important;
+height: 56px !important;
+}
+table.more-videos-size {
+height: 100px !important;
+}
+div.more-videos-font, td.more-videos-font {
+font-size: 24px !important;
+line-height: 27px !important;
+}
+table.more-videos-button-size {
+width: 230px !important;
+height: 60px !important;
+}
+td.more-videos-button-width {
+width: 250px !important;
+}
+td.more-videos-text-width {
+width: 270px !important;
+}
+table.video-spotlight-width {
+width:600px !important;
+height:332px !important;
+}
+td.video-spotlight-size, img.video-spotlight-size {
+width:600px !important;
+height:332px !important;
+}
+table.regular-button-height {
+height:60px !important;
+}
+td.regular-button-padding-width {
+width:20px !important;
+}
+td.regular-button-font {
+font-size:27.5px !important;
+line-height:27.5px !important;
+}
+img.play-button-img-size {
+width:20px !important;
+height:20px !important;
+}
+table.large-button-size {
+width:600px !important;
+height:70px !important;
+}
+table.video-2col-size {
+width:600px !important;
+}
+table.video-2col-width, td.video-2col-width {
+width:600px !important;
+}
+img.video-2col-thumb-size {
+width:600px !important;
+height:332px !important;
+}
+table.video-2col-outer-container-size, td.video-2col-outer-container-size {
+width: 600px !important;
+}
+table.video-2col-inner-container-size, td.video-2col-inner-container-size {
+width: 540px !important;
+}
+table.video-2col-inner-container-width, td.video-2col-inner-container-width {
+width: 540px !important;
+}
+div.section-title-font, td.section-title-font {
+font-size: 30px !important;
+line-height: 35px !important;
+}
+div.section-subtitle-font, td.section-subtitle-font {
+font-size: 25px !important;
+line-height: 25px !important;
+}
+table.video-3col-padding-height, td.video-3col-padding-height {
+height: 55px !important;
+}
+img.video-3col-thumb-size, table.video-3col-thumb-size {
+width: 600px !important;
+height: 332px !important;
+}
+table.video-3col-width, td.video-3col-width {
+width: 600px !important;
+}
+table.inner-3col-content-container-width, td.inner-3col-content-container-width {
+width: 600px !important;
+}
+td.small-pad-width {
+width: 20px !important;
+}
+img.channel-avatar-size {
+width: 80px !important;
+height: 80px !important;
+}
+span.follow-and-subs-font {
+display: block !important;
+font-size: 24px !important;
+line-height: 27px !important;
+max-height:30px !important;
+}
+td.social-logo-padding-width {
+width: 32px !important;
+}
+table.channel-owner-block-content-width, td.channel-owner-block-content-width {
+width: 420px !important;
+}
+td.show-only-on-mobile {
+display: block !important;
+width: 100% !important;
+max-height: 100% !important;
+overflow: visible !important;
+}
+td.show-not-on-mobile, tr.show-not-on-mobile {
+display: none !important;
+visibility: hidden !important;
+}
+}
+</style>
+<style type="text/css">
+* {
+font-family: arial, Arial, sans-serif;
+}
+@media only screen and (max-device-width: 480px) {
+body[class=suppress-border-on-mobile] {
+margin: 0 !important;
+border: 0 !important;
+padding: 0 !important;
+}
+table[class=suppress-on-mobile], td[class=suppress-on-mobile], div[class=suppress-on-mobile], img[class=suppress-on-mobile], span[class=suppress-on-mobile] {
+display: none !important;
+width: 0px !important;
+height: 0px !important;
+line-height: 0px !important;
+margin: 0 !important;
+border: 0 !important;
+padding: 0 !important;
+}
+table[class=outer-container-width], td[class=outer-container-width] {
+width: 640px !important;
+}
+td[class=outer-container-padding-width] {
+width: 20px !important;
+}
+table[class=inner-container-width], td[class=inner-container-width] {
+width: 600px !important;
+}
+table[class=header-container-width] {
+width: 600px !important;
+height: 100px !important;
+}
+td[class=header_left_padding_width] {
+width: 25px !important;
+}
+td[class=logo_container_size] {
+width: 575px !important;
+height: 100px !important;
+}
+img[class=header_logo_size] {
+height: 47px !important;
+}
+table[class=footer-padding-width], td[class=footer-padding-width] {
+width: 30px !important;
+}
+table[class=footer-width], td[class=footer-width] {
+width: 540px !important;
+}
+td[class=footer-font], div[class=footer-font] {
+font-size: 20px !important;
+line-height: 30px !important;
+}
+table[class=footer-content-padding-height], td[class=footer-content-padding-height] {
+height: 30px !important;
+}
+table[class=large-section-padding-height], td[class=large-section-padding-height] {
+height: 16px !important;
+}
+table[class=small-section-padding-height], td[class=small-section-padding-height] {
+height: 20px !important;
+}
+table[class=content-container-padding-width], td[class=content-container-padding-width] {
+width: 30px !important;
+}
+table[class=content-container-padding-height], td[class=content-container-padding-height] {
+height: 30px !important;
+}
+table[class=content-container-width], td[class=content-container-width] {
+width: 540px !important;
+}
+span[class=video-title-font-class], td[class=video-title-font-class], div[class=greeting-font], td[class=greeting-font] {
+font-size: 24px !important;
+line-height: 30px !important;
+}
+a[class=video-link-font-class], div[class=video-link-font-class], td[class=video-link-font-class] {
+font-size: 20px !important;
+line-height: 30px !important;
+}
+span[class=meta-data-font], div[class=meta-data-font], a[class=meta-data-font], td[class=meta-data-font] {
+display: block !important;
+font-size: 20px !important;
+line-height: 36px !important;
+}
+td[class=small-meta-data-font] {
+font-size: 25px !important;
+line-height: 30px !important;
+}
+table[class=video-content-padding-height], td[class=video-content-padding-height] {
+height: 45px !important;
+}
+td[class=avatar-size], img[class=avatar-size] {
+width: 54px !important;
+height: 54px !important;
+}
+img[class=large-avatar-size] {
+width: 32px !important;
+}
+img[class=channel-avatar-size] {
+width: 80px !important;
+height: 80px !important;
+}
+table[class=more-videos-size] {
+height: 100px !important;
+}
+div[class=more-videos-font], td[class=more-videos-font] {
+font-size: 24px !important;
+line-height: 27px !important;
+}
+table[class=more-videos-button-size] {
+width: 230px !important;
+height: 60px !important;
+}
+td[class=more-videos-button-width] {
+width: 250px !important;
+}
+td[class=more-videos-text-width] {
+width: 270px !important;
+}
+table[class=video-spotlight-width] {
+width:600px !important;
+height:332px !important;
+}
+td[class=video-spotlight-size], img[class=video-spotlight-size] {
+width:600px !important;
+height:332px !important;
+}
+table[class=regular-button-height] {
+height:60px !important;
+}
+td[class=regular-button-padding-width] {
+width:20px !important;
+}
+td[class=regular-button-font] {
+font-size:27.5px !important;
+line-height:27.5px !important;
+}
+img[class=play-button-img-size] {
+width:20px !important;
+height:20px !important;
+}
+table[class=large-button-size] {
+width:600px !important;
+height:70px !important;
+}
+table[class=video-2col-size] {
+width:600px !important;
+}
+table[class=video-2col-width], td[class=video-2col-width] {
+width:600px !important;
+}
+img[class=video-2col-thumb-size] {
+width:600px !important;
+height:332px !important;
+}
+table[class=video-2col-outer-container-size], td[class=video-2col-outer-container-size] {
+width: 600px !important;
+}
+table[class=video-2col-inner-container-size], td[class=video-2col-inner-container-size] {
+width: 540px !important;
+}
+table[class=video-2col-inner-container-width], td[class=video-2col-inner-container-width] {
+width: 540px !important;
+}
+div[class=section-title-font], td[class=section-title-font] {
+font-size: 30px !important;
+line-height: 35px !important;
+}
+div[class=section-subtitle-font], td[class=section-subtitle-font] {
+font-size: 25px !important;
+line-height: 25px !important;
+}
+table[class=video-3col-padding-height], td[class=video-3col-padding-height] {
+height: 55px !important;
+}
+img[class=video-3col-thumb-size], table[class=video-3col-thumb-size] {
+width: 600px !important;
+height: 332px !important;
+}
+table[class=video-3col-width], td[class=video-3col-width] {
+width: 600px !important;
+}
+table[class=inner-3col-content-container-width], td[class=inner-3col-content-container-width] {
+width: 600px !important;
+}
+td[class=small-pad-width] {
+width: 20px !important;
+}
+img[class=channel-avatar-size] {
+width: 80px !important;
+height: 80px !important;
+}
+img[class=thumbnail-size-class], td[class=thumbnail-size-class] {
+width: 80px !important;
+height: 44px !important;
+}
+span[class=follow-and-subs-font] {
+display: block !important;
+font-size: 24px !important;
+line-height: 27px !important;
+max-height:30px !important;
+}
+td[class=social-logo-padding-width] {
+width: 32px !important;
+}
+table[class=channel-owner-block-content-width], td[class=channel-owner-block-content-width] {
+width: 420px !important;
+}
+td[class=show-only-on-mobile] {
+display: block !important;
+width: 100% !important;
+max-height: 100% !important;
+overflow: visible !important;
+}
+td[class=show-not-on-mobile], tr[class=show-not-on-mobile]{
+display: none !important;
+visibility: hidden !important;
+}
+table., td. {
+width: 500px !important;
+}
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body class="suppress-border-on-mobile">
+<span style="display: none !important; visibility: hidden; width: 0; height: 0; opacity: 0; color: transparent;mso-hide:all">The Fantasy Footballers: &quot;Fantasy Football 2017 - 500th Episode! Week 15 Matchups + Greatest ...&quot;</span>
+<table class="outer-container-width" width="680" bgcolor="transparent" align="center" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="outer-container-padding-width" width="40"></td>
+<td class="inner-container-width" width="600">
+<table class="inner-container-width" width="600" align="center" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table class="header-container-width" width="600" align="left" valign="center" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="logo_container_size" width="584" valign="center">
+<a href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/&amp;g=AIR_RmFoeVL0z2_BYwbu12wrxxuGDdYXqIVat9DN9miDj980gb1QGaNgWKBZ9Y9bq-pKZVM8RNC08VzE72VkOGpm5p-XaHnqozQDJm646Fqz2ue-M4JsFaHUzheOW6ab3veV"><img alt="Youtube Logo" class="header_logo_size" height="30" src="http://www.gstatic.com/youtube/img/branding/youtubelogo/1x/youtubelogo_60.png" border="0" style="display:block;"></a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td style="max-height:0px; font-size:0; display:none;"><hr class="inner-container-width" width="600" style="height:0px; border:none; border-color:transparent; padding:0px; margin:0px;"></td></tr>
+<tr><td class="large-section-padding-height" height="20"></td></tr>
+<tr>
+<td>
+<table class="inner-container-width" width="600" align="center" valign="center" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+
+<script type="application/json" data-scope="inboxmarkup">
+{
+"api_version": "1.0",
+"publisher": {
+"api_key": "c4f99df5214ea4f584bb2e72588b237d",
+"name": "YouTube"
+},
+"entity": {
+"external_key": "YouTubeDigest",
+"title": "YouTube Digest",
+"subtitle": "Latest: December 18, 2017",
+"main_image_url": "https://lh3.googleusercontent.com/qzeDHEH4itIbIKtU0XAr-VMB7bKYCG4wsgWoJno2PaHuTxzMAPaWwPHMdvewrwgNcfq3Pdq8pg=s0",
+"avatar_image_url": "https://lh3.googleusercontent.com/-as5xbhkCeMo/VwKaPW6V_cI/AAAAAAAA6lA/5zsGHEaEd9YN4B-mQ1ABZNOGtTyfrBRegCL0B/s0/YouTube-avatar-generic%2B%252811%2529.png"
+},
+"cards": [
+{
+"title": "YouTube Digest",
+"subtitle": "Highlights from the latest email",
+"widgets": [
+{
+"type": "LINK",
+"title": "Fantasy Football 2017 - 500th Episode! Week 15 Matchups + Greatest Moments - Ep. #500",
+"description": "Fantasy Football Podcast for December 15th, 2017. Andy, Jason, and Mike are back with the 500th episode of The Fantasy Footballers Podcast! We’ll jump into more Week 15 matchups during the Fantasy Forecast. Catch up on the latest injury updates during In-or-Out. And finally, we have some fun with a highlight reel with classic clips from 500 episodes. Manage your redraft, keeper, and dynasty fantasy football teams with insights you can only get on the #1 fantasy football podcast. 04:00- #FootClan Friday 05:15- Thursday Night Recap: Broncos at Colts 09:10- NFL News \x26 Notes 09:20- Adrian Peterson 10:30- In-or-Out? 21:05- Bengals at Vikings 24:30- Jets at Saints 27:00- Eagles at Giants 30:50- Cardinals at Redskins 35:40- Rams at Seahawks 39:35- Patriots at Steelers 42:10- Titans at 49ers 47:55- Cowboys at Raiders 51:30- Breaking News: Fournette misses Fri practice 52:25- Falcons at Buccaneers 58:10- Week 15 Daily Dose Live Draft 01:03:00- Highlight Reel! Check out today\x27s sponsors: h... [+4 videos]",
+"url": "",
+"image_url": "http://i.ytimg.com/vi/4f1Z8Ay1h_E/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3kPqDbw3JXTlmK8Mfh6j4N8BjXKEg&feature=em-subs_digest"
+},
+{
+"type": "LINK",
+"title": "Fantasy Football 2017 - 500th Episode! Week 15 Matchups + Greatest Moments - Ep. #500",
+"description": "Fantasy Football Podcast for December 15th, 2017. Andy, Jason, and Mike are back with the 500th episode of The Fantasy Footballers Podcast! We’ll jump into more Week 15 matchups during the Fantasy Forecast. Catch up on the latest injury updates during In-or-Out. And finally, we have some fun with a highlight reel with classic clips from 500 episodes. Manage your redraft, keeper, and dynasty fantasy football teams with insights you can only get on the #1 fantasy football podcast. 04:00- #FootClan Friday 05:15- Thursday Night Recap: Broncos at Colts 09:10- NFL News \x26 Notes 09:20- Adrian Peterson 10:30- In-or-Out? 21:05- Bengals at Vikings 24:30- Jets at Saints 27:00- Eagles at Giants 30:50- Cardinals at Redskins 35:40- Rams at Seahawks 39:35- Patriots at Steelers 42:10- Titans at 49ers 47:55- Cowboys at Raiders 51:30- Breaking News: Fournette misses Fri practice 52:25- Falcons at Buccaneers 58:10- Week 15 Daily Dose Live Draft 01:03:00- Highlight Reel! Check out today\x27s sponsors: h...",
+"url": "http://youtu.be/4f1Z8Ay1h_E?em",
+"image_url": "http://i.ytimg.com/vi/4f1Z8Ay1h_E/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3kPqDbw3JXTlmK8Mfh6j4N8BjXKEg&feature=em-subs_digest-vrecs"
+},
+{
+"type": "LINK",
+"title": "10 People You Won\x27t Believe Actually Exist",
+"description": "10 People You Won\x27t Believe Actually Exist ► Subscribe: https:\x2F\x2Fgoo.gl\x2FGmtyPv Unveiled channel: ► Subscribe: https:\x2F\x2Fgoo.gl\x2FGmtyPv Animation from: https:\x2F\x2Fwww.youtube.com\x2Fuser\x2FD0MICS This world is not free of wonders. That goes the same to human beings living around us. Everything in our world is special and unique - diversity is everywhere. But there are people who stand out more than other people. Today we will talk about 10 people you won’t believe actually exist. 10. Yu Zhenhuan – This man comes from the northern Chinese province of Liaoning. He has hair that covers 96 per cent of his body because of a rare hormone imbalance. This makes Yu the hairiest man on the Earth. Yu’s excess body hair is all over his body except for two places\x3B his palms, and soles of his feet. http:\x2F\x2Fwww.likesharetweet.com\x2Finspiring\x2F8-men-you-wont-believe-actually-exist2\x2F 9. Helmut Strebl - This 49-year-old Austrian bodybuilder is so ripped he regularly goes viral across social media and is regar...",
+"url": "http://youtu.be/yhpTinbzhpg?em",
+"image_url": "http://i.ytimg.com/vi/yhpTinbzhpg/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3mEnNoE4bQ8GHfXMjRVQyjyzB4nPA&feature=em-subs_digest-vrecs"
+},
+{
+"type": "LINK",
+"title": "Top 10 Most Annoying Dark Souls Enemies",
+"description": "Top 10 Most Annoying Dark Souls Enemies \x2F\x2F Subscribe: http:\x2F\x2Fgoo.gl\x2FQ2kKrD \x2F\x2F TIMESTAMPS BELOW ----------------------- CELEBRATE 10 YEARS OF WATCHMOJO WITH OUR SPECIAL EDITION MAGAZINE, LINKS BELOW! Awww not THESE guys again! These are the unspeakable horrors and adversaries that you encounter in Dark Souls 1, 2 and 3, as well as Demons Souls and Bloodborne that are the most aggravating, infuriating, annoying, rage inducing, difficult or just plain HARD. Welcome to http:\x2F\x2FWatchmojo.com\x2F and today we’re counting down our picks for the Top 10 Most Annoying Enemies in the Dark Souls Series! 00:37 #10. Great Bow Silver Knight 01:25 #9. Ironclad Soldier aka Turtle Knight 02:08 #8. Brainsucker 02:53 #7. Serpent Men 03:40 #6. Great (Enemy) Crab 04:26 #5. Jailer 05:26 #4. Poison Statue Cluster 06:10 #3, #2 \x26 #1: ???? Special thanks to our user “Laballs” for suggesting the topic using our interactive suggestion tool at http:\x2F\x2Fwatchmojo.com\x2Fsuggest Our Magazine!! Learn...",
+"url": "http://youtu.be/kpAigzGfV-g?em",
+"image_url": "http://i.ytimg.com/vi/kpAigzGfV-g/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3mt8hUhUlReT9EmvZAF5GCiTSC50w&feature=em-subs_digest-vrecs"
+}
+]
+}
+],
+"updates": {
+"snippets": [
+{
+"icon": "VIDEO_PLAY",
+"message": "Fantasy Football 2017 - 500th Episode! Week 15 Matchups + Greatest Moments - Ep. #500"
+},
+{
+"icon": "VIDEO_PLAY",
+"message": "Fantasy Football 2017 - 500th Episode! Week 15 Matchups + Greatest Moments - Ep. #500"
+},
+{
+"icon": "VIDEO_PLAY",
+"message": "10 People You Won\x27t Believe Actually Exist"
+},
+{
+"icon": "VIDEO_PLAY",
+"message": "Top 10 Most Annoying Dark Souls Enemies"
+}
+]
+}
+}
+</script>
+<table class="inner-container-width" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="section-title-font" style="font-family:Roboto,sans-serif; font-size:16px; line-height:25px; letter-spacing:0px; color:#222222; -webkit-text-size-adjust:none;">
+Subscriptions
+</td>
+</tr>
+</table>
+<table class="small-section-padding-height" height="16" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="small-section-padding-height" height="16"></td>
+</tr>
+</table>
+<table class="video-spotlight-width" width="600" align="center" cellspacing="0" cellpadding="0" border="0">
+<!--[if gte mso 9]>
+<tr>
+<td class="video-spotlight-size" width="516" height="290" align="center">
+<a href="http://www.youtube.com/watch?v=4f1Z8Ay1h_E&feature=em-subs_digest" style="text-decoration:none; display:block;" class="nonplayable">
+<img class="video-spotlight-size" src="http://i.ytimg.com/vi/4f1Z8Ay1h_E/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3kPqDbw3JXTlmK8Mfh6j4N8BjXKEg&feature=em-subs_digest" width="516" height="290" border="0">
+</a>
+</td>
+</tr>
+<![endif]-->
+<!--[if !mso]><!-- -->
+<tr style="mso-hide:all">
+<td colspan="3">
+<a href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/watch?v%3D4f1Z8Ay1h_E%26feature%3Dem-subs_digest&amp;g=AIR_RmGw6veuVPO6TmoudOgTR3ZJnz44dCDtuoLsXR0Us8AXZpYONTVBv5IHOJVsnQti4yPycKTI-SKK6Ho_tih8Yxt6T4LyUnrdNpQTXKIDo-1hhxzI1qy2-CJZ4BZiX1yo3unsUYWuLw7er3qnuzCTqhyCvYBgDRDi1wkbI12j_Q-ItPbMV55HVKwIOtRw3morCcY" style="text-decoration:none; display:block;" class="nonplayable">
+<table aria-label="Fantasy Football 2017 - 500th Episode! Week 15 Matchups + Greatest ..." class="video-spotlight-width" width="600" align="center" background="http://i.ytimg.com/vi/4f1Z8Ay1h_E/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&amp;rs=AMzJL3kPqDbw3JXTlmK8Mfh6j4N8BjXKEg&amp;feature=em-subs_digest" style="background-repeat:no-repeat; background-size:100% 100%;mso-hide:all" height="338" cellspacing="0" cellpadding="0" border="0">
+<tr style="mso-hide:all"><td aria-label="Fantasy Football 2017 - 500th Episode! Week 15 Matchups + Greatest ...">
+<img src="https://www.gstatic.com/youtube/img/email/transparent_pixel.png" alt="Fantasy Football 2017 - 500th Episode! Week 15 Matchups + Greatest ..." width="600" style="height: 300px;">
+</td></tr>
+<tr aria-label="Fantasy Football 2017 - 500th Episode! Week 15 Matchups + Greatest ..." scope="row" style="mso-hide:all">
+<td aria-label="Fantasy Football 2017 - 500th Episode! Week 15 Matchups + Greatest ..." class="footer-font" style="color:#fff; text-align:right; font-size: 12px;" valign="bottom" width="600">
+<div style="margin-bottom:8px; margin-right:8px; border-radius:2px; background-color: #212121; padding:2px 4px; display:inline-block;">1:14:59</div>
+</td>
+</tr>
+</table>
+</a>
+</td>
+</tr>
+<!--<![endif]-->
+<tr><td>
+<table class="large-section-padding-height" height="16" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="large-section-padding-height" height="16"></td>
+</tr>
+</table>
+</td></tr>
+<tr>
+<td>
+<table class="content-container-width" width="560" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<tr>
+<td class="avatar-size" width="32" style="vertical-align:top;">
+<a href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/channel/UC-No2ITxJsNt50oJQ3fLmUA?feature%3Dem-subs_digest&amp;g=AIR_RmE8tfnk3HDTNsWogcB80olz9fZ9WlhA8wUFX9CX_xHrRRuAP-q5V5TX1TrZm_97iCG1ra-DVaQbPU8MFueKRZ1nOzEnsItk1JcE4n5Yh6XxdVSAtH9sLJYx4j23JWjXP11feHCbjhSm0ShpRVwiIjXqFk6YRHVdWbG-_9t-d8E6KhrBou8iT1ljluMkNE3i7aBhpTCpZb55L44">
+<img class="avatar-size" src="https://lh3.googleusercontent.com/-efowdyDUsnM/AAAAAAAAAAI/AAAAAAAAAAA/BQEp7-R4OYU/s50-mo/photo.jpg" width="32" style="display:block; border-radius: 50%;" border="0">
+</a>
+</td>
+<td class="small-pad-width" width="16"></td>
+<td>
+<table class="content-container-width" width="540" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<td valign="center">
+<table class="content-container-width" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<tr>
+<td style="padding-bottom:4px">
+<a href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/watch?v%3D4f1Z8Ay1h_E%26feature%3Dem-subs_digest&amp;g=AIR_RmGw6veuVPO6TmoudOgTR3ZJnz44dCDtuoLsXR0Us8AXZpYONTVBv5IHOJVsnQti4yPycKTI-SKK6Ho_tih8Yxt6T4LyUnrdNpQTXKIDo-1hhxzI1qy2-CJZ4BZiX1yo3unsUYWuLw7er3qnuzCTqhyCvYBgDRDi1wkbI12j_Q-ItPbMV55HVKwIOtRw3morCcY" style="text-decoration:none;">
+<span class="video-title-font-class" valign="center" style="font-family:Roboto,sans-serif; font-size:14px; color:#212121; line-height:20px; -webkit-text-size-adjust:none;">
+Fantasy Football 2017 - 500th Episode! Week 15 Matchups + Greatest ...
+</span>
+</a>
+</td>
+</tr>
+<tr>
+<td>
+<a class="video-link-font-class" href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/channel/UC-No2ITxJsNt50oJQ3fLmUA?feature%3Dem-subs_digest&amp;g=AIR_RmE8tfnk3HDTNsWogcB80olz9fZ9WlhA8wUFX9CX_xHrRRuAP-q5V5TX1TrZm_97iCG1ra-DVaQbPU8MFueKRZ1nOzEnsItk1JcE4n5Yh6XxdVSAtH9sLJYx4j23JWjXP11feHCbjhSm0ShpRVwiIjXqFk6YRHVdWbG-_9t-d8E6KhrBou8iT1ljluMkNE3i7aBhpTCpZb55L44" style="font-family:Roboto,sans-serif;font-size:12px; color: #757575;; line-height:16px; letter-spacing:0px; -webkit-text-size-adjust:none; text-decoration:none;">
+The Fantasy Footballers
+</a>
+</td>
+</tr>
+</table>
+</td>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td>
+<table class="large-section-padding-height" height="16" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="large-section-padding-height" height="16"></td>
+</tr>
+</table>
+</td></tr>
+</table>
+
+<hr style="display: block;height: 1px;border: 0;border-top: 1px solid #eaeaea;padding: 0;"></hr>
+<table class="inner-container-width" width="600" cellspacing="0" cellpadding="0" border="0">
+<tbody>
+<tr><td>
+<table class="content-container-padding-height" height="16" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="content-container-padding-height" height="16"></td>
+</tr>
+</table>
+</td></tr>
+<tr>
+<td>
+<table class="inner-container-width" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="section-title-font" style="font-family:Roboto,sans-serif; font-size:16px; line-height:25px; letter-spacing:0px; color:#222222; -webkit-text-size-adjust:none;">
+Recommended
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td>
+<table class="content-container-padding-height" height="16" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="content-container-padding-height" height="16"></td>
+</tr>
+</table>
+</td></tr>
+<tr><td>
+<table class="inner-container-width" width="600" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="inner-container-width" width="600">
+<table class="inner-container-width" width="600" cellspacing="0" cellpadding="0" border="0">
+<tr><td class="inner-container-width" width="600">
+<table align="left" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table class="video-spotlight-width" width="290" cellspacing="0" cellpadding="0" border="0">
+<!--[if gte mso 9]>
+<tr>
+<td class="video-spotlight-size" width="290" align="center">
+<a href="http://www.youtube.com/watch?v=4f1Z8Ay1h_E&feature=em-subs_digest-vrecs" style="text-decoration:none; display:block;" class="nonplayable">
+<img class="video-spotlight-size" src="http://i.ytimg.com/vi/4f1Z8Ay1h_E/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3kPqDbw3JXTlmK8Mfh6j4N8BjXKEg&feature=em-subs_digest-vrecs" width="290" border="0">
+</a>
+</td>
+</tr>
+<![endif]-->
+<!--[if !mso]><!-- -->
+<tr style="mso-hide:all">
+<td class="video-2col-outer-container-size" width="290">
+<a href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/watch?v%3D4f1Z8Ay1h_E%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmHSOjnmmBap7vt3a1xrCeTTTov447ZzWm3DPv7gUvCsTWp8NJN7Uylem22eY0sZSrqhxMSC9OvcOO8ZANZNmx5tkEr6E0fHhsNqLgjFlD-P_RTY8hX9SYrZJRapViSPk4slRnqpDiIC-tK0lPp5Mm7sxIJtEcEUT6P-tUSNFRUAyJcjeaT6FzfCrkz5LHjBKMbr4fhkxCs" style="text-decoration:none;" target="_blank" ; class="nonplayable">
+<table aria-label="Fantasy Football 2017 - 500th Episode! Week 15 Matchups... link" class="video-spotlight-width" width="290" align="center" background="http://i.ytimg.com/vi/4f1Z8Ay1h_E/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&amp;rs=AMzJL3kPqDbw3JXTlmK8Mfh6j4N8BjXKEg&amp;feature=em-subs_digest-vrecs" style="background-repeat:no-repeat; background-size:100% 100%;" cellspacing="0" cellpadding="0" border="0" height="162">
+<tr style="mso-hide:all"><td aria-label="Fantasy Football 2017 - 500th Episode! Week 15 Matchups..." class="video-2col-thumb-size" width="290">
+<img src="https://www.gstatic.com/youtube/img/email/transparent_pixel.png" alt="Fantasy Football 2017 - 500th Episode! Week 15 Matchups..." class="video-2col-thumb-size" width="290" height="132">
+</td></tr>
+<tr style="mso-hide:all">
+<td class="footer-font" style="color:#fff; text-align:right; font-size: 12px;" valign="bottom" width="290">
+<div style="margin-bottom:8px; margin-right:8px; border-radius:2px; background-color: #212121; padding:2px 4px; display:inline-block;">1:14:59</div>
+</td>
+</tr>
+</table>
+</a>
+</td>
+</tr>
+<!--<![endif]-->
+<tr><td height="16"></td></tr>
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="270" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table width="270" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="270" valign="top">
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="250" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="250" valign="top">
+<table class="content-container-width" width="250" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<td valign="center">
+<table class="content-container-width" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<tr><td style="padding-bottom:4px">
+<a href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/watch?v%3D4f1Z8Ay1h_E%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmHSOjnmmBap7vt3a1xrCeTTTov447ZzWm3DPv7gUvCsTWp8NJN7Uylem22eY0sZSrqhxMSC9OvcOO8ZANZNmx5tkEr6E0fHhsNqLgjFlD-P_RTY8hX9SYrZJRapViSPk4slRnqpDiIC-tK0lPp5Mm7sxIJtEcEUT6P-tUSNFRUAyJcjeaT6FzfCrkz5LHjBKMbr4fhkxCs" style="text-decoration:none;">
+<span class="video-title-font-class" valign="center" style="font-family:Roboto,sans-serif; font-size:14px; color:#212121; line-height:20px; -webkit-text-size-adjust:none;">
+Fantasy Football 2017 - 500th Episode! Week 15 Matchups...
+</span>
+</a>
+</td></tr>
+<tr><td>
+<a class="video-link-font-class" href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/channel/UC-No2ITxJsNt50oJQ3fLmUA?feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmH32eqBFvFt9OLVhLCxlxAnQ0x_3Dksgp5ctu38TWOXhZ7IlxrkK9QAVy8hLwgYCeTmoS4ybXxuBFjS0N6g8hLCb2gi63rrnvGxMM2rJz6PDTXz5gHHF34Tq04i6kZYwPZqAJUB5eLP6xpy2_wB7nAppVtXtF9KOmQCMd8zeGoYswHPykX6hXGgprCsJEQxylvJHmUSyYPN0-qpQvoQ-DoF" style="font-family:Roboto,sans-serif;font-size:12px; color: #757575;; line-height:16px; letter-spacing:0px; -webkit-text-size-adjust:none; text-decoration:none;">
+The Fantasy Footballers
+</a>
+</td></tr>
+</table>
+</td>
+</table>
+</td>
+</tr>
+<tr>
+<td class="video-2col-width" width="250" valign="top">
+<div class="meta-data-font" style="font-family:Roboto,sans-serif; color:#999999; font-size:12px; letter-spacing:0px; line-height:20px; -webkit-text-size-adjust:none;">
+23,921 views
+ • 
+2 days ago
+</div>
+</td>
+</tr>
+<tr><td height="16"></td></tr>
+</table>
+</td>
+</tr>
+</td>
+</tr>
+<tr><td height="16"></td>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table align="right" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table class="video-spotlight-width" width="290" cellspacing="0" cellpadding="0" border="0">
+<!--[if gte mso 9]>
+<tr>
+<td class="video-spotlight-size" width="290" align="center">
+<a href="http://www.youtube.com/watch?v=yhpTinbzhpg&feature=em-subs_digest-vrecs" style="text-decoration:none; display:block;" class="nonplayable">
+<img class="video-spotlight-size" src="http://i.ytimg.com/vi/yhpTinbzhpg/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3mEnNoE4bQ8GHfXMjRVQyjyzB4nPA&feature=em-subs_digest-vrecs" width="290" border="0">
+</a>
+</td>
+</tr>
+<![endif]-->
+<!--[if !mso]><!-- -->
+<tr style="mso-hide:all">
+<td class="video-2col-outer-container-size" width="290">
+<a href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/watch?v%3DyhpTinbzhpg%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmEXfcxAWHSlpLAIvgCAg653pA-TDr2uT_tTn3ywY-h2srk2af4R2XT22vmP-nZXR3G5KtZY4JEZtT2LS_Lvl6CS94dS3uk7FbHzoRlY50h3tff4yKwd1evH2UhRcWjxi4275GZwTehfM_l9QyfJGEjzMtV4XOEL0h0XfZGALkTTol4ryP51Grt7VDRSYWzqWMVoB-OlakQ" style="text-decoration:none;" target="_blank" ; class="nonplayable">
+<table aria-label="10 People You Won&#39;t Believe Actually Exist link" class="video-spotlight-width" width="290" align="center" background="http://i.ytimg.com/vi/yhpTinbzhpg/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&amp;rs=AMzJL3mEnNoE4bQ8GHfXMjRVQyjyzB4nPA&amp;feature=em-subs_digest-vrecs" style="background-repeat:no-repeat; background-size:100% 100%;" cellspacing="0" cellpadding="0" border="0" height="162">
+<tr style="mso-hide:all"><td aria-label="10 People You Won&#39;t Believe Actually Exist" class="video-2col-thumb-size" width="290">
+<img src="https://www.gstatic.com/youtube/img/email/transparent_pixel.png" alt="10 People You Won&#39;t Believe Actually Exist" class="video-2col-thumb-size" width="290" height="132">
+</td></tr>
+<tr style="mso-hide:all">
+<td class="footer-font" style="color:#fff; text-align:right; font-size: 12px;" valign="bottom" width="290">
+<div style="margin-bottom:8px; margin-right:8px; border-radius:2px; background-color: #212121; padding:2px 4px; display:inline-block;">10:21</div>
+</td>
+</tr>
+</table>
+</a>
+</td>
+</tr>
+<!--<![endif]-->
+<tr><td height="16"></td></tr>
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="270" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table width="270" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="270" valign="top">
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="250" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="250" valign="top">
+<table class="content-container-width" width="250" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<td valign="center">
+<table class="content-container-width" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<tr><td style="padding-bottom:4px">
+<a href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/watch?v%3DyhpTinbzhpg%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmEXfcxAWHSlpLAIvgCAg653pA-TDr2uT_tTn3ywY-h2srk2af4R2XT22vmP-nZXR3G5KtZY4JEZtT2LS_Lvl6CS94dS3uk7FbHzoRlY50h3tff4yKwd1evH2UhRcWjxi4275GZwTehfM_l9QyfJGEjzMtV4XOEL0h0XfZGALkTTol4ryP51Grt7VDRSYWzqWMVoB-OlakQ" style="text-decoration:none;">
+<span class="video-title-font-class" valign="center" style="font-family:Roboto,sans-serif; font-size:14px; color:#212121; line-height:20px; -webkit-text-size-adjust:none;">
+10 People You Won&#39;t Believe Actually Exist
+</span>
+</a>
+</td></tr>
+<tr><td>
+<a class="video-link-font-class" href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/channel/UCV-oV8yecSfMZnzdKAhO_4A?feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmE3fDXThqkGFBXGu2ZEL-eu7alxm61eBiY-7hnM576zC3zMEOzDF1UBxBHL_l9BezW46-Acg8mWl09LTdeMcEx21ZT0mHdd6pZisTV8usT2b0_LEYksxhBZvhoxGyBXtjfqr0M8R119FSi4jAhV0b8ArBrw9muQzG6TjrtEhywe_DFAjsf3MjH9LSi6naq7Vm-tfGwTQEigLQcZcp0o3ftd" style="font-family:Roboto,sans-serif;font-size:12px; color: #757575;; line-height:16px; letter-spacing:0px; -webkit-text-size-adjust:none; text-decoration:none;">
+Interesting Facts
+</a>
+</td></tr>
+</table>
+</td>
+</table>
+</td>
+</tr>
+<tr>
+<td class="video-2col-width" width="250" valign="top">
+<div class="meta-data-font" style="font-family:Roboto,sans-serif; color:#999999; font-size:12px; letter-spacing:0px; line-height:20px; -webkit-text-size-adjust:none;">
+3,766,436 views
+ • 
+5 days ago
+</div>
+</td>
+</tr>
+<tr><td height="16"></td></tr>
+</table>
+</td>
+</tr>
+</td>
+</tr>
+<tr><td height="16"></td>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td></tr>
+<tr><td class="inner-container-width" width="600">
+<table align="left" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table class="video-spotlight-width" width="290" cellspacing="0" cellpadding="0" border="0">
+<!--[if gte mso 9]>
+<tr>
+<td class="video-spotlight-size" width="290" align="center">
+<a href="http://www.youtube.com/watch?v=kpAigzGfV-g&feature=em-subs_digest-vrecs" style="text-decoration:none; display:block;" class="nonplayable">
+<img class="video-spotlight-size" src="http://i.ytimg.com/vi/kpAigzGfV-g/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3mt8hUhUlReT9EmvZAF5GCiTSC50w&feature=em-subs_digest-vrecs" width="290" border="0">
+</a>
+</td>
+</tr>
+<![endif]-->
+<!--[if !mso]><!-- -->
+<tr style="mso-hide:all">
+<td class="video-2col-outer-container-size" width="290">
+<a href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/watch?v%3DkpAigzGfV-g%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmGW9v3das8A0osdIK4LV2HdbH7IJHttbb_0OJFVJ72rhrSz6LihrHeHtuUhcK_Sb92_gGl9QprzBYnfvMCGijrmq99pTqKI603ypUqPWSucPe_mM6OtshlBH9XxiH38FZlaGeMcF9OYY0ODnBBP0wtw1ZGmqOP2tC-w4bv8YvhWWuEsmIeeAl5DwBy4WVPKfuVqAJVv9o4" style="text-decoration:none;" target="_blank" ; class="nonplayable">
+<table aria-label="Top 10 Most Annoying Dark Souls Enemies link" class="video-spotlight-width" width="290" align="center" background="http://i.ytimg.com/vi/kpAigzGfV-g/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&amp;rs=AMzJL3mt8hUhUlReT9EmvZAF5GCiTSC50w&amp;feature=em-subs_digest-vrecs" style="background-repeat:no-repeat; background-size:100% 100%;" cellspacing="0" cellpadding="0" border="0" height="162">
+<tr style="mso-hide:all"><td aria-label="Top 10 Most Annoying Dark Souls Enemies" class="video-2col-thumb-size" width="290">
+<img src="https://www.gstatic.com/youtube/img/email/transparent_pixel.png" alt="Top 10 Most Annoying Dark Souls Enemies" class="video-2col-thumb-size" width="290" height="132">
+</td></tr>
+<tr style="mso-hide:all">
+<td class="footer-font" style="color:#fff; text-align:right; font-size: 12px;" valign="bottom" width="290">
+<div style="margin-bottom:8px; margin-right:8px; border-radius:2px; background-color: #212121; padding:2px 4px; display:inline-block;">9:01</div>
+</td>
+</tr>
+</table>
+</a>
+</td>
+</tr>
+<!--<![endif]-->
+<tr><td height="16"></td></tr>
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="270" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table width="270" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="270" valign="top">
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="250" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="250" valign="top">
+<table class="content-container-width" width="250" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<td valign="center">
+<table class="content-container-width" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<tr><td style="padding-bottom:4px">
+<a href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/watch?v%3DkpAigzGfV-g%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmGW9v3das8A0osdIK4LV2HdbH7IJHttbb_0OJFVJ72rhrSz6LihrHeHtuUhcK_Sb92_gGl9QprzBYnfvMCGijrmq99pTqKI603ypUqPWSucPe_mM6OtshlBH9XxiH38FZlaGeMcF9OYY0ODnBBP0wtw1ZGmqOP2tC-w4bv8YvhWWuEsmIeeAl5DwBy4WVPKfuVqAJVv9o4" style="text-decoration:none;">
+<span class="video-title-font-class" valign="center" style="font-family:Roboto,sans-serif; font-size:14px; color:#212121; line-height:20px; -webkit-text-size-adjust:none;">
+Top 10 Most Annoying Dark Souls Enemies
+</span>
+</a>
+</td></tr>
+<tr><td>
+<a class="video-link-font-class" href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/user/WatchMojo?feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmE5gD6jcE5wrq6UfSdLXYRBO4VO43Si170StmzHZgkFw9BUuG1SGLw_Q77hq8FEN_fdwftpWiyWRK3N28nQpGxbpsfZd34Ko2DUhTZZFht_gEMi6Y2for1RHBTtzVnlwnMOOzmcj5zqqtAB30Z9IoKG2tnZQnclxlJakCBhpW5s9AwPG52CZUHPzfP3UtU" style="font-family:Roboto,sans-serif;font-size:12px; color: #757575;; line-height:16px; letter-spacing:0px; -webkit-text-size-adjust:none; text-decoration:none;">
+WatchMojo.com
+</a>
+</td></tr>
+</table>
+</td>
+</table>
+</td>
+</tr>
+<tr>
+<td class="video-2col-width" width="250" valign="top">
+<div class="meta-data-font" style="font-family:Roboto,sans-serif; color:#999999; font-size:12px; letter-spacing:0px; line-height:20px; -webkit-text-size-adjust:none;">
+510,011 views
+ • 
+8 months ago
+</div>
+</td>
+</tr>
+<tr><td height="16"></td></tr>
+</table>
+</td>
+</tr>
+</td>
+</tr>
+<tr><td height="16"></td>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table align="right" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table class="video-spotlight-width" width="290" cellspacing="0" cellpadding="0" border="0">
+<!--[if gte mso 9]>
+<tr>
+<td class="video-spotlight-size" width="290" align="center">
+<a href="http://www.youtube.com/watch?v=rEz16K3BNuQ&feature=em-subs_digest-vrecs" style="text-decoration:none; display:block;" class="nonplayable">
+<img class="video-spotlight-size" src="http://i.ytimg.com/vi/rEz16K3BNuQ/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3kyp6ZjG5ZbprvR7wpwqxOJnILfFw&feature=em-subs_digest-vrecs" width="290" border="0">
+</a>
+</td>
+</tr>
+<![endif]-->
+<!--[if !mso]><!-- -->
+<tr style="mso-hide:all">
+<td class="video-2col-outer-container-size" width="290">
+<a href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/watch?v%3DrEz16K3BNuQ%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmHAQGduxiKB5XFxBymnPPV0BDdM4XhFRpq_MS_1kEhSBMsYmcCNTfBbMhjGWwZSqfVNHBMM_hKUiO244hYifYqwG6AqN9GYB-oW54PLusjHcjDfCVE-sB-F47NhpE7d_-MRgaFg9_yK0_-rTF39jGc36BLgBVGjkFxbp_DyluKvx7x7MZsxvg0dd05kHLgffFFWgvEhriY" style="text-decoration:none;" target="_blank" ; class="nonplayable">
+<table aria-label="Top 10 Funniest Family Feud Moments of 2017 link" class="video-spotlight-width" width="290" align="center" background="http://i.ytimg.com/vi/rEz16K3BNuQ/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&amp;rs=AMzJL3kyp6ZjG5ZbprvR7wpwqxOJnILfFw&amp;feature=em-subs_digest-vrecs" style="background-repeat:no-repeat; background-size:100% 100%;" cellspacing="0" cellpadding="0" border="0" height="162">
+<tr style="mso-hide:all"><td aria-label="Top 10 Funniest Family Feud Moments of 2017" class="video-2col-thumb-size" width="290">
+<img src="https://www.gstatic.com/youtube/img/email/transparent_pixel.png" alt="Top 10 Funniest Family Feud Moments of 2017" class="video-2col-thumb-size" width="290" height="132">
+</td></tr>
+<tr style="mso-hide:all">
+<td class="footer-font" style="color:#fff; text-align:right; font-size: 12px;" valign="bottom" width="290">
+<div style="margin-bottom:8px; margin-right:8px; border-radius:2px; background-color: #212121; padding:2px 4px; display:inline-block;">12:59</div>
+</td>
+</tr>
+</table>
+</a>
+</td>
+</tr>
+<!--<![endif]-->
+<tr><td height="16"></td></tr>
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="270" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table width="270" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="270" valign="top">
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="250" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="250" valign="top">
+<table class="content-container-width" width="250" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<td valign="center">
+<table class="content-container-width" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<tr><td style="padding-bottom:4px">
+<a href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/watch?v%3DrEz16K3BNuQ%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmHAQGduxiKB5XFxBymnPPV0BDdM4XhFRpq_MS_1kEhSBMsYmcCNTfBbMhjGWwZSqfVNHBMM_hKUiO244hYifYqwG6AqN9GYB-oW54PLusjHcjDfCVE-sB-F47NhpE7d_-MRgaFg9_yK0_-rTF39jGc36BLgBVGjkFxbp_DyluKvx7x7MZsxvg0dd05kHLgffFFWgvEhriY" style="text-decoration:none;">
+<span class="video-title-font-class" valign="center" style="font-family:Roboto,sans-serif; font-size:14px; color:#212121; line-height:20px; -webkit-text-size-adjust:none;">
+Top 10 Funniest Family Feud Moments of 2017
+</span>
+</a>
+</td></tr>
+<tr><td>
+<a class="video-link-font-class" href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/channel/UCRtQDkL_op8jPzM2K9aT0Vw?feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmEqrgG7gezJEECLoJfdZ_gH1xTXQIOaAZ6DtaYV12yvzam-bR6XaB6ZTLlmnb4M2Ro7IdOY8qJXsvhfSJdNri-Gc8EWNLYuDnwUrBRgwu0Kn3DMTovRhUWFbVE2WSwWXovAaKZvPqTbyVXnaa41wLve0Z_fOM7J_1pQw961YnT8nKqNBfnpYu9lvwg_bxci8QCwEYBSOIT2rwzRtuM22Jfd" style="font-family:Roboto,sans-serif;font-size:12px; color: #757575;; line-height:16px; letter-spacing:0px; -webkit-text-size-adjust:none; text-decoration:none;">
+Top Ten Daily
+</a>
+</td></tr>
+</table>
+</td>
+</table>
+</td>
+</tr>
+<tr>
+<td class="video-2col-width" width="250" valign="top">
+<div class="meta-data-font" style="font-family:Roboto,sans-serif; color:#999999; font-size:12px; letter-spacing:0px; line-height:20px; -webkit-text-size-adjust:none;">
+2,517,363 views
+ • 
+4 months ago
+</div>
+</td>
+</tr>
+<tr><td height="16"></td></tr>
+</table>
+</td>
+</tr>
+</td>
+</tr>
+<tr><td height="16"></td>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td></tr>
+<tr><td class="inner-container-width" width="600">
+<table align="left" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table class="video-spotlight-width" width="290" cellspacing="0" cellpadding="0" border="0">
+<!--[if gte mso 9]>
+<tr>
+<td class="video-spotlight-size" width="290" align="center">
+<a href="http://www.youtube.com/watch?v=Sh4rC6KxYpE&feature=em-subs_digest-vrecs" style="text-decoration:none; display:block;" class="nonplayable">
+<img class="video-spotlight-size" src="http://i.ytimg.com/vi/Sh4rC6KxYpE/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3k1EDG73SYbAuFTGCclOHGPyAfTMw&feature=em-subs_digest-vrecs" width="290" border="0">
+</a>
+</td>
+</tr>
+<![endif]-->
+<!--[if !mso]><!-- -->
+<tr style="mso-hide:all">
+<td class="video-2col-outer-container-size" width="290">
+<a href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/watch?v%3DSh4rC6KxYpE%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmFnVLRMcfPi1RdcXNLRuPDnHTGdJ7JczbdEgnqPPJMuTbarW8AZnZa6n0L2snmXBt-SLQdzNBBpNnjzD0oG3DGY4X1nbuYWZr5S4cbXKDDUfC7MMsL9op8apuMVfFjg4syh0vwWMc7QoBBmpre__A1jhF6A6qv4auZrgZCeQHOjHpYKjPcPV6JTvrGhDZuhFYYitrmIuMY" style="text-decoration:none;" target="_blank" ; class="nonplayable">
+<table aria-label="Funniest TV Game Show Answers Compilation Ever link" class="video-spotlight-width" width="290" align="center" background="http://i.ytimg.com/vi/Sh4rC6KxYpE/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&amp;rs=AMzJL3k1EDG73SYbAuFTGCclOHGPyAfTMw&amp;feature=em-subs_digest-vrecs" style="background-repeat:no-repeat; background-size:100% 100%;" cellspacing="0" cellpadding="0" border="0" height="162">
+<tr style="mso-hide:all"><td aria-label="Funniest TV Game Show Answers Compilation Ever" class="video-2col-thumb-size" width="290">
+<img src="https://www.gstatic.com/youtube/img/email/transparent_pixel.png" alt="Funniest TV Game Show Answers Compilation Ever" class="video-2col-thumb-size" width="290" height="132">
+</td></tr>
+<tr style="mso-hide:all">
+<td class="footer-font" style="color:#fff; text-align:right; font-size: 12px;" valign="bottom" width="290">
+<div style="margin-bottom:8px; margin-right:8px; border-radius:2px; background-color: #212121; padding:2px 4px; display:inline-block;">14:26</div>
+</td>
+</tr>
+</table>
+</a>
+</td>
+</tr>
+<!--<![endif]-->
+<tr><td height="16"></td></tr>
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="270" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table width="270" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="270" valign="top">
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="250" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="250" valign="top">
+<table class="content-container-width" width="250" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<td valign="center">
+<table class="content-container-width" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<tr><td style="padding-bottom:4px">
+<a href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/watch?v%3DSh4rC6KxYpE%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmFnVLRMcfPi1RdcXNLRuPDnHTGdJ7JczbdEgnqPPJMuTbarW8AZnZa6n0L2snmXBt-SLQdzNBBpNnjzD0oG3DGY4X1nbuYWZr5S4cbXKDDUfC7MMsL9op8apuMVfFjg4syh0vwWMc7QoBBmpre__A1jhF6A6qv4auZrgZCeQHOjHpYKjPcPV6JTvrGhDZuhFYYitrmIuMY" style="text-decoration:none;">
+<span class="video-title-font-class" valign="center" style="font-family:Roboto,sans-serif; font-size:14px; color:#212121; line-height:20px; -webkit-text-size-adjust:none;">
+Funniest TV Game Show Answers Compilation Ever
+</span>
+</a>
+</td></tr>
+<tr><td>
+<a class="video-link-font-class" href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/user/DJBobbyFX?feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmGJgxp7isc2-k4CgijomKJfqt8f9QucIBCObgg3AtdDvmW5I6PJ5rgpSYWJM7dsiR04CwNWHQ30M99-IlTw5g1ORZKZa8A-JvVA5bmEwSayQ3mPXakibikwwO4stJ6FuE05KauSqN6cfgPrqY7mN7zZT2KQOZhIOsg3hMyKJF3Xsqa92CrWg4p8ZA9DBW0" style="font-family:Roboto,sans-serif;font-size:12px; color: #757575;; line-height:16px; letter-spacing:0px; -webkit-text-size-adjust:none; text-decoration:none;">
+DJBobbyFX
+</a>
+</td></tr>
+</table>
+</td>
+</table>
+</td>
+</tr>
+<tr>
+<td class="video-2col-width" width="250" valign="top">
+<div class="meta-data-font" style="font-family:Roboto,sans-serif; color:#999999; font-size:12px; letter-spacing:0px; line-height:20px; -webkit-text-size-adjust:none;">
+564,782 views
+ • 
+over a year ago
+</div>
+</td>
+</tr>
+<tr><td height="16"></td></tr>
+</table>
+</td>
+</tr>
+</td>
+</tr>
+<tr><td height="16"></td>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table align="right" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table class="video-spotlight-width" width="290" cellspacing="0" cellpadding="0" border="0">
+<!--[if gte mso 9]>
+<tr>
+<td class="video-spotlight-size" width="290" align="center">
+<a href="http://www.youtube.com/watch?v=Fj8G9dGuNkU&feature=em-subs_digest-vrecs" style="text-decoration:none; display:block;" class="nonplayable">
+<img class="video-spotlight-size" src="http://i.ytimg.com/vi/Fj8G9dGuNkU/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3maHEEbmc7YaKhs4nEw_aq-k1ldmw&feature=em-subs_digest-vrecs" width="290" border="0">
+</a>
+</td>
+</tr>
+<![endif]-->
+<!--[if !mso]><!-- -->
+<tr style="mso-hide:all">
+<td class="video-2col-outer-container-size" width="290">
+<a href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/watch?v%3DFj8G9dGuNkU%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmFOxdiu-EMm_mCBgt6oi3jngaMjBKIwucHtOtWEqz3w3_O41uR7zg2x5cNK40C75YMwDCmKpK9Y6S7fSc0HTXeuGrehdNsPHKQeIuoZHBSqJkV9RSOml1INxwkkcB0Yr8qGn8uDK0lIeHTOm3bI9tlvVvod2RAp4nFugv5l7V_yyG1tdNLHdQYXp-Qbgv2X-Y5U6qqNlw8" style="text-decoration:none;" target="_blank" ; class="nonplayable">
+<table aria-label="Greatest Trick Plays in Football History link" class="video-spotlight-width" width="290" align="center" background="http://i.ytimg.com/vi/Fj8G9dGuNkU/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&amp;rs=AMzJL3maHEEbmc7YaKhs4nEw_aq-k1ldmw&amp;feature=em-subs_digest-vrecs" style="background-repeat:no-repeat; background-size:100% 100%;" cellspacing="0" cellpadding="0" border="0" height="162">
+<tr style="mso-hide:all"><td aria-label="Greatest Trick Plays in Football History" class="video-2col-thumb-size" width="290">
+<img src="https://www.gstatic.com/youtube/img/email/transparent_pixel.png" alt="Greatest Trick Plays in Football History" class="video-2col-thumb-size" width="290" height="132">
+</td></tr>
+<tr style="mso-hide:all">
+<td class="footer-font" style="color:#fff; text-align:right; font-size: 12px;" valign="bottom" width="290">
+<div style="margin-bottom:8px; margin-right:8px; border-radius:2px; background-color: #212121; padding:2px 4px; display:inline-block;">13:39</div>
+</td>
+</tr>
+</table>
+</a>
+</td>
+</tr>
+<!--<![endif]-->
+<tr><td height="16"></td></tr>
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="270" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table width="270" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="270" valign="top">
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="250" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="250" valign="top">
+<table class="content-container-width" width="250" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<td valign="center">
+<table class="content-container-width" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<tr><td style="padding-bottom:4px">
+<a href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/watch?v%3DFj8G9dGuNkU%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmFOxdiu-EMm_mCBgt6oi3jngaMjBKIwucHtOtWEqz3w3_O41uR7zg2x5cNK40C75YMwDCmKpK9Y6S7fSc0HTXeuGrehdNsPHKQeIuoZHBSqJkV9RSOml1INxwkkcB0Yr8qGn8uDK0lIeHTOm3bI9tlvVvod2RAp4nFugv5l7V_yyG1tdNLHdQYXp-Qbgv2X-Y5U6qqNlw8" style="text-decoration:none;">
+<span class="video-title-font-class" valign="center" style="font-family:Roboto,sans-serif; font-size:14px; color:#212121; line-height:20px; -webkit-text-size-adjust:none;">
+Greatest Trick Plays in Football History
+</span>
+</a>
+</td></tr>
+<tr><td>
+<a class="video-link-font-class" href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/channel/UCr1TEhHFn8jEXraaZ1lslhQ?feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmHHrObTbsrqKt225J2dU8OdRSVaWdPWHA1lUf73nFn11LWJ86QYuVknPAJ5Np9difkSX4QS_z7A2_qkD4s6Q5Rzwd2a9bflqWWsFysB6-3YO8xbok9NrlC8H27Rkaje5LKyX9U0_DF6f5h9ObDfjy9tuG-oaeXfC4dmcas3iJvf7fjmQFiYyG_i5wEpq8qw-a3dGX4Ta-AFPc8Yr3e2xTC7" style="font-family:Roboto,sans-serif;font-size:12px; color: #757575;; line-height:16px; letter-spacing:0px; -webkit-text-size-adjust:none; text-decoration:none;">
+Jaydon
+</a>
+</td></tr>
+</table>
+</td>
+</table>
+</td>
+</tr>
+<tr>
+<td class="video-2col-width" width="250" valign="top">
+<div class="meta-data-font" style="font-family:Roboto,sans-serif; color:#999999; font-size:12px; letter-spacing:0px; line-height:20px; -webkit-text-size-adjust:none;">
+39,775,811 views
+ • 
+over a year ago
+</div>
+</td>
+</tr>
+<tr><td height="16"></td></tr>
+</table>
+</td>
+</tr>
+</td>
+</tr>
+<tr><td height="16"></td>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td></tr>
+</tbody>
+</table>
+
+<img class="open_tracking_img" src="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/gen_204%3Fa%3Dem-subs_digest" width="1" height="1" style="display:none !important; visibility: hidden; width: 0; height: 0; opacity: 0; color: transparent;">
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<hr style="display: block;height: 1px;border: 0;border-top: 1px solid #eaeaea;margin-bottom: 16px;padding: 0;"></hr>
+<tr>
+<td>
+<table class="inner-container-width" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="footer-font" style="color: #757575; font-size:12px; line-height:16px; font-family:Roboto, sans-serif; letter-spacing:0px; -webkit-text-size-adjust:none; word-wrap:break-word;">
+YouTube sends email summaries like these so you can keep up with your channel subscriptions.
+If you no longer want to receive these updates, you may edit your preferences <a href="https://www.youtube.com/attribution_link?noapp=1&amp;a=t2IiRSKc10Q55pXy&amp;u=/account_notifications?feature%3Dem-subs_digest&amp;g=AIR_RmFuXCLLotkkyCDN5iyC9SgWCmO78H4Ry8uqKBGNiMpwGy4VkE5xIabbkBGQxmw8Kjeia20JcktJAFyZkgpa-7_7Ustz8JYXHicORYMg4y75WzVn-52MKxSwHWuhVI1G7zscX-0Rffpel9ZGqKoWYVeRzB9og9al1jhVdyqKen9_gbCRKbkj8pKYXXUDmWN67k3nrjN2-jg" style="color:#2793E6; text-decoration:none;">here</a> or <a href="https://www.youtube.com/attribution_link?noapp=1&amp;a=t2IiRSKc10Q55pXy&amp;u=/email_unsubscribe?uid%3DMfxBhDYBg7rrycMVIMKZsw%26action_unsubscribe%3DXDeFq3dYbtuTMQAzwi9Lqm14OJV8MTUxMzU4NzMxOEAxNTEzNTg3MzE4%26feature%3Dem-subs_digest&amp;g=AIR_RmEUBPKVER9FLHwoJSsqC8dypqJ1O4bek0vE0ILmvgnoK2H6XRg_ajc6jz11FX4j-uXod9J1eOGDcygOm8H6jJZtaBhporYpOtJRVVNSAGEcSM28TqBCZDaFJwEayetrcVRH4nilDmY8ZTnmBIu4LdEfzqv4hw1ajmobkMf6o6ZNo2aGir8o2F5f5YrlXMDR2tT2q3jsqEyx5ftLIU3fCOrkCS11CggueDv9dh4XHbfhVxf2LC0GaAUqyTgCoDuXnmK03OElTFv90qCxjGvERe0oDFqwOo8qk8MK7yZYUecRApizaqpYEP7QGiOrpkiWmNvWllTEbqChnyAd-ypaPZR8RC4" style="color:#2793E6; text-decoration:none;">unsubscribe</a>.
+</td>
+</tr>
+<tr><td>
+<table class="footer-content-padding-height" height="16" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="footer-content-padding-height" height="16"></td>
+</tr>
+</table>
+</td></tr>
+<tr>
+<td class="footer-font" style="color: #757575; font-size:12px; line-height:16px; font-family:Roboto, sans-serif; letter-spacing:0px; text-decoration:none; -webkit-text-size-adjust:none;">
+© 2017 YouTube, LLC 901 Cherry Ave, San Bruno, CA 94066
+</td>
+</tr>
+<tr><td>
+<table class="footer-content-padding-height" height="16" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="footer-content-padding-height" height="16"></td>
+</tr>
+</table>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+<td class="outer-container-padding-width" width="40"></td>
+</tr>
+<tr>
+<td colspan="3">
+<table class="content-container-width" width="600" height="18" align="left" style="background-repeat:no-repeat; background-size:100% 100%;" height="332" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="outer-container-padding-width" width="40"></td>
+<td width="20" aria-label="YouTube Link">
+<a href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/youtube&amp;g=AIR_RmG_SR2BubPH64dUaIWsoC8YvW3WwqaZ-3pBODxpMF03rRijGMFzRwhXcNky167ozXOf8OKw2PHeikJiP1980jdBeJ-OLvqDzP2oo3LYsXtUH45qjYwoeIZGKrf0o94C_2dDXUXsDg" target="_blank">
+<img alt="YouTube" class="large-avatar-size" src="https://www.gstatic.com/youtube/img/email/youtube_email_icon_grey.png" height="18" border="0">
+</a>
+</td>
+<td class="social-logo-padding-width" width="16"></td>
+<td aria-label="Twitter Link">
+<a href="https://www.google.com/appserve/mkt/p/AIR_RmGSSFsNIzSAMG7zB4-wRPq2bJGhTaBXKJCuGjySNRBqMKkNuGTOcnK8z9gTi1YYUc98KpBKvBpUAbtFU7g" target="_blank">
+<img alt="Twitter" class="large-avatar-size" src="https://www.gstatic.com/youtube/img/email/twitter_email_icon_grey.png" height="18" border="0">
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<img height="1" width="3" src="https://www.google.com/appserve/mkt/img/AIR_RmEvb5l8Zv25GspXJyqJLSGVmLLHF4gQxpFW-Xm7777g.gif"></body>
+</html>
+
+<html lang="en">
+<head>
+<title>
+The Fantasy Footballers: &quot;Fantasy Football 2017 - 500th Episode! Week 15 Matchups + Greatest ...&quot;
+</title>
+<style type="text/css">
+* {
+font-family: arial, Arial, sans-serif;
+}
+@media only screen and (max-device-width: 480px) {
+body.suppress-border-on-mobile {
+margin: 0 !important;
+border: 0 !important;
+padding: 0 !important;
+}
+table.suppress-on-mobile, td.suppress-on-mobile, div.suppress-on-mobile, img.suppress-on-mobile, span.suppress-on-mobile {
+display: none !important;
+width: 0px !important;
+height: 0px !important;
+line-height: 0px !important;
+margin: 0 !important;
+border: 0 !important;
+padding: 0 !important;
+}
+table.outer-container-width, td.outer-container-width {
+width: 640px !important;
+}
+td.outer-container-padding-width {
+width: 20px !important;
+}
+table.inner-container-width, td.inner-container-width {
+width: 600px !important;
+}
+table.header-container-width {
+width: 600px !important;
+height: 100px !important;
+}
+td.header_left_padding_width {
+width: 25px !important;
+}
+td.logo_container_size {
+width: 575px !important;
+height: 100px !important;
+}
+img.header_logo_size {
+height: 47px !important;
+}
+table.footer-padding-width, td.footer-padding-width {
+width: 30px !important;
+}
+table.footer-width, td.footer-width {
+width: 540px !important;
+}
+td.footer-font, div.footer-font {
+font-size: 20px !important;
+line-height: 30px !important;
+}
+table.footer-content-padding-height, td.footer-content-padding-height {
+height: 30px !important;
+}
+table.large-section-padding-height, td.large-section-padding-height {
+height: 16px !important;
+}
+table.small-section-padding-height, td.small-section-padding-height {
+height: 20px !important;
+}
+table.content-container-padding-width, td.content-container-padding-width {
+width: 30px !important;
+}
+table.content-container-padding-height, td.content-container-padding-height {
+height: 30px !important;
+}
+table.content-container-width, td.content-container-width {
+width: 540px !important;
+}
+span.video-title-font-class, td.video-title-font-class, div.greeting-font, td.greeting-font {
+font-size: 24px !important;
+line-height: 30px !important;
+}
+a.video-link-font-class, div.video-link-font-class, td.video-link-font-class {
+font-size: 20px !important;
+line-height: 30px !important;
+}
+span.meta-data-font, div.meta-data-font, a.meta-data-font, td.meta-data-font {
+display: block !important;
+font-size: 20px !important;
+line-height: 36px !important;
+}
+td.small-meta-data-font {
+font-size: 25px !important;
+line-height: 30px !important;
+}
+table.video-content-padding-height, td.video-content-padding-height {
+height: 45px !important;
+}
+td.avatar-size, img.avatar-size {
+width: 54px !important;
+height: 54px !important;
+}
+img.large-avatar-size {
+height: 32px !important;
+}
+img.channel-avatar-size {
+width: 80px !important;
+height: 80px !important;
+}
+img.thumbnail-size-class, td.thumbnail-size-class{
+width: 100px !important;
+height: 56px !important;
+}
+table.more-videos-size {
+height: 100px !important;
+}
+div.more-videos-font, td.more-videos-font {
+font-size: 24px !important;
+line-height: 27px !important;
+}
+table.more-videos-button-size {
+width: 230px !important;
+height: 60px !important;
+}
+td.more-videos-button-width {
+width: 250px !important;
+}
+td.more-videos-text-width {
+width: 270px !important;
+}
+table.video-spotlight-width {
+width:600px !important;
+height:332px !important;
+}
+td.video-spotlight-size, img.video-spotlight-size {
+width:600px !important;
+height:332px !important;
+}
+table.regular-button-height {
+height:60px !important;
+}
+td.regular-button-padding-width {
+width:20px !important;
+}
+td.regular-button-font {
+font-size:27.5px !important;
+line-height:27.5px !important;
+}
+img.play-button-img-size {
+width:20px !important;
+height:20px !important;
+}
+table.large-button-size {
+width:600px !important;
+height:70px !important;
+}
+table.video-2col-size {
+width:600px !important;
+}
+table.video-2col-width, td.video-2col-width {
+width:600px !important;
+}
+img.video-2col-thumb-size {
+width:600px !important;
+height:332px !important;
+}
+table.video-2col-outer-container-size, td.video-2col-outer-container-size {
+width: 600px !important;
+}
+table.video-2col-inner-container-size, td.video-2col-inner-container-size {
+width: 540px !important;
+}
+table.video-2col-inner-container-width, td.video-2col-inner-container-width {
+width: 540px !important;
+}
+div.section-title-font, td.section-title-font {
+font-size: 30px !important;
+line-height: 35px !important;
+}
+div.section-subtitle-font, td.section-subtitle-font {
+font-size: 25px !important;
+line-height: 25px !important;
+}
+table.video-3col-padding-height, td.video-3col-padding-height {
+height: 55px !important;
+}
+img.video-3col-thumb-size, table.video-3col-thumb-size {
+width: 600px !important;
+height: 332px !important;
+}
+table.video-3col-width, td.video-3col-width {
+width: 600px !important;
+}
+table.inner-3col-content-container-width, td.inner-3col-content-container-width {
+width: 600px !important;
+}
+td.small-pad-width {
+width: 20px !important;
+}
+img.channel-avatar-size {
+width: 80px !important;
+height: 80px !important;
+}
+span.follow-and-subs-font {
+display: block !important;
+font-size: 24px !important;
+line-height: 27px !important;
+max-height:30px !important;
+}
+td.social-logo-padding-width {
+width: 32px !important;
+}
+table.channel-owner-block-content-width, td.channel-owner-block-content-width {
+width: 420px !important;
+}
+td.show-only-on-mobile {
+display: block !important;
+width: 100% !important;
+max-height: 100% !important;
+overflow: visible !important;
+}
+td.show-not-on-mobile, tr.show-not-on-mobile {
+display: none !important;
+visibility: hidden !important;
+}
+}
+</style>
+<style type="text/css">
+* {
+font-family: arial, Arial, sans-serif;
+}
+@media only screen and (max-device-width: 480px) {
+body[class=suppress-border-on-mobile] {
+margin: 0 !important;
+border: 0 !important;
+padding: 0 !important;
+}
+table[class=suppress-on-mobile], td[class=suppress-on-mobile], div[class=suppress-on-mobile], img[class=suppress-on-mobile], span[class=suppress-on-mobile] {
+display: none !important;
+width: 0px !important;
+height: 0px !important;
+line-height: 0px !important;
+margin: 0 !important;
+border: 0 !important;
+padding: 0 !important;
+}
+table[class=outer-container-width], td[class=outer-container-width] {
+width: 640px !important;
+}
+td[class=outer-container-padding-width] {
+width: 20px !important;
+}
+table[class=inner-container-width], td[class=inner-container-width] {
+width: 600px !important;
+}
+table[class=header-container-width] {
+width: 600px !important;
+height: 100px !important;
+}
+td[class=header_left_padding_width] {
+width: 25px !important;
+}
+td[class=logo_container_size] {
+width: 575px !important;
+height: 100px !important;
+}
+img[class=header_logo_size] {
+height: 47px !important;
+}
+table[class=footer-padding-width], td[class=footer-padding-width] {
+width: 30px !important;
+}
+table[class=footer-width], td[class=footer-width] {
+width: 540px !important;
+}
+td[class=footer-font], div[class=footer-font] {
+font-size: 20px !important;
+line-height: 30px !important;
+}
+table[class=footer-content-padding-height], td[class=footer-content-padding-height] {
+height: 30px !important;
+}
+table[class=large-section-padding-height], td[class=large-section-padding-height] {
+height: 16px !important;
+}
+table[class=small-section-padding-height], td[class=small-section-padding-height] {
+height: 20px !important;
+}
+table[class=content-container-padding-width], td[class=content-container-padding-width] {
+width: 30px !important;
+}
+table[class=content-container-padding-height], td[class=content-container-padding-height] {
+height: 30px !important;
+}
+table[class=content-container-width], td[class=content-container-width] {
+width: 540px !important;
+}
+span[class=video-title-font-class], td[class=video-title-font-class], div[class=greeting-font], td[class=greeting-font] {
+font-size: 24px !important;
+line-height: 30px !important;
+}
+a[class=video-link-font-class], div[class=video-link-font-class], td[class=video-link-font-class] {
+font-size: 20px !important;
+line-height: 30px !important;
+}
+span[class=meta-data-font], div[class=meta-data-font], a[class=meta-data-font], td[class=meta-data-font] {
+display: block !important;
+font-size: 20px !important;
+line-height: 36px !important;
+}
+td[class=small-meta-data-font] {
+font-size: 25px !important;
+line-height: 30px !important;
+}
+table[class=video-content-padding-height], td[class=video-content-padding-height] {
+height: 45px !important;
+}
+td[class=avatar-size], img[class=avatar-size] {
+width: 54px !important;
+height: 54px !important;
+}
+img[class=large-avatar-size] {
+width: 32px !important;
+}
+img[class=channel-avatar-size] {
+width: 80px !important;
+height: 80px !important;
+}
+table[class=more-videos-size] {
+height: 100px !important;
+}
+div[class=more-videos-font], td[class=more-videos-font] {
+font-size: 24px !important;
+line-height: 27px !important;
+}
+table[class=more-videos-button-size] {
+width: 230px !important;
+height: 60px !important;
+}
+td[class=more-videos-button-width] {
+width: 250px !important;
+}
+td[class=more-videos-text-width] {
+width: 270px !important;
+}
+table[class=video-spotlight-width] {
+width:600px !important;
+height:332px !important;
+}
+td[class=video-spotlight-size], img[class=video-spotlight-size] {
+width:600px !important;
+height:332px !important;
+}
+table[class=regular-button-height] {
+height:60px !important;
+}
+td[class=regular-button-padding-width] {
+width:20px !important;
+}
+td[class=regular-button-font] {
+font-size:27.5px !important;
+line-height:27.5px !important;
+}
+img[class=play-button-img-size] {
+width:20px !important;
+height:20px !important;
+}
+table[class=large-button-size] {
+width:600px !important;
+height:70px !important;
+}
+table[class=video-2col-size] {
+width:600px !important;
+}
+table[class=video-2col-width], td[class=video-2col-width] {
+width:600px !important;
+}
+img[class=video-2col-thumb-size] {
+width:600px !important;
+height:332px !important;
+}
+table[class=video-2col-outer-container-size], td[class=video-2col-outer-container-size] {
+width: 600px !important;
+}
+table[class=video-2col-inner-container-size], td[class=video-2col-inner-container-size] {
+width: 540px !important;
+}
+table[class=video-2col-inner-container-width], td[class=video-2col-inner-container-width] {
+width: 540px !important;
+}
+div[class=section-title-font], td[class=section-title-font] {
+font-size: 30px !important;
+line-height: 35px !important;
+}
+div[class=section-subtitle-font], td[class=section-subtitle-font] {
+font-size: 25px !important;
+line-height: 25px !important;
+}
+table[class=video-3col-padding-height], td[class=video-3col-padding-height] {
+height: 55px !important;
+}
+img[class=video-3col-thumb-size], table[class=video-3col-thumb-size] {
+width: 600px !important;
+height: 332px !important;
+}
+table[class=video-3col-width], td[class=video-3col-width] {
+width: 600px !important;
+}
+table[class=inner-3col-content-container-width], td[class=inner-3col-content-container-width] {
+width: 600px !important;
+}
+td[class=small-pad-width] {
+width: 20px !important;
+}
+img[class=channel-avatar-size] {
+width: 80px !important;
+height: 80px !important;
+}
+img[class=thumbnail-size-class], td[class=thumbnail-size-class] {
+width: 80px !important;
+height: 44px !important;
+}
+span[class=follow-and-subs-font] {
+display: block !important;
+font-size: 24px !important;
+line-height: 27px !important;
+max-height:30px !important;
+}
+td[class=social-logo-padding-width] {
+width: 32px !important;
+}
+table[class=channel-owner-block-content-width], td[class=channel-owner-block-content-width] {
+width: 420px !important;
+}
+td[class=show-only-on-mobile] {
+display: block !important;
+width: 100% !important;
+max-height: 100% !important;
+overflow: visible !important;
+}
+td[class=show-not-on-mobile], tr[class=show-not-on-mobile]{
+display: none !important;
+visibility: hidden !important;
+}
+table., td. {
+width: 500px !important;
+}
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body class="suppress-border-on-mobile">
+<span style="display: none !important; visibility: hidden; width: 0; height: 0; opacity: 0; color: transparent;mso-hide:all">The Fantasy Footballers: &quot;Fantasy Football 2017 - 500th Episode! Week 15 Matchups + Greatest ...&quot;</span>
+<table class="outer-container-width" width="680" bgcolor="transparent" align="center" valign="top" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="outer-container-padding-width" width="40"></td>
+<td class="inner-container-width" width="600">
+<table class="inner-container-width" width="600" align="center" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table class="header-container-width" width="600" align="left" valign="center" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="logo_container_size" width="584" valign="center">
+<a href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/&amp;g=AIR_RmFoeVL0z2_BYwbu12wrxxuGDdYXqIVat9DN9miDj980gb1QGaNgWKBZ9Y9bq-pKZVM8RNC08VzE72VkOGpm5p-XaHnqozQDJm646Fqz2ue-M4JsFaHUzheOW6ab3veV"><img alt="Youtube Logo" class="header_logo_size" height="30" src="http://www.gstatic.com/youtube/img/branding/youtubelogo/1x/youtubelogo_60.png" border="0" style="display:block;"></a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td style="max-height:0px; font-size:0; display:none;"><hr class="inner-container-width" width="600" style="height:0px; border:none; border-color:transparent; padding:0px; margin:0px;"></td></tr>
+<tr><td class="large-section-padding-height" height="20"></td></tr>
+<tr>
+<td>
+<table class="inner-container-width" width="600" align="center" valign="center" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+
+<script type="application/json" data-scope="inboxmarkup">
+{
+"api_version": "1.0",
+"publisher": {
+"api_key": "c4f99df5214ea4f584bb2e72588b237d",
+"name": "YouTube"
+},
+"entity": {
+"external_key": "YouTubeDigest",
+"title": "YouTube Digest",
+"subtitle": "Latest: December 18, 2017",
+"main_image_url": "https://lh3.googleusercontent.com/qzeDHEH4itIbIKtU0XAr-VMB7bKYCG4wsgWoJno2PaHuTxzMAPaWwPHMdvewrwgNcfq3Pdq8pg=s0",
+"avatar_image_url": "https://lh3.googleusercontent.com/-as5xbhkCeMo/VwKaPW6V_cI/AAAAAAAA6lA/5zsGHEaEd9YN4B-mQ1ABZNOGtTyfrBRegCL0B/s0/YouTube-avatar-generic%2B%252811%2529.png"
+},
+"cards": [
+{
+"title": "YouTube Digest",
+"subtitle": "Highlights from the latest email",
+"widgets": [
+{
+"type": "LINK",
+"title": "Fantasy Football 2017 - 500th Episode! Week 15 Matchups + Greatest Moments - Ep. #500",
+"description": "Fantasy Football Podcast for December 15th, 2017. Andy, Jason, and Mike are back with the 500th episode of The Fantasy Footballers Podcast! We’ll jump into more Week 15 matchups during the Fantasy Forecast. Catch up on the latest injury updates during In-or-Out. And finally, we have some fun with a highlight reel with classic clips from 500 episodes. Manage your redraft, keeper, and dynasty fantasy football teams with insights you can only get on the #1 fantasy football podcast. 04:00- #FootClan Friday 05:15- Thursday Night Recap: Broncos at Colts 09:10- NFL News \x26 Notes 09:20- Adrian Peterson 10:30- In-or-Out? 21:05- Bengals at Vikings 24:30- Jets at Saints 27:00- Eagles at Giants 30:50- Cardinals at Redskins 35:40- Rams at Seahawks 39:35- Patriots at Steelers 42:10- Titans at 49ers 47:55- Cowboys at Raiders 51:30- Breaking News: Fournette misses Fri practice 52:25- Falcons at Buccaneers 58:10- Week 15 Daily Dose Live Draft 01:03:00- Highlight Reel! Check out today\x27s sponsors: h... [+4 videos]",
+"url": "",
+"image_url": "http://i.ytimg.com/vi/4f1Z8Ay1h_E/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3kPqDbw3JXTlmK8Mfh6j4N8BjXKEg&feature=em-subs_digest"
+},
+{
+"type": "LINK",
+"title": "Fantasy Football 2017 - 500th Episode! Week 15 Matchups + Greatest Moments - Ep. #500",
+"description": "Fantasy Football Podcast for December 15th, 2017. Andy, Jason, and Mike are back with the 500th episode of The Fantasy Footballers Podcast! We’ll jump into more Week 15 matchups during the Fantasy Forecast. Catch up on the latest injury updates during In-or-Out. And finally, we have some fun with a highlight reel with classic clips from 500 episodes. Manage your redraft, keeper, and dynasty fantasy football teams with insights you can only get on the #1 fantasy football podcast. 04:00- #FootClan Friday 05:15- Thursday Night Recap: Broncos at Colts 09:10- NFL News \x26 Notes 09:20- Adrian Peterson 10:30- In-or-Out? 21:05- Bengals at Vikings 24:30- Jets at Saints 27:00- Eagles at Giants 30:50- Cardinals at Redskins 35:40- Rams at Seahawks 39:35- Patriots at Steelers 42:10- Titans at 49ers 47:55- Cowboys at Raiders 51:30- Breaking News: Fournette misses Fri practice 52:25- Falcons at Buccaneers 58:10- Week 15 Daily Dose Live Draft 01:03:00- Highlight Reel! Check out today\x27s sponsors: h...",
+"url": "http://youtu.be/4f1Z8Ay1h_E?em",
+"image_url": "http://i.ytimg.com/vi/4f1Z8Ay1h_E/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3kPqDbw3JXTlmK8Mfh6j4N8BjXKEg&feature=em-subs_digest-vrecs"
+},
+{
+"type": "LINK",
+"title": "10 People You Won\x27t Believe Actually Exist",
+"description": "10 People You Won\x27t Believe Actually Exist ► Subscribe: https:\x2F\x2Fgoo.gl\x2FGmtyPv Unveiled channel: ► Subscribe: https:\x2F\x2Fgoo.gl\x2FGmtyPv Animation from: https:\x2F\x2Fwww.youtube.com\x2Fuser\x2FD0MICS This world is not free of wonders. That goes the same to human beings living around us. Everything in our world is special and unique - diversity is everywhere. But there are people who stand out more than other people. Today we will talk about 10 people you won’t believe actually exist. 10. Yu Zhenhuan – This man comes from the northern Chinese province of Liaoning. He has hair that covers 96 per cent of his body because of a rare hormone imbalance. This makes Yu the hairiest man on the Earth. Yu’s excess body hair is all over his body except for two places\x3B his palms, and soles of his feet. http:\x2F\x2Fwww.likesharetweet.com\x2Finspiring\x2F8-men-you-wont-believe-actually-exist2\x2F 9. Helmut Strebl - This 49-year-old Austrian bodybuilder is so ripped he regularly goes viral across social media and is regar...",
+"url": "http://youtu.be/yhpTinbzhpg?em",
+"image_url": "http://i.ytimg.com/vi/yhpTinbzhpg/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3mEnNoE4bQ8GHfXMjRVQyjyzB4nPA&feature=em-subs_digest-vrecs"
+},
+{
+"type": "LINK",
+"title": "Top 10 Most Annoying Dark Souls Enemies",
+"description": "Top 10 Most Annoying Dark Souls Enemies \x2F\x2F Subscribe: http:\x2F\x2Fgoo.gl\x2FQ2kKrD \x2F\x2F TIMESTAMPS BELOW ----------------------- CELEBRATE 10 YEARS OF WATCHMOJO WITH OUR SPECIAL EDITION MAGAZINE, LINKS BELOW! Awww not THESE guys again! These are the unspeakable horrors and adversaries that you encounter in Dark Souls 1, 2 and 3, as well as Demons Souls and Bloodborne that are the most aggravating, infuriating, annoying, rage inducing, difficult or just plain HARD. Welcome to http:\x2F\x2FWatchmojo.com\x2F and today we’re counting down our picks for the Top 10 Most Annoying Enemies in the Dark Souls Series! 00:37 #10. Great Bow Silver Knight 01:25 #9. Ironclad Soldier aka Turtle Knight 02:08 #8. Brainsucker 02:53 #7. Serpent Men 03:40 #6. Great (Enemy) Crab 04:26 #5. Jailer 05:26 #4. Poison Statue Cluster 06:10 #3, #2 \x26 #1: ???? Special thanks to our user “Laballs” for suggesting the topic using our interactive suggestion tool at http:\x2F\x2Fwatchmojo.com\x2Fsuggest Our Magazine!! Learn...",
+"url": "http://youtu.be/kpAigzGfV-g?em",
+"image_url": "http://i.ytimg.com/vi/kpAigzGfV-g/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3mt8hUhUlReT9EmvZAF5GCiTSC50w&feature=em-subs_digest-vrecs"
+}
+]
+}
+],
+"updates": {
+"snippets": [
+{
+"icon": "VIDEO_PLAY",
+"message": "Fantasy Football 2017 - 500th Episode! Week 15 Matchups + Greatest Moments - Ep. #500"
+},
+{
+"icon": "VIDEO_PLAY",
+"message": "Fantasy Football 2017 - 500th Episode! Week 15 Matchups + Greatest Moments - Ep. #500"
+},
+{
+"icon": "VIDEO_PLAY",
+"message": "10 People You Won\x27t Believe Actually Exist"
+},
+{
+"icon": "VIDEO_PLAY",
+"message": "Top 10 Most Annoying Dark Souls Enemies"
+}
+]
+}
+}
+</script>
+<table class="inner-container-width" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="section-title-font" style="font-family:Roboto,sans-serif; font-size:16px; line-height:25px; letter-spacing:0px; color:#222222; -webkit-text-size-adjust:none;">
+Subscriptions
+</td>
+</tr>
+</table>
+<table class="small-section-padding-height" height="16" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="small-section-padding-height" height="16"></td>
+</tr>
+</table>
+<table class="video-spotlight-width" width="600" align="center" cellspacing="0" cellpadding="0" border="0">
+<!--[if gte mso 9]>
+<tr>
+<td class="video-spotlight-size" width="516" height="290" align="center">
+<a href="http://www.youtube.com/watch?v=4f1Z8Ay1h_E&feature=em-subs_digest" style="text-decoration:none; display:block;" class="nonplayable">
+<img class="video-spotlight-size" src="http://i.ytimg.com/vi/4f1Z8Ay1h_E/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3kPqDbw3JXTlmK8Mfh6j4N8BjXKEg&feature=em-subs_digest" width="516" height="290" border="0">
+</a>
+</td>
+</tr>
+<![endif]-->
+<!--[if !mso]><!-- -->
+<tr style="mso-hide:all">
+<td colspan="3">
+<a href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/watch?v%3D4f1Z8Ay1h_E%26feature%3Dem-subs_digest&amp;g=AIR_RmGw6veuVPO6TmoudOgTR3ZJnz44dCDtuoLsXR0Us8AXZpYONTVBv5IHOJVsnQti4yPycKTI-SKK6Ho_tih8Yxt6T4LyUnrdNpQTXKIDo-1hhxzI1qy2-CJZ4BZiX1yo3unsUYWuLw7er3qnuzCTqhyCvYBgDRDi1wkbI12j_Q-ItPbMV55HVKwIOtRw3morCcY" style="text-decoration:none; display:block;" class="nonplayable">
+<table aria-label="Fantasy Football 2017 - 500th Episode! Week 15 Matchups + Greatest ..." class="video-spotlight-width" width="600" align="center" background="http://i.ytimg.com/vi/4f1Z8Ay1h_E/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&amp;rs=AMzJL3kPqDbw3JXTlmK8Mfh6j4N8BjXKEg&amp;feature=em-subs_digest" style="background-repeat:no-repeat; background-size:100% 100%;mso-hide:all" height="338" cellspacing="0" cellpadding="0" border="0">
+<tr style="mso-hide:all"><td aria-label="Fantasy Football 2017 - 500th Episode! Week 15 Matchups + Greatest ...">
+<img src="https://www.gstatic.com/youtube/img/email/transparent_pixel.png" alt="Fantasy Football 2017 - 500th Episode! Week 15 Matchups + Greatest ..." width="600" style="height: 300px;">
+</td></tr>
+<tr aria-label="Fantasy Football 2017 - 500th Episode! Week 15 Matchups + Greatest ..." scope="row" style="mso-hide:all">
+<td aria-label="Fantasy Football 2017 - 500th Episode! Week 15 Matchups + Greatest ..." class="footer-font" style="color:#fff; text-align:right; font-size: 12px;" valign="bottom" width="600">
+<div style="margin-bottom:8px; margin-right:8px; border-radius:2px; background-color: #212121; padding:2px 4px; display:inline-block;">1:14:59</div>
+</td>
+</tr>
+</table>
+</a>
+</td>
+</tr>
+<!--<![endif]-->
+<tr><td>
+<table class="large-section-padding-height" height="16" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="large-section-padding-height" height="16"></td>
+</tr>
+</table>
+</td></tr>
+<tr>
+<td>
+<table class="content-container-width" width="560" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<tr>
+<td class="avatar-size" width="32" style="vertical-align:top;">
+<a href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/channel/UC-No2ITxJsNt50oJQ3fLmUA?feature%3Dem-subs_digest&amp;g=AIR_RmE8tfnk3HDTNsWogcB80olz9fZ9WlhA8wUFX9CX_xHrRRuAP-q5V5TX1TrZm_97iCG1ra-DVaQbPU8MFueKRZ1nOzEnsItk1JcE4n5Yh6XxdVSAtH9sLJYx4j23JWjXP11feHCbjhSm0ShpRVwiIjXqFk6YRHVdWbG-_9t-d8E6KhrBou8iT1ljluMkNE3i7aBhpTCpZb55L44">
+<img class="avatar-size" src="https://lh3.googleusercontent.com/-efowdyDUsnM/AAAAAAAAAAI/AAAAAAAAAAA/BQEp7-R4OYU/s50-mo/photo.jpg" width="32" style="display:block; border-radius: 50%;" border="0">
+</a>
+</td>
+<td class="small-pad-width" width="16"></td>
+<td>
+<table class="content-container-width" width="540" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<td valign="center">
+<table class="content-container-width" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<tr>
+<td style="padding-bottom:4px">
+<a href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/watch?v%3D4f1Z8Ay1h_E%26feature%3Dem-subs_digest&amp;g=AIR_RmGw6veuVPO6TmoudOgTR3ZJnz44dCDtuoLsXR0Us8AXZpYONTVBv5IHOJVsnQti4yPycKTI-SKK6Ho_tih8Yxt6T4LyUnrdNpQTXKIDo-1hhxzI1qy2-CJZ4BZiX1yo3unsUYWuLw7er3qnuzCTqhyCvYBgDRDi1wkbI12j_Q-ItPbMV55HVKwIOtRw3morCcY" style="text-decoration:none;">
+<span class="video-title-font-class" valign="center" style="font-family:Roboto,sans-serif; font-size:14px; color:#212121; line-height:20px; -webkit-text-size-adjust:none;">
+Fantasy Football 2017 - 500th Episode! Week 15 Matchups + Greatest ...
+</span>
+</a>
+</td>
+</tr>
+<tr>
+<td>
+<a class="video-link-font-class" href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/channel/UC-No2ITxJsNt50oJQ3fLmUA?feature%3Dem-subs_digest&amp;g=AIR_RmE8tfnk3HDTNsWogcB80olz9fZ9WlhA8wUFX9CX_xHrRRuAP-q5V5TX1TrZm_97iCG1ra-DVaQbPU8MFueKRZ1nOzEnsItk1JcE4n5Yh6XxdVSAtH9sLJYx4j23JWjXP11feHCbjhSm0ShpRVwiIjXqFk6YRHVdWbG-_9t-d8E6KhrBou8iT1ljluMkNE3i7aBhpTCpZb55L44" style="font-family:Roboto,sans-serif;font-size:12px; color: #757575;; line-height:16px; letter-spacing:0px; -webkit-text-size-adjust:none; text-decoration:none;">
+The Fantasy Footballers
+</a>
+</td>
+</tr>
+</table>
+</td>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td>
+<table class="large-section-padding-height" height="16" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="large-section-padding-height" height="16"></td>
+</tr>
+</table>
+</td></tr>
+</table>
+
+<hr style="display: block;height: 1px;border: 0;border-top: 1px solid #eaeaea;padding: 0;"></hr>
+<table class="inner-container-width" width="600" cellspacing="0" cellpadding="0" border="0">
+<tbody>
+<tr><td>
+<table class="content-container-padding-height" height="16" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="content-container-padding-height" height="16"></td>
+</tr>
+</table>
+</td></tr>
+<tr>
+<td>
+<table class="inner-container-width" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="section-title-font" style="font-family:Roboto,sans-serif; font-size:16px; line-height:25px; letter-spacing:0px; color:#222222; -webkit-text-size-adjust:none;">
+Recommended
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td>
+<table class="content-container-padding-height" height="16" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="content-container-padding-height" height="16"></td>
+</tr>
+</table>
+</td></tr>
+<tr><td>
+<table class="inner-container-width" width="600" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="inner-container-width" width="600">
+<table class="inner-container-width" width="600" cellspacing="0" cellpadding="0" border="0">
+<tr><td class="inner-container-width" width="600">
+<table align="left" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table class="video-spotlight-width" width="290" cellspacing="0" cellpadding="0" border="0">
+<!--[if gte mso 9]>
+<tr>
+<td class="video-spotlight-size" width="290" align="center">
+<a href="http://www.youtube.com/watch?v=4f1Z8Ay1h_E&feature=em-subs_digest-vrecs" style="text-decoration:none; display:block;" class="nonplayable">
+<img class="video-spotlight-size" src="http://i.ytimg.com/vi/4f1Z8Ay1h_E/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3kPqDbw3JXTlmK8Mfh6j4N8BjXKEg&feature=em-subs_digest-vrecs" width="290" border="0">
+</a>
+</td>
+</tr>
+<![endif]-->
+<!--[if !mso]><!-- -->
+<tr style="mso-hide:all">
+<td class="video-2col-outer-container-size" width="290">
+<a href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/watch?v%3D4f1Z8Ay1h_E%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmHSOjnmmBap7vt3a1xrCeTTTov447ZzWm3DPv7gUvCsTWp8NJN7Uylem22eY0sZSrqhxMSC9OvcOO8ZANZNmx5tkEr6E0fHhsNqLgjFlD-P_RTY8hX9SYrZJRapViSPk4slRnqpDiIC-tK0lPp5Mm7sxIJtEcEUT6P-tUSNFRUAyJcjeaT6FzfCrkz5LHjBKMbr4fhkxCs" style="text-decoration:none;" target="_blank" ; class="nonplayable">
+<table aria-label="Fantasy Football 2017 - 500th Episode! Week 15 Matchups... link" class="video-spotlight-width" width="290" align="center" background="http://i.ytimg.com/vi/4f1Z8Ay1h_E/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&amp;rs=AMzJL3kPqDbw3JXTlmK8Mfh6j4N8BjXKEg&amp;feature=em-subs_digest-vrecs" style="background-repeat:no-repeat; background-size:100% 100%;" cellspacing="0" cellpadding="0" border="0" height="162">
+<tr style="mso-hide:all"><td aria-label="Fantasy Football 2017 - 500th Episode! Week 15 Matchups..." class="video-2col-thumb-size" width="290">
+<img src="https://www.gstatic.com/youtube/img/email/transparent_pixel.png" alt="Fantasy Football 2017 - 500th Episode! Week 15 Matchups..." class="video-2col-thumb-size" width="290" height="132">
+</td></tr>
+<tr style="mso-hide:all">
+<td class="footer-font" style="color:#fff; text-align:right; font-size: 12px;" valign="bottom" width="290">
+<div style="margin-bottom:8px; margin-right:8px; border-radius:2px; background-color: #212121; padding:2px 4px; display:inline-block;">1:14:59</div>
+</td>
+</tr>
+</table>
+</a>
+</td>
+</tr>
+<!--<![endif]-->
+<tr><td height="16"></td></tr>
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="270" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table width="270" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="270" valign="top">
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="250" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="250" valign="top">
+<table class="content-container-width" width="250" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<td valign="center">
+<table class="content-container-width" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<tr><td style="padding-bottom:4px">
+<a href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/watch?v%3D4f1Z8Ay1h_E%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmHSOjnmmBap7vt3a1xrCeTTTov447ZzWm3DPv7gUvCsTWp8NJN7Uylem22eY0sZSrqhxMSC9OvcOO8ZANZNmx5tkEr6E0fHhsNqLgjFlD-P_RTY8hX9SYrZJRapViSPk4slRnqpDiIC-tK0lPp5Mm7sxIJtEcEUT6P-tUSNFRUAyJcjeaT6FzfCrkz5LHjBKMbr4fhkxCs" style="text-decoration:none;">
+<span class="video-title-font-class" valign="center" style="font-family:Roboto,sans-serif; font-size:14px; color:#212121; line-height:20px; -webkit-text-size-adjust:none;">
+Fantasy Football 2017 - 500th Episode! Week 15 Matchups...
+</span>
+</a>
+</td></tr>
+<tr><td>
+<a class="video-link-font-class" href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/channel/UC-No2ITxJsNt50oJQ3fLmUA?feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmH32eqBFvFt9OLVhLCxlxAnQ0x_3Dksgp5ctu38TWOXhZ7IlxrkK9QAVy8hLwgYCeTmoS4ybXxuBFjS0N6g8hLCb2gi63rrnvGxMM2rJz6PDTXz5gHHF34Tq04i6kZYwPZqAJUB5eLP6xpy2_wB7nAppVtXtF9KOmQCMd8zeGoYswHPykX6hXGgprCsJEQxylvJHmUSyYPN0-qpQvoQ-DoF" style="font-family:Roboto,sans-serif;font-size:12px; color: #757575;; line-height:16px; letter-spacing:0px; -webkit-text-size-adjust:none; text-decoration:none;">
+The Fantasy Footballers
+</a>
+</td></tr>
+</table>
+</td>
+</table>
+</td>
+</tr>
+<tr>
+<td class="video-2col-width" width="250" valign="top">
+<div class="meta-data-font" style="font-family:Roboto,sans-serif; color:#999999; font-size:12px; letter-spacing:0px; line-height:20px; -webkit-text-size-adjust:none;">
+23,921 views
+ • 
+2 days ago
+</div>
+</td>
+</tr>
+<tr><td height="16"></td></tr>
+</table>
+</td>
+</tr>
+</td>
+</tr>
+<tr><td height="16"></td>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table align="right" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table class="video-spotlight-width" width="290" cellspacing="0" cellpadding="0" border="0">
+<!--[if gte mso 9]>
+<tr>
+<td class="video-spotlight-size" width="290" align="center">
+<a href="http://www.youtube.com/watch?v=yhpTinbzhpg&feature=em-subs_digest-vrecs" style="text-decoration:none; display:block;" class="nonplayable">
+<img class="video-spotlight-size" src="http://i.ytimg.com/vi/yhpTinbzhpg/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3mEnNoE4bQ8GHfXMjRVQyjyzB4nPA&feature=em-subs_digest-vrecs" width="290" border="0">
+</a>
+</td>
+</tr>
+<![endif]-->
+<!--[if !mso]><!-- -->
+<tr style="mso-hide:all">
+<td class="video-2col-outer-container-size" width="290">
+<a href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/watch?v%3DyhpTinbzhpg%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmEXfcxAWHSlpLAIvgCAg653pA-TDr2uT_tTn3ywY-h2srk2af4R2XT22vmP-nZXR3G5KtZY4JEZtT2LS_Lvl6CS94dS3uk7FbHzoRlY50h3tff4yKwd1evH2UhRcWjxi4275GZwTehfM_l9QyfJGEjzMtV4XOEL0h0XfZGALkTTol4ryP51Grt7VDRSYWzqWMVoB-OlakQ" style="text-decoration:none;" target="_blank" ; class="nonplayable">
+<table aria-label="10 People You Won&#39;t Believe Actually Exist link" class="video-spotlight-width" width="290" align="center" background="http://i.ytimg.com/vi/yhpTinbzhpg/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&amp;rs=AMzJL3mEnNoE4bQ8GHfXMjRVQyjyzB4nPA&amp;feature=em-subs_digest-vrecs" style="background-repeat:no-repeat; background-size:100% 100%;" cellspacing="0" cellpadding="0" border="0" height="162">
+<tr style="mso-hide:all"><td aria-label="10 People You Won&#39;t Believe Actually Exist" class="video-2col-thumb-size" width="290">
+<img src="https://www.gstatic.com/youtube/img/email/transparent_pixel.png" alt="10 People You Won&#39;t Believe Actually Exist" class="video-2col-thumb-size" width="290" height="132">
+</td></tr>
+<tr style="mso-hide:all">
+<td class="footer-font" style="color:#fff; text-align:right; font-size: 12px;" valign="bottom" width="290">
+<div style="margin-bottom:8px; margin-right:8px; border-radius:2px; background-color: #212121; padding:2px 4px; display:inline-block;">10:21</div>
+</td>
+</tr>
+</table>
+</a>
+</td>
+</tr>
+<!--<![endif]-->
+<tr><td height="16"></td></tr>
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="270" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table width="270" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="270" valign="top">
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="250" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="250" valign="top">
+<table class="content-container-width" width="250" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<td valign="center">
+<table class="content-container-width" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<tr><td style="padding-bottom:4px">
+<a href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/watch?v%3DyhpTinbzhpg%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmEXfcxAWHSlpLAIvgCAg653pA-TDr2uT_tTn3ywY-h2srk2af4R2XT22vmP-nZXR3G5KtZY4JEZtT2LS_Lvl6CS94dS3uk7FbHzoRlY50h3tff4yKwd1evH2UhRcWjxi4275GZwTehfM_l9QyfJGEjzMtV4XOEL0h0XfZGALkTTol4ryP51Grt7VDRSYWzqWMVoB-OlakQ" style="text-decoration:none;">
+<span class="video-title-font-class" valign="center" style="font-family:Roboto,sans-serif; font-size:14px; color:#212121; line-height:20px; -webkit-text-size-adjust:none;">
+10 People You Won&#39;t Believe Actually Exist
+</span>
+</a>
+</td></tr>
+<tr><td>
+<a class="video-link-font-class" href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/channel/UCV-oV8yecSfMZnzdKAhO_4A?feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmE3fDXThqkGFBXGu2ZEL-eu7alxm61eBiY-7hnM576zC3zMEOzDF1UBxBHL_l9BezW46-Acg8mWl09LTdeMcEx21ZT0mHdd6pZisTV8usT2b0_LEYksxhBZvhoxGyBXtjfqr0M8R119FSi4jAhV0b8ArBrw9muQzG6TjrtEhywe_DFAjsf3MjH9LSi6naq7Vm-tfGwTQEigLQcZcp0o3ftd" style="font-family:Roboto,sans-serif;font-size:12px; color: #757575;; line-height:16px; letter-spacing:0px; -webkit-text-size-adjust:none; text-decoration:none;">
+Interesting Facts
+</a>
+</td></tr>
+</table>
+</td>
+</table>
+</td>
+</tr>
+<tr>
+<td class="video-2col-width" width="250" valign="top">
+<div class="meta-data-font" style="font-family:Roboto,sans-serif; color:#999999; font-size:12px; letter-spacing:0px; line-height:20px; -webkit-text-size-adjust:none;">
+3,766,436 views
+ • 
+5 days ago
+</div>
+</td>
+</tr>
+<tr><td height="16"></td></tr>
+</table>
+</td>
+</tr>
+</td>
+</tr>
+<tr><td height="16"></td>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td></tr>
+<tr><td class="inner-container-width" width="600">
+<table align="left" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table class="video-spotlight-width" width="290" cellspacing="0" cellpadding="0" border="0">
+<!--[if gte mso 9]>
+<tr>
+<td class="video-spotlight-size" width="290" align="center">
+<a href="http://www.youtube.com/watch?v=kpAigzGfV-g&feature=em-subs_digest-vrecs" style="text-decoration:none; display:block;" class="nonplayable">
+<img class="video-spotlight-size" src="http://i.ytimg.com/vi/kpAigzGfV-g/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3mt8hUhUlReT9EmvZAF5GCiTSC50w&feature=em-subs_digest-vrecs" width="290" border="0">
+</a>
+</td>
+</tr>
+<![endif]-->
+<!--[if !mso]><!-- -->
+<tr style="mso-hide:all">
+<td class="video-2col-outer-container-size" width="290">
+<a href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/watch?v%3DkpAigzGfV-g%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmGW9v3das8A0osdIK4LV2HdbH7IJHttbb_0OJFVJ72rhrSz6LihrHeHtuUhcK_Sb92_gGl9QprzBYnfvMCGijrmq99pTqKI603ypUqPWSucPe_mM6OtshlBH9XxiH38FZlaGeMcF9OYY0ODnBBP0wtw1ZGmqOP2tC-w4bv8YvhWWuEsmIeeAl5DwBy4WVPKfuVqAJVv9o4" style="text-decoration:none;" target="_blank" ; class="nonplayable">
+<table aria-label="Top 10 Most Annoying Dark Souls Enemies link" class="video-spotlight-width" width="290" align="center" background="http://i.ytimg.com/vi/kpAigzGfV-g/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&amp;rs=AMzJL3mt8hUhUlReT9EmvZAF5GCiTSC50w&amp;feature=em-subs_digest-vrecs" style="background-repeat:no-repeat; background-size:100% 100%;" cellspacing="0" cellpadding="0" border="0" height="162">
+<tr style="mso-hide:all"><td aria-label="Top 10 Most Annoying Dark Souls Enemies" class="video-2col-thumb-size" width="290">
+<img src="https://www.gstatic.com/youtube/img/email/transparent_pixel.png" alt="Top 10 Most Annoying Dark Souls Enemies" class="video-2col-thumb-size" width="290" height="132">
+</td></tr>
+<tr style="mso-hide:all">
+<td class="footer-font" style="color:#fff; text-align:right; font-size: 12px;" valign="bottom" width="290">
+<div style="margin-bottom:8px; margin-right:8px; border-radius:2px; background-color: #212121; padding:2px 4px; display:inline-block;">9:01</div>
+</td>
+</tr>
+</table>
+</a>
+</td>
+</tr>
+<!--<![endif]-->
+<tr><td height="16"></td></tr>
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="270" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table width="270" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="270" valign="top">
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="250" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="250" valign="top">
+<table class="content-container-width" width="250" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<td valign="center">
+<table class="content-container-width" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<tr><td style="padding-bottom:4px">
+<a href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/watch?v%3DkpAigzGfV-g%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmGW9v3das8A0osdIK4LV2HdbH7IJHttbb_0OJFVJ72rhrSz6LihrHeHtuUhcK_Sb92_gGl9QprzBYnfvMCGijrmq99pTqKI603ypUqPWSucPe_mM6OtshlBH9XxiH38FZlaGeMcF9OYY0ODnBBP0wtw1ZGmqOP2tC-w4bv8YvhWWuEsmIeeAl5DwBy4WVPKfuVqAJVv9o4" style="text-decoration:none;">
+<span class="video-title-font-class" valign="center" style="font-family:Roboto,sans-serif; font-size:14px; color:#212121; line-height:20px; -webkit-text-size-adjust:none;">
+Top 10 Most Annoying Dark Souls Enemies
+</span>
+</a>
+</td></tr>
+<tr><td>
+<a class="video-link-font-class" href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/user/WatchMojo?feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmE5gD6jcE5wrq6UfSdLXYRBO4VO43Si170StmzHZgkFw9BUuG1SGLw_Q77hq8FEN_fdwftpWiyWRK3N28nQpGxbpsfZd34Ko2DUhTZZFht_gEMi6Y2for1RHBTtzVnlwnMOOzmcj5zqqtAB30Z9IoKG2tnZQnclxlJakCBhpW5s9AwPG52CZUHPzfP3UtU" style="font-family:Roboto,sans-serif;font-size:12px; color: #757575;; line-height:16px; letter-spacing:0px; -webkit-text-size-adjust:none; text-decoration:none;">
+WatchMojo.com
+</a>
+</td></tr>
+</table>
+</td>
+</table>
+</td>
+</tr>
+<tr>
+<td class="video-2col-width" width="250" valign="top">
+<div class="meta-data-font" style="font-family:Roboto,sans-serif; color:#999999; font-size:12px; letter-spacing:0px; line-height:20px; -webkit-text-size-adjust:none;">
+510,011 views
+ • 
+8 months ago
+</div>
+</td>
+</tr>
+<tr><td height="16"></td></tr>
+</table>
+</td>
+</tr>
+</td>
+</tr>
+<tr><td height="16"></td>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table align="right" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table class="video-spotlight-width" width="290" cellspacing="0" cellpadding="0" border="0">
+<!--[if gte mso 9]>
+<tr>
+<td class="video-spotlight-size" width="290" align="center">
+<a href="http://www.youtube.com/watch?v=rEz16K3BNuQ&feature=em-subs_digest-vrecs" style="text-decoration:none; display:block;" class="nonplayable">
+<img class="video-spotlight-size" src="http://i.ytimg.com/vi/rEz16K3BNuQ/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3kyp6ZjG5ZbprvR7wpwqxOJnILfFw&feature=em-subs_digest-vrecs" width="290" border="0">
+</a>
+</td>
+</tr>
+<![endif]-->
+<!--[if !mso]><!-- -->
+<tr style="mso-hide:all">
+<td class="video-2col-outer-container-size" width="290">
+<a href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/watch?v%3DrEz16K3BNuQ%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmHAQGduxiKB5XFxBymnPPV0BDdM4XhFRpq_MS_1kEhSBMsYmcCNTfBbMhjGWwZSqfVNHBMM_hKUiO244hYifYqwG6AqN9GYB-oW54PLusjHcjDfCVE-sB-F47NhpE7d_-MRgaFg9_yK0_-rTF39jGc36BLgBVGjkFxbp_DyluKvx7x7MZsxvg0dd05kHLgffFFWgvEhriY" style="text-decoration:none;" target="_blank" ; class="nonplayable">
+<table aria-label="Top 10 Funniest Family Feud Moments of 2017 link" class="video-spotlight-width" width="290" align="center" background="http://i.ytimg.com/vi/rEz16K3BNuQ/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&amp;rs=AMzJL3kyp6ZjG5ZbprvR7wpwqxOJnILfFw&amp;feature=em-subs_digest-vrecs" style="background-repeat:no-repeat; background-size:100% 100%;" cellspacing="0" cellpadding="0" border="0" height="162">
+<tr style="mso-hide:all"><td aria-label="Top 10 Funniest Family Feud Moments of 2017" class="video-2col-thumb-size" width="290">
+<img src="https://www.gstatic.com/youtube/img/email/transparent_pixel.png" alt="Top 10 Funniest Family Feud Moments of 2017" class="video-2col-thumb-size" width="290" height="132">
+</td></tr>
+<tr style="mso-hide:all">
+<td class="footer-font" style="color:#fff; text-align:right; font-size: 12px;" valign="bottom" width="290">
+<div style="margin-bottom:8px; margin-right:8px; border-radius:2px; background-color: #212121; padding:2px 4px; display:inline-block;">12:59</div>
+</td>
+</tr>
+</table>
+</a>
+</td>
+</tr>
+<!--<![endif]-->
+<tr><td height="16"></td></tr>
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="270" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table width="270" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="270" valign="top">
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="250" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="250" valign="top">
+<table class="content-container-width" width="250" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<td valign="center">
+<table class="content-container-width" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<tr><td style="padding-bottom:4px">
+<a href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/watch?v%3DrEz16K3BNuQ%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmHAQGduxiKB5XFxBymnPPV0BDdM4XhFRpq_MS_1kEhSBMsYmcCNTfBbMhjGWwZSqfVNHBMM_hKUiO244hYifYqwG6AqN9GYB-oW54PLusjHcjDfCVE-sB-F47NhpE7d_-MRgaFg9_yK0_-rTF39jGc36BLgBVGjkFxbp_DyluKvx7x7MZsxvg0dd05kHLgffFFWgvEhriY" style="text-decoration:none;">
+<span class="video-title-font-class" valign="center" style="font-family:Roboto,sans-serif; font-size:14px; color:#212121; line-height:20px; -webkit-text-size-adjust:none;">
+Top 10 Funniest Family Feud Moments of 2017
+</span>
+</a>
+</td></tr>
+<tr><td>
+<a class="video-link-font-class" href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/channel/UCRtQDkL_op8jPzM2K9aT0Vw?feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmEqrgG7gezJEECLoJfdZ_gH1xTXQIOaAZ6DtaYV12yvzam-bR6XaB6ZTLlmnb4M2Ro7IdOY8qJXsvhfSJdNri-Gc8EWNLYuDnwUrBRgwu0Kn3DMTovRhUWFbVE2WSwWXovAaKZvPqTbyVXnaa41wLve0Z_fOM7J_1pQw961YnT8nKqNBfnpYu9lvwg_bxci8QCwEYBSOIT2rwzRtuM22Jfd" style="font-family:Roboto,sans-serif;font-size:12px; color: #757575;; line-height:16px; letter-spacing:0px; -webkit-text-size-adjust:none; text-decoration:none;">
+Top Ten Daily
+</a>
+</td></tr>
+</table>
+</td>
+</table>
+</td>
+</tr>
+<tr>
+<td class="video-2col-width" width="250" valign="top">
+<div class="meta-data-font" style="font-family:Roboto,sans-serif; color:#999999; font-size:12px; letter-spacing:0px; line-height:20px; -webkit-text-size-adjust:none;">
+2,517,363 views
+ • 
+4 months ago
+</div>
+</td>
+</tr>
+<tr><td height="16"></td></tr>
+</table>
+</td>
+</tr>
+</td>
+</tr>
+<tr><td height="16"></td>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td></tr>
+<tr><td class="inner-container-width" width="600">
+<table align="left" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table class="video-spotlight-width" width="290" cellspacing="0" cellpadding="0" border="0">
+<!--[if gte mso 9]>
+<tr>
+<td class="video-spotlight-size" width="290" align="center">
+<a href="http://www.youtube.com/watch?v=Sh4rC6KxYpE&feature=em-subs_digest-vrecs" style="text-decoration:none; display:block;" class="nonplayable">
+<img class="video-spotlight-size" src="http://i.ytimg.com/vi/Sh4rC6KxYpE/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3k1EDG73SYbAuFTGCclOHGPyAfTMw&feature=em-subs_digest-vrecs" width="290" border="0">
+</a>
+</td>
+</tr>
+<![endif]-->
+<!--[if !mso]><!-- -->
+<tr style="mso-hide:all">
+<td class="video-2col-outer-container-size" width="290">
+<a href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/watch?v%3DSh4rC6KxYpE%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmFnVLRMcfPi1RdcXNLRuPDnHTGdJ7JczbdEgnqPPJMuTbarW8AZnZa6n0L2snmXBt-SLQdzNBBpNnjzD0oG3DGY4X1nbuYWZr5S4cbXKDDUfC7MMsL9op8apuMVfFjg4syh0vwWMc7QoBBmpre__A1jhF6A6qv4auZrgZCeQHOjHpYKjPcPV6JTvrGhDZuhFYYitrmIuMY" style="text-decoration:none;" target="_blank" ; class="nonplayable">
+<table aria-label="Funniest TV Game Show Answers Compilation Ever link" class="video-spotlight-width" width="290" align="center" background="http://i.ytimg.com/vi/Sh4rC6KxYpE/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&amp;rs=AMzJL3k1EDG73SYbAuFTGCclOHGPyAfTMw&amp;feature=em-subs_digest-vrecs" style="background-repeat:no-repeat; background-size:100% 100%;" cellspacing="0" cellpadding="0" border="0" height="162">
+<tr style="mso-hide:all"><td aria-label="Funniest TV Game Show Answers Compilation Ever" class="video-2col-thumb-size" width="290">
+<img src="https://www.gstatic.com/youtube/img/email/transparent_pixel.png" alt="Funniest TV Game Show Answers Compilation Ever" class="video-2col-thumb-size" width="290" height="132">
+</td></tr>
+<tr style="mso-hide:all">
+<td class="footer-font" style="color:#fff; text-align:right; font-size: 12px;" valign="bottom" width="290">
+<div style="margin-bottom:8px; margin-right:8px; border-radius:2px; background-color: #212121; padding:2px 4px; display:inline-block;">14:26</div>
+</td>
+</tr>
+</table>
+</a>
+</td>
+</tr>
+<!--<![endif]-->
+<tr><td height="16"></td></tr>
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="270" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table width="270" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="270" valign="top">
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="250" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="250" valign="top">
+<table class="content-container-width" width="250" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<td valign="center">
+<table class="content-container-width" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<tr><td style="padding-bottom:4px">
+<a href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/watch?v%3DSh4rC6KxYpE%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmFnVLRMcfPi1RdcXNLRuPDnHTGdJ7JczbdEgnqPPJMuTbarW8AZnZa6n0L2snmXBt-SLQdzNBBpNnjzD0oG3DGY4X1nbuYWZr5S4cbXKDDUfC7MMsL9op8apuMVfFjg4syh0vwWMc7QoBBmpre__A1jhF6A6qv4auZrgZCeQHOjHpYKjPcPV6JTvrGhDZuhFYYitrmIuMY" style="text-decoration:none;">
+<span class="video-title-font-class" valign="center" style="font-family:Roboto,sans-serif; font-size:14px; color:#212121; line-height:20px; -webkit-text-size-adjust:none;">
+Funniest TV Game Show Answers Compilation Ever
+</span>
+</a>
+</td></tr>
+<tr><td>
+<a class="video-link-font-class" href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/user/DJBobbyFX?feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmGJgxp7isc2-k4CgijomKJfqt8f9QucIBCObgg3AtdDvmW5I6PJ5rgpSYWJM7dsiR04CwNWHQ30M99-IlTw5g1ORZKZa8A-JvVA5bmEwSayQ3mPXakibikwwO4stJ6FuE05KauSqN6cfgPrqY7mN7zZT2KQOZhIOsg3hMyKJF3Xsqa92CrWg4p8ZA9DBW0" style="font-family:Roboto,sans-serif;font-size:12px; color: #757575;; line-height:16px; letter-spacing:0px; -webkit-text-size-adjust:none; text-decoration:none;">
+DJBobbyFX
+</a>
+</td></tr>
+</table>
+</td>
+</table>
+</td>
+</tr>
+<tr>
+<td class="video-2col-width" width="250" valign="top">
+<div class="meta-data-font" style="font-family:Roboto,sans-serif; color:#999999; font-size:12px; letter-spacing:0px; line-height:20px; -webkit-text-size-adjust:none;">
+564,782 views
+ • 
+over a year ago
+</div>
+</td>
+</tr>
+<tr><td height="16"></td></tr>
+</table>
+</td>
+</tr>
+</td>
+</tr>
+<tr><td height="16"></td>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table align="right" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table class="video-spotlight-width" width="290" cellspacing="0" cellpadding="0" border="0">
+<!--[if gte mso 9]>
+<tr>
+<td class="video-spotlight-size" width="290" align="center">
+<a href="http://www.youtube.com/watch?v=Fj8G9dGuNkU&feature=em-subs_digest-vrecs" style="text-decoration:none; display:block;" class="nonplayable">
+<img class="video-spotlight-size" src="http://i.ytimg.com/vi/Fj8G9dGuNkU/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&rs=AMzJL3maHEEbmc7YaKhs4nEw_aq-k1ldmw&feature=em-subs_digest-vrecs" width="290" border="0">
+</a>
+</td>
+</tr>
+<![endif]-->
+<!--[if !mso]><!-- -->
+<tr style="mso-hide:all">
+<td class="video-2col-outer-container-size" width="290">
+<a href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/watch?v%3DFj8G9dGuNkU%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmFOxdiu-EMm_mCBgt6oi3jngaMjBKIwucHtOtWEqz3w3_O41uR7zg2x5cNK40C75YMwDCmKpK9Y6S7fSc0HTXeuGrehdNsPHKQeIuoZHBSqJkV9RSOml1INxwkkcB0Yr8qGn8uDK0lIeHTOm3bI9tlvVvod2RAp4nFugv5l7V_yyG1tdNLHdQYXp-Qbgv2X-Y5U6qqNlw8" style="text-decoration:none;" target="_blank" ; class="nonplayable">
+<table aria-label="Greatest Trick Plays in Football History link" class="video-spotlight-width" width="290" align="center" background="http://i.ytimg.com/vi/Fj8G9dGuNkU/sddefault.jpg?sqp=-oaymwEGCIAFEOgC&amp;rs=AMzJL3maHEEbmc7YaKhs4nEw_aq-k1ldmw&amp;feature=em-subs_digest-vrecs" style="background-repeat:no-repeat; background-size:100% 100%;" cellspacing="0" cellpadding="0" border="0" height="162">
+<tr style="mso-hide:all"><td aria-label="Greatest Trick Plays in Football History" class="video-2col-thumb-size" width="290">
+<img src="https://www.gstatic.com/youtube/img/email/transparent_pixel.png" alt="Greatest Trick Plays in Football History" class="video-2col-thumb-size" width="290" height="132">
+</td></tr>
+<tr style="mso-hide:all">
+<td class="footer-font" style="color:#fff; text-align:right; font-size: 12px;" valign="bottom" width="290">
+<div style="margin-bottom:8px; margin-right:8px; border-radius:2px; background-color: #212121; padding:2px 4px; display:inline-block;">13:39</div>
+</td>
+</tr>
+</table>
+</a>
+</td>
+</tr>
+<!--<![endif]-->
+<tr><td height="16"></td></tr>
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="270" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+<table width="270" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="270" valign="top">
+<tr>
+<td>
+<table class="video-2col-inner-container-size" width="250" valign="top" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;overflow:hidden;word-wrap:break-word;text-overflow:ellipsis">
+<tr>
+<td class="content-container-width" width="250" valign="top">
+<table class="content-container-width" width="250" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<td valign="center">
+<table class="content-container-width" cellspacing="0" cellpadding="0" border="0" style="table-layout:fixed;">
+<tr><td style="padding-bottom:4px">
+<a href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/watch?v%3DFj8G9dGuNkU%26feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmFOxdiu-EMm_mCBgt6oi3jngaMjBKIwucHtOtWEqz3w3_O41uR7zg2x5cNK40C75YMwDCmKpK9Y6S7fSc0HTXeuGrehdNsPHKQeIuoZHBSqJkV9RSOml1INxwkkcB0Yr8qGn8uDK0lIeHTOm3bI9tlvVvod2RAp4nFugv5l7V_yyG1tdNLHdQYXp-Qbgv2X-Y5U6qqNlw8" style="text-decoration:none;">
+<span class="video-title-font-class" valign="center" style="font-family:Roboto,sans-serif; font-size:14px; color:#212121; line-height:20px; -webkit-text-size-adjust:none;">
+Greatest Trick Plays in Football History
+</span>
+</a>
+</td></tr>
+<tr><td>
+<a class="video-link-font-class" href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/channel/UCr1TEhHFn8jEXraaZ1lslhQ?feature%3Dem-subs_digest-vrecs&amp;g=AIR_RmHHrObTbsrqKt225J2dU8OdRSVaWdPWHA1lUf73nFn11LWJ86QYuVknPAJ5Np9difkSX4QS_z7A2_qkD4s6Q5Rzwd2a9bflqWWsFysB6-3YO8xbok9NrlC8H27Rkaje5LKyX9U0_DF6f5h9ObDfjy9tuG-oaeXfC4dmcas3iJvf7fjmQFiYyG_i5wEpq8qw-a3dGX4Ta-AFPc8Yr3e2xTC7" style="font-family:Roboto,sans-serif;font-size:12px; color: #757575;; line-height:16px; letter-spacing:0px; -webkit-text-size-adjust:none; text-decoration:none;">
+Jaydon
+</a>
+</td></tr>
+</table>
+</td>
+</table>
+</td>
+</tr>
+<tr>
+<td class="video-2col-width" width="250" valign="top">
+<div class="meta-data-font" style="font-family:Roboto,sans-serif; color:#999999; font-size:12px; letter-spacing:0px; line-height:20px; -webkit-text-size-adjust:none;">
+39,775,811 views
+ • 
+over a year ago
+</div>
+</td>
+</tr>
+<tr><td height="16"></td></tr>
+</table>
+</td>
+</tr>
+</td>
+</tr>
+<tr><td height="16"></td>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td></tr>
+</tbody>
+</table>
+
+<img class="open_tracking_img" src="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/gen_204%3Fa%3Dem-subs_digest" width="1" height="1" style="display:none !important; visibility: hidden; width: 0; height: 0; opacity: 0; color: transparent;">
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<hr style="display: block;height: 1px;border: 0;border-top: 1px solid #eaeaea;margin-bottom: 16px;padding: 0;"></hr>
+<tr>
+<td>
+<table class="inner-container-width" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="footer-font" style="color: #757575; font-size:12px; line-height:16px; font-family:Roboto, sans-serif; letter-spacing:0px; -webkit-text-size-adjust:none; word-wrap:break-word;">
+YouTube sends email summaries like these so you can keep up with your channel subscriptions.
+If you no longer want to receive these updates, you may edit your preferences <a href="https://www.youtube.com/attribution_link?noapp=1&amp;a=t2IiRSKc10Q55pXy&amp;u=/account_notifications?feature%3Dem-subs_digest&amp;g=AIR_RmFuXCLLotkkyCDN5iyC9SgWCmO78H4Ry8uqKBGNiMpwGy4VkE5xIabbkBGQxmw8Kjeia20JcktJAFyZkgpa-7_7Ustz8JYXHicORYMg4y75WzVn-52MKxSwHWuhVI1G7zscX-0Rffpel9ZGqKoWYVeRzB9og9al1jhVdyqKen9_gbCRKbkj8pKYXXUDmWN67k3nrjN2-jg" style="color:#2793E6; text-decoration:none;">here</a> or <a href="https://www.youtube.com/attribution_link?noapp=1&amp;a=t2IiRSKc10Q55pXy&amp;u=/email_unsubscribe?uid%3DMfxBhDYBg7rrycMVIMKZsw%26action_unsubscribe%3DXDeFq3dYbtuTMQAzwi9Lqm14OJV8MTUxMzU4NzMxOEAxNTEzNTg3MzE4%26feature%3Dem-subs_digest&amp;g=AIR_RmEUBPKVER9FLHwoJSsqC8dypqJ1O4bek0vE0ILmvgnoK2H6XRg_ajc6jz11FX4j-uXod9J1eOGDcygOm8H6jJZtaBhporYpOtJRVVNSAGEcSM28TqBCZDaFJwEayetrcVRH4nilDmY8ZTnmBIu4LdEfzqv4hw1ajmobkMf6o6ZNo2aGir8o2F5f5YrlXMDR2tT2q3jsqEyx5ftLIU3fCOrkCS11CggueDv9dh4XHbfhVxf2LC0GaAUqyTgCoDuXnmK03OElTFv90qCxjGvERe0oDFqwOo8qk8MK7yZYUecRApizaqpYEP7QGiOrpkiWmNvWllTEbqChnyAd-ypaPZR8RC4" style="color:#2793E6; text-decoration:none;">unsubscribe</a>.
+</td>
+</tr>
+<tr><td>
+<table class="footer-content-padding-height" height="16" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="footer-content-padding-height" height="16"></td>
+</tr>
+</table>
+</td></tr>
+<tr>
+<td class="footer-font" style="color: #757575; font-size:12px; line-height:16px; font-family:Roboto, sans-serif; letter-spacing:0px; text-decoration:none; -webkit-text-size-adjust:none;">
+© 2017 YouTube, LLC 901 Cherry Ave, San Bruno, CA 94066
+</td>
+</tr>
+<tr><td>
+<table class="footer-content-padding-height" height="16" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="footer-content-padding-height" height="16"></td>
+</tr>
+</table>
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+<td class="outer-container-padding-width" width="40"></td>
+</tr>
+<tr>
+<td colspan="3">
+<table class="content-container-width" width="600" height="18" align="left" style="background-repeat:no-repeat; background-size:100% 100%;" height="332" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td class="outer-container-padding-width" width="40"></td>
+<td width="20" aria-label="YouTube Link">
+<a href="https://www.youtube.com/attribution_link?a=t2IiRSKc10Q55pXy&amp;u=/youtube&amp;g=AIR_RmG_SR2BubPH64dUaIWsoC8YvW3WwqaZ-3pBODxpMF03rRijGMFzRwhXcNky167ozXOf8OKw2PHeikJiP1980jdBeJ-OLvqDzP2oo3LYsXtUH45qjYwoeIZGKrf0o94C_2dDXUXsDg" target="_blank">
+<img alt="YouTube" class="large-avatar-size" src="https://www.gstatic.com/youtube/img/email/youtube_email_icon_grey.png" height="18" border="0">
+</a>
+</td>
+<td class="social-logo-padding-width" width="16"></td>
+<td aria-label="Twitter Link">
+<a href="https://www.google.com/appserve/mkt/p/AIR_RmGSSFsNIzSAMG7zB4-wRPq2bJGhTaBXKJCuGjySNRBqMKkNuGTOcnK8z9gTi1YYUc98KpBKvBpUAbtFU7g" target="_blank">
+<img alt="Twitter" class="large-avatar-size" src="https://www.gstatic.com/youtube/img/email/twitter_email_icon_grey.png" height="18" border="0">
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<img height="1" width="3" src="https://www.google.com/appserve/mkt/img/AIR_RmEvb5l8Zv25GspXJyqJLSGVmLLHF4gQxpFW-Xm7777g.gif"></body>
+</html>
