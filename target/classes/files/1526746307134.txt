@@ -1,85 +1,19 @@
 Contents of Itinerary Email
-Header Content
 
-Delivered-To: appjeffs@gmail.com
-Received: by 2002:a9d:36a8:0:0:0:0:0 with SMTP id h37-v6csp1220841otc;
-        Thu, 19 Apr 2018 13:18:32 -0700 (PDT)
-X-Received: by 10.31.124.131 with SMTP id x125mr5494701vkc.28.1524169111845;
-        Thu, 19 Apr 2018 13:18:31 -0700 (PDT)
-ARC-Seal: i=1; a=rsa-sha256; t=1524169111; cv=none;
-        d=google.com; s=arc-20160816;
-        b=XLQxWg01tySxxh2wmxQkmjEb7RchphmY34VruiQOc47sZnyHzIL+1oLljY0FrAISpv
-         PVciCaWpWtNiPSv6FiDhRU1k61RMo1bPiKUlJKHqoI4KDUGKNeca9c+6M1bIrWPaQooe
-         mllEl5+nKLxheKAl5aPL30m/PnKg3hoab35gs5CDbpVtwhg8JszAEjspN0SKAfZ5b3HG
-         OyBXEswapR9p2oTYFFpI6K5emqgJBUC8jKyrLxj97DJfrPRfS/4GwgNpjujNoPSSIYM7
-         5YtiKhkxyltRjx9Vh4sioRvgYstcSaYBVpIfh0K6MJ5VbxO0ZZj9sZpTmqidx8VOrkKB
-         FMug==
-ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
-        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
-         :dkim-signature:arc-authentication-results;
-        bh=zZuR69kFZbfukms961rVMdVOUEt/4Iewx9QP4BMd4p8=;
-        b=o4SGW+2klKTOehm/m/nMRdXmZqMU1kTRvmUg25YRrAIx74E48172kVXuloP1HbKV5o
-         ppEetzHz6R05wrk2xEvLoOJvh7cpKECHDj5gr/pBbjGQXF/PmC+Mu5fZms49V5veMnGf
-         k6oklGfZLnSqZw1xsBRnxY0z++K3/1Hys/8G6xqgTB+ilBLJ1iGkHMGSu8pTfvTiyGYc
-         w+60EXavT5+ZPURMs2xvEKGvQVvCYY4P+DQIo3xHRu5QL0EURiXzpJ7Ro02sPMCrsbVV
-         GefvyCXGloVuQ+HsXo+N4ST8EttWxteFv1NZzmLWnh09T0nQiqMjnhPUVOU5qRjo5msJ
-         hFMw==
-ARC-Authentication-Results: i=1; mx.google.com;
-       dkim=pass header.i=@gmail.com header.s=20161025 header.b=IzEQgl0f;
-       spf=pass (google.com: domain of jeffsfakeemailbox@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=jeffsfakeemailbox@gmail.com;
-       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
-Return-Path: <jeffsfakeemailbox@gmail.com>
-Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
-        by mx.google.com with SMTPS id w3sor1874802uah.127.2018.04.19.13.18.31
-        for <appjeffs@gmail.com>
-        (Google Transport Security);
-        Thu, 19 Apr 2018 13:18:31 -0700 (PDT)
-Received-SPF: pass (google.com: domain of jeffsfakeemailbox@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
-Authentication-Results: mx.google.com;
-       dkim=pass header.i=@gmail.com header.s=20161025 header.b=IzEQgl0f;
-       spf=pass (google.com: domain of jeffsfakeemailbox@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=jeffsfakeemailbox@gmail.com;
-       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=gmail.com; s=20161025;
-        h=mime-version:references:in-reply-to:from:date:message-id:subject:to;
-        bh=zZuR69kFZbfukms961rVMdVOUEt/4Iewx9QP4BMd4p8=;
-        b=IzEQgl0fwVH065k7l1FJsHb5R16IwqyiHc7KKjuDUT/itZCj3/Tnm3gY3mxHAHGvhw
-         uz7IDZVps7DXrJg6DEAenpigXxKdO+KD2OhWJKbzgepYDQx6g3CTWFsRmW5CJpxpmG0d
-         /91FTFoLkvb7b0bUaodRY8u8d0b+KrjVI7yr+v3XdqzMUVSikrmm33PbSTZ2ffO654FA
-         FtoRFep64GfpuLeslce2zguiPTwbJMu1tIV6SRHRUSAtrJHjfZVDV1aSA2inTnrOebtG
-         +u0AeLTcmspBgg8Zak4f+xRXqj+ye5mEY/OQ7v98ZlZhjUIyY9kh/FDv6LEJgcVf/E8w
-         1psg==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=1e100.net; s=20161025;
-        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
-         :message-id:subject:to;
-        bh=zZuR69kFZbfukms961rVMdVOUEt/4Iewx9QP4BMd4p8=;
-        b=HPjsXhvH5mWIExdguc3nrpae4x7TyzWvPp7NbwwvU7IAwv5WwhR2XivzO2rLCfCC7O
-         6ZwrM4bJtFt17rkVAYOTFPLJYC3PTOCym2ADj4xoaoLBX4nFUZEccucxmv7vc5hgaakf
-         JeDBl/Op+W9DQE9ge+dH7g5njrsvdhP1XVh+qTz8vlqa1jSaWmepmRp8dP9/t/PQMQ7H
-         ujt+/0XkOrXdOehnYGreYZjJmgPET8lDy4rSuwHvewOPtg+eqVVOtIInLFcfWo4X/LPK
-         zQn3wwUY5DocKSIr7RE5MIwogTASVtK9+3OXBpcMtQvgJOOgq3Nj/mgN9Bu5qIViezSg
-         NmqA==
-X-Gm-Message-State: ALQs6tBYeTSio1+OIDkyQbWRFWXtEfK4PdAWGvX4N0Q/algKFrG7Otq4
-	Sfd6wEvDzxkhLIndpn6wAvY0w2moM0cjn2w22PQ=
-X-Google-Smtp-Source: AIpwx497Nogi9pQVOSFvJHPoj5QtJ5/4b/pOE58JVVeYoPshaucza3JchJFUl5qTyCdF35m3PJuuTh0bgDtHJnUa3PI=
-X-Received: by 10.176.83.143 with SMTP id k15mr5698730uaa.40.1524169111420;
- Thu, 19 Apr 2018 13:18:31 -0700 (PDT)
-MIME-Version: 1.0
-References: <5a30e930.8309370a.bf48d.b8ceSMTPIN_ADDED_MISSING@mx.google.com>
-In-Reply-To: <5a30e930.8309370a.bf48d.b8ceSMTPIN_ADDED_MISSING@mx.google.com>
-From: Jeff Erson <jeffsfakeemailbox@gmail.com>
-Date: Thu, 19 Apr 2018 20:18:21 +0000
-Message-ID: <CAFpM2wZveMoT7K8sKn6otwtiw4vKd+TBLGjS1dMYPHE4-8EfaQ@mail.gmail.com>
-Subject: Fwd: Successful waiver claim for Chris Hogan in No Class Needed
-To: "appjeffs@gmail.com" <appjeffs@gmail.com>
-Content-Type: multipart/alternative; boundary="f403045e36d076c26a056a394604"
 Body Content
 ---------------------------------
 
 This is a Multipart
 This is a string
 ---------------------------
+---------- Forwarded message ---------
+From: Jeff Erson <jeffsfakeemailbox@gmail.com>
+Date: Thu, Apr 19, 2018 at 4:18 PM
+Subject: Fwd: Successful waiver claim for Chris Hogan in No Class Needed
+To: appjeffs@gmail.com <appjeffs@gmail.com>
+
+
+
 ---------- Forwarded message ---------
 From: Yahoo Sports <sports-fantasy-replies@sports.yahoo.com>
 Date: Wed, Dec 13, 2017 at 3:47 AM
@@ -125,7 +59,7 @@ Yahoo Sports is located at 701 First Avenue, Sunnyvale, CA 94089
 
 This is a string
 ---------------------------
-<div><br><div class="gmail_quote"><div>---------- Forwarded message ---------<br>From: Yahoo Sports &lt;<a href="mailto:sports-fantasy-replies@sports.yahoo.com">sports-fantasy-replies@sports.yahoo.com</a>&gt;<br>Date: Wed, Dec 13, 2017 at 3:47 AM<br>Subject: Successful waiver claim for Chris Hogan in No Class Needed<br>To:  &lt;<a href="mailto:jeffsfakeemailbox@gmail.com">jeffsfakeemailbox@gmail.com</a>&gt;<br></div><br><br>
+<div><br><div class="gmail_quote"><div>---------- Forwarded message ---------<br>From: Jeff Erson &lt;<a href="mailto:jeffsfakeemailbox@gmail.com">jeffsfakeemailbox@gmail.com</a>&gt;<br>Date: Thu, Apr 19, 2018 at 4:18 PM<br>Subject: Fwd: Successful waiver claim for Chris Hogan in No Class Needed<br>To: <a href="mailto:appjeffs@gmail.com">appjeffs@gmail.com</a> &lt;<a href="mailto:appjeffs@gmail.com">appjeffs@gmail.com</a>&gt;<br></div><br><br><div><br><div class="gmail_quote"><div>---------- Forwarded message ---------<br>From: Yahoo Sports &lt;<a href="mailto:sports-fantasy-replies@sports.yahoo.com" target="_blank">sports-fantasy-replies@sports.yahoo.com</a>&gt;<br>Date: Wed, Dec 13, 2017 at 3:47 AM<br>Subject: Successful waiver claim for Chris Hogan in No Class Needed<br>To:  &lt;<a href="mailto:jeffsfakeemailbox@gmail.com" target="_blank">jeffsfakeemailbox@gmail.com</a>&gt;<br></div><br><br>
 
     
 
@@ -199,7 +133,7 @@ Your <a href="https://football.fantasysports.yahoo.com/f1/295575/10?week=15" tar
   <td valign="top"><font face="Arial,Helvetica,sans-serif" size="-2" color="#000000">
 
     
-    You received this email because you subscribed to receive emails for Yahoo Sports Fantasy Football. Please do not reply to this message to unsubscribe. If you do not want to receive these emails, use this link to <a href="https://football.fantasysports.yahoo.com/f1/295575/10/editteaminfo" target="_blank">unsubscribe</a>. If you would like to change your communications preferences for other Yahoo business lines, please visit your <a href="http://subscribe.yahoo.com/showaccount" target="_blank">Marketing Preferences</a> page. To learn more about Yahoo&#39;s use of personal information, including the use of <a href="http://info.yahoo.com/privacy/us/yahoo/webbeacons/" target="_blank">web beacons</a> in HTML-based email, please read our <a href="https://info.yahoo.com/privacy/us/yahoo/" target="_blank">Privacy Policy</a>. Yahoo Sports is located at <a href="https://maps.google.com/?q=701+First+Avenue,+Sunnyvale,+CA+94089&amp;entry=gmail&amp;source=g">701 First Avenue, Sunnyvale, CA 94089</a>.
+    You received this email because you subscribed to receive emails for Yahoo Sports Fantasy Football. Please do not reply to this message to unsubscribe. If you do not want to receive these emails, use this link to <a href="https://football.fantasysports.yahoo.com/f1/295575/10/editteaminfo" target="_blank">unsubscribe</a>. If you would like to change your communications preferences for other Yahoo business lines, please visit your <a href="http://subscribe.yahoo.com/showaccount" target="_blank">Marketing Preferences</a> page. To learn more about Yahoo&#39;s use of personal information, including the use of <a href="http://info.yahoo.com/privacy/us/yahoo/webbeacons/" target="_blank">web beacons</a> in HTML-based email, please read our <a href="https://info.yahoo.com/privacy/us/yahoo/" target="_blank">Privacy Policy</a>. Yahoo Sports is located at <a href="https://maps.google.com/?q=701+First+Avenue,+Sunnyvale,+CA+94089&amp;entry=gmail&amp;source=g" target="_blank">701 First Avenue, Sunnyvale, CA 94089</a>.
 
       
   </font></td>
@@ -211,8 +145,8 @@ Your <a href="https://football.fantasysports.yahoo.com/f1/295575/10?week=15" tar
 </div>
 
 
-</div></div>
-<div><br><div class="gmail_quote"><div>---------- Forwarded message ---------<br>From: Yahoo Sports &lt;<a href="mailto:sports-fantasy-replies@sports.yahoo.com">sports-fantasy-replies@sports.yahoo.com</a>&gt;<br>Date: Wed, Dec 13, 2017 at 3:47 AM<br>Subject: Successful waiver claim for Chris Hogan in No Class Needed<br>To:  &lt;<a href="mailto:jeffsfakeemailbox@gmail.com">jeffsfakeemailbox@gmail.com</a>&gt;<br></div><br><br>
+</div></div></div></div>
+<div><br><div class="gmail_quote"><div>---------- Forwarded message ---------<br>From: Jeff Erson &lt;<a href="mailto:jeffsfakeemailbox@gmail.com">jeffsfakeemailbox@gmail.com</a>&gt;<br>Date: Thu, Apr 19, 2018 at 4:18 PM<br>Subject: Fwd: Successful waiver claim for Chris Hogan in No Class Needed<br>To: <a href="mailto:appjeffs@gmail.com">appjeffs@gmail.com</a> &lt;<a href="mailto:appjeffs@gmail.com">appjeffs@gmail.com</a>&gt;<br></div><br><br><div><br><div class="gmail_quote"><div>---------- Forwarded message ---------<br>From: Yahoo Sports &lt;<a href="mailto:sports-fantasy-replies@sports.yahoo.com" target="_blank">sports-fantasy-replies@sports.yahoo.com</a>&gt;<br>Date: Wed, Dec 13, 2017 at 3:47 AM<br>Subject: Successful waiver claim for Chris Hogan in No Class Needed<br>To:  &lt;<a href="mailto:jeffsfakeemailbox@gmail.com" target="_blank">jeffsfakeemailbox@gmail.com</a>&gt;<br></div><br><br>
 
     
 
@@ -286,7 +220,7 @@ Your <a href="https://football.fantasysports.yahoo.com/f1/295575/10?week=15" tar
   <td valign="top"><font face="Arial,Helvetica,sans-serif" size="-2" color="#000000">
 
     
-    You received this email because you subscribed to receive emails for Yahoo Sports Fantasy Football. Please do not reply to this message to unsubscribe. If you do not want to receive these emails, use this link to <a href="https://football.fantasysports.yahoo.com/f1/295575/10/editteaminfo" target="_blank">unsubscribe</a>. If you would like to change your communications preferences for other Yahoo business lines, please visit your <a href="http://subscribe.yahoo.com/showaccount" target="_blank">Marketing Preferences</a> page. To learn more about Yahoo&#39;s use of personal information, including the use of <a href="http://info.yahoo.com/privacy/us/yahoo/webbeacons/" target="_blank">web beacons</a> in HTML-based email, please read our <a href="https://info.yahoo.com/privacy/us/yahoo/" target="_blank">Privacy Policy</a>. Yahoo Sports is located at <a href="https://maps.google.com/?q=701+First+Avenue,+Sunnyvale,+CA+94089&amp;entry=gmail&amp;source=g">701 First Avenue, Sunnyvale, CA 94089</a>.
+    You received this email because you subscribed to receive emails for Yahoo Sports Fantasy Football. Please do not reply to this message to unsubscribe. If you do not want to receive these emails, use this link to <a href="https://football.fantasysports.yahoo.com/f1/295575/10/editteaminfo" target="_blank">unsubscribe</a>. If you would like to change your communications preferences for other Yahoo business lines, please visit your <a href="http://subscribe.yahoo.com/showaccount" target="_blank">Marketing Preferences</a> page. To learn more about Yahoo&#39;s use of personal information, including the use of <a href="http://info.yahoo.com/privacy/us/yahoo/webbeacons/" target="_blank">web beacons</a> in HTML-based email, please read our <a href="https://info.yahoo.com/privacy/us/yahoo/" target="_blank">Privacy Policy</a>. Yahoo Sports is located at <a href="https://maps.google.com/?q=701+First+Avenue,+Sunnyvale,+CA+94089&amp;entry=gmail&amp;source=g" target="_blank">701 First Avenue, Sunnyvale, CA 94089</a>.
 
       
   </font></td>
@@ -298,4 +232,4 @@ Your <a href="https://football.fantasysports.yahoo.com/f1/295575/10?week=15" tar
 </div>
 
 
-</div></div>
+</div></div></div></div>

@@ -129,8 +129,6 @@ public class MailReader {
             e.printStackTrace();
         } catch (MessagingException e) {
             e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -200,7 +198,7 @@ public class MailReader {
          * Once we decide which headers to record, will probably want to switch
          * to direct calls (ie: getSubject, getRecipients, etc)
          */
-        bw.write("Header Content\n");
+//        bw.write("Header Content\n");
         Enumeration headers = m.getAllHeaders();
 
         //get values for ET obj creation
@@ -209,7 +207,7 @@ public class MailReader {
 
         while (headers.hasMoreElements()) {
             Header h = (Header) headers.nextElement();
-            bw.write("\n" + h.getName() + ": " + h.getValue());
+//            bw.write("\n" + h.getName() + ": " + h.getValue());
             if(h.getName().equals("From")) {
                 address = h.getValue();
             }
