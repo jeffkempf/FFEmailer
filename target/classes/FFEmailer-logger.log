@@ -37,8 +37,3 @@
 ', forwardedAddress='null', forwardedDate=0, valid=false, content='null', contentType='WAIVERSUCCESS'}
 2018-05-19T16:55:30,325 INFO  [main|EmailParser] placeHolder str: GREETING, can you believe I was able to pick up PLAYERADDED for PLAYERDROPPED in my league!? That's crazy! I'm gonna dominate OPPONENT this week! lol
 2018-05-19T16:55:30,325 INFO  [main|EmailParser] formatted message: Sup dawg, can you believe I was able to pick up Chris Hogan for Jermaine Kearse in my league!? That's crazy! I'm gonna dominate Jeff this week! lol
-2018-05-19T16:58:22,463 INFO  [main|EmailParser] messages.length in main: 2
-2018-05-19T16:58:22,662 INFO  [main|EmailParser] email object: FFEmail{originalAddress='Yahoo Sports <sports-fantasy-replies@sports.yahoo.com>
-', forwardedAddress='null', forwardedDate=0, valid=false, content='null', contentType='WAIVERSUCCESS'}
-2018-05-19T16:58:22,674 INFO  [main|EmailParser] placeHolder str: GREETING, can you believe I was able to pick up PLAYERADDED for PLAYERDROPPED in my league!? That's crazy! I'm gonna dominate OPPONENT this week! lol
-2018-05-19T16:58:22,674 INFO  [main|EmailParser] formatted message: Hey dude, can you believe I was able to pick up Chris Hogan for Jermaine Kearse in my league!? That's crazy! I'm gonna dominate Jose this week! lol
