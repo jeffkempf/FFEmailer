@@ -7,7 +7,7 @@ public class FFEmail {
     private boolean valid;
     private String rawContent;
     private String content;
-    private String contentType;
+    private MessageType contentType;
 
     public FFEmail() {
         //default constructor
@@ -61,23 +61,28 @@ public class FFEmail {
         this.content = content;
     }
 
-    public String getContentType() {
+    public MessageType getContentType() {
         return contentType;
     }
 
-    public void setContentType(String contentType) {
-        if(contentType.toLowerCase().contains("waiver")){
-            if(contentType.toLowerCase().contains("successful")){
-                this.contentType = "waiverSuccess";
-            } else if(contentType.toLowerCase().contains("successful")){
-                this.contentType = "waiverFail";
+    /**
+     * parses keywords from email subject to determine content type
+     * @param subject
+     */
+    public void setContentType(String subject) {
+        if(subject.toLowerCase().contains("waiver")){
+            //unsuccessful must come 1st since contains "successful"
+            if(subject.toLowerCase().contains("unsuccessful")){
+                contentType = MessageType.WAIVERFAIL;
+            } else if(subject.toLowerCase().contains("successful")){
+                contentType = MessageType.WAIVERSUCCESS;
             } else {
-                this.contentType = "waiverInvalid";
+                contentType = MessageType.INVALID;
             }
-        } else if(contentType.toLowerCase().contains("recap")) {
-            this.contentType = "recap";
+        } else if(subject.toLowerCase().contains("recap")) {
+            contentType = MessageType.RECAP;
         } else {
-            this.contentType = "unknown";
+            contentType = MessageType.INVALID;
         }
     }
 
@@ -88,7 +93,7 @@ public class FFEmail {
                 ", forwardedAddress='" + forwardedAddress + '\'' +
                 ", forwardedDate=" + forwardedDate +
                 ", valid=" + valid +
-                ", rawContent='" + rawContent + '\'' +
+//                ", rawContent='" + rawContent + '\'' +
                 ", content='" + content + '\'' +
                 ", contentType='" + contentType + '\'' +
                 '}';

@@ -2,21 +2,18 @@ package kempf.jeff.services;
 
 import kempf.jeff.entities.EmailThreshold;
 import kempf.jeff.entities.FFEmail;
-import kempf.jeff.util.DateUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.json.JSONObject;
-import org.simplejavamail.converter.internal.mimemessage.MimeMessageParser;
 
 import javax.mail.*;
-import javax.mail.internet.MimeMessage;
 import java.io.BufferedWriter;
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Enumeration;
-import java.util.HashMap;
-import java.util.Properties;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.*;
 import java.util.regex.Pattern;
 
 public class EmailParser {
@@ -28,9 +25,13 @@ public class EmailParser {
     private BufferedWriter bw;
     private FFEmail email;
     private String filePath;
+    private String templatePath;
     private static Logger logger;
-    private HashMap<String, EmailThreshold> emailLimits; //for tracking sender thresholds
     private boolean textIsHtml = false;
+    private HashMap<String, EmailThreshold> emailLimits; //for tracking sender thresholds
+    private static final ArrayList<String> part1 = new ArrayList<>();
+    private static final ArrayList<String> part2 = new ArrayList<>();
+    private static final ArrayList<String> opponent = new ArrayList<>();
 
     public EmailParser(Properties prop) {
         this.prop = prop;
@@ -38,9 +39,40 @@ public class EmailParser {
         emailUsername = prop.getProperty("mail.pop3s.user");
         emailPassword = prop.getProperty("mail.pop3s.password");
         filePath = prop.getProperty("file.dir");
+        templatePath = prop.getProperty("template.dir");
         email = new FFEmail();
         emailLimits = new HashMap<>();
         logger = LogManager.getLogger(EmailParser.class.getName());
+
+        //generate greetings
+        part1.add("Yo");
+        part1.add("Sup");
+        part1.add("Hey");
+        part1.add("");
+        part2.add("dawg");
+        part2.add("dude");
+        part2.add("bro");
+        part2.add("man");
+        part2.add("fam");
+
+        opponent.add("Kevin");
+        opponent.add("Chad");
+        opponent.add("Brad");
+        opponent.add("Chris");
+        opponent.add("Steve");
+        opponent.add("Mike");
+        opponent.add("Jeff");
+        opponent.add("Bro Dawg");
+        opponent.add("DeSean");
+        opponent.add("LeRoy");
+        opponent.add("Chazz");
+        opponent.add("Will");
+        opponent.add("Sammy Boy");
+        opponent.add("Pubert");
+        opponent.add("Austin");
+        opponent.add("Andy");
+        opponent.add("Alex");
+        opponent.add("Jose");
     }
 
     public void fetch() {
@@ -85,11 +117,6 @@ public class EmailParser {
      * @throws Exception
      */
     public void writePart(Part p) throws Exception {
-//        System.out.println("Call to writeEnvelope at start of writePart: ");
-//        System.out.println("getText results: " + getText(p));
-        if (p instanceof Message) {
-//            writeEnvelope((Message) p);
-        }
 
         //check if the content has attachment
         if (p.isMimeType("multipart/*")) {
@@ -102,21 +129,14 @@ public class EmailParser {
         else {
             Object o = p.getContent();
             if (o instanceof String) {
-//                System.out.println("o is a string");
-
                 //try getting original address and forwarded date from body
                 if(o != null){
-                    logger.info("o object: " + (String) o);
                     JSONObject jsonObject = new JSONObject(o);
-//                    email.setContent((String) o);
                     String tempContent = (String) o;
                     int innerIndex = tempContent.lastIndexOf("---------- Forwarded message ---------");
                     String trueContent = tempContent.substring(innerIndex);
-                    logger.info("true content: " + trueContent);
-                    email.setRawContent(trueContent);
-//                    logger.info("write envelope after getting true content:");
-//                    writeEnvelope((Message) p);
-                    //got to be a better way than ths
+
+                    //got to be a better way than this
                     getSpecifics(trueContent);
 
                 }
@@ -134,13 +154,13 @@ public class EmailParser {
         i2 = trueContent.indexOf("To: ");
         String subject = trueContent.substring(i1, i2);
         email.setContentType(subject);
-        email.setContent(trueContent.substring(i2)); //this is pretty close
+        email.setRawContent(trueContent.substring(i2)); //this is pretty close
         logger.info("email object: " + email.toString());
         String greeting = generateGreeting();
         System.out.println("Email obj: " + email.toString());
-        if(email.getContentType().equalsIgnoreCase("waiverSuccess")) {
-
-        }
+        JSONObject metaData = populateMetaData(trueContent);
+        metaData.put("GREETING", greeting);
+        populateMessage(metaData);
     }
 
 
@@ -169,32 +189,7 @@ public class EmailParser {
 
     }
 
-
-    public void writeEnvelope(Message m) throws Exception {
-        System.out.println("This is the message envelope");
-        System.out.println("---------------------------");
-        Address[] a;
-
-        // FROM
-        if ((a = m.getFrom()) != null) {
-            for (int j = 0; j < a.length; j++)
-                System.out.println("FROM: " + a[j].toString());
-        }
-
-        // TO
-        if ((a = m.getRecipients(Message.RecipientType.TO)) != null) {
-            for (int j = 0; j < a.length; j++)
-                System.out.println("TO: " + a[j].toString());
-        }
-
-        // SUBJECT
-        if (m.getSubject() != null)
-            System.out.println("SUBJECT: " + m.getSubject());
-
-    }
-
-    private String getText(Part p) throws
-            MessagingException, IOException {
+    private String getText(Part p) throws MessagingException, IOException {
         if (p.isMimeType("text/*")) {
             String s = (String)p.getContent();
             textIsHtml = p.isMimeType("text/html");
@@ -233,7 +228,96 @@ public class EmailParser {
     }
 
     private String generateGreeting(){
-        return "Yo";
+        Random rand = new Random();
+        int r1 = rand.nextInt(part1.size());
+        int r2 = rand.nextInt(part2.size());
+        String greeting = part1.get(r1) + " " + part2.get(r2);
+        return greeting;
     }
+
+    private JSONObject populateMetaData(String originalStr){
+        JSONObject metaData = new JSONObject();
+
+        //generate guy's name
+        Random rand = new Random();
+        int r = rand.nextInt(opponent.size());
+        metaData.put("OPPONENT", opponent.get(r));
+
+        String lines[] = originalStr.split("\\r?\\n");
+        int i1;
+        int i2;
+        switch (email.getContentType()) {
+            case RECAP:
+                System.out.println("Coming soon: RECAP");
+                break;
+            case WAIVERSUCCESS:
+            case WAIVERFAIL:
+                for(String line : lines){
+                    if(line.startsWith("Player Dropped:")){
+                        i1 = line.indexOf(":") + 1;
+                        String player = line.substring(i1);
+                        metaData.put("PLAYERDROPPED", player.trim());
+                        System.out.println("dropped player: " + player);
+                    } else if(line.startsWith("Player Dropped :")){
+                        i1 = line.indexOf(":") + 1;
+                        String player = line.substring(i1);
+                        metaData.put("PLAYERDROPPED", player.trim());
+                        System.out.println("dropped player: " + player);
+                    }
+                    if(line.startsWith("Player Added:")){
+                        i1 = line.indexOf(":") + 1;
+                        String player = line.substring(i1);
+                        metaData.put("PLAYERADDED", player.trim());
+                        System.out.println("added player: " + player);
+                    } else if(line.startsWith("Player Added :")){
+                        i1 = line.indexOf(":") + 1;
+                        String player = line.substring(i1);
+                        metaData.put("PLAYERADDED", player.trim());
+                        System.out.println("added player: " + player);
+                    }
+                }
+                break;
+        }
+        return metaData;
+    }
+
+    private void populateMessage(JSONObject metaData){
+        try {
+            String placeHolder = null;
+            switch (email.getContentType()) {
+                case RECAP:
+                    System.out.println("Coming soon: RECAP");
+                    break;
+                case WAIVERSUCCESS:
+                    placeHolder = new String(Files.readAllBytes(Paths.get(templatePath + "WaiverSuccess.txt")),
+                            StandardCharsets.UTF_8);
+                    logger.info("placeHolder str: " + placeHolder);
+                    break;
+
+                case WAIVERFAIL:
+                    placeHolder = new String(Files.readAllBytes(Paths.get(templatePath + "WaiverFailure.txt")),
+                            StandardCharsets.UTF_8);
+                    logger.info("placeHolder str: " + placeHolder);
+                    break;
+                default:
+                    logger.warn("Unsupported message type");
+                    break;
+            }
+            Iterator<String> tags = metaData.keys();
+            while(tags.hasNext()) {
+                String tag = tags.next();
+                Object value = metaData.get(tag.toString()); //not all values are strings
+
+                if(placeHolder.contains(tag)) {
+                    placeHolder = placeHolder.replaceAll(tag, value+""); //not all metadata values exist in messagebody. check if exists first.
+                }
+            }
+            logger.info("formatted message: " + placeHolder);
+            email.setContent(placeHolder);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
 }
