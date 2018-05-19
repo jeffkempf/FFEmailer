@@ -1,3 +1,4 @@
 WorkTrip-BE/*
 src/main/resources/files/*
 src/main/resources/FFEmailer-logger.log
+src/main/resources/email.properties
