@@ -32,6 +32,7 @@ public class RefinedEmailParser {
     private static final ArrayList<String> part2 = new ArrayList<>();
     private static final ArrayList<String> opponent = new ArrayList<>();
     private TwilioService twilioService;
+    private NexmoService nexmoService;
 
     public RefinedEmailParser(Properties prop) {
         this.prop = prop;
@@ -43,6 +44,7 @@ public class RefinedEmailParser {
         emailLimits = new HashMap<>();
         logger = LogManager.getLogger(RefinedEmailParser.class.getName());
         twilioService = new TwilioService(prop);
+        nexmoService = new NexmoService(prop);
 
         //generate greetings
         part1.add("Yo");
@@ -159,7 +161,7 @@ public class RefinedEmailParser {
                     if (o != null) {
                         JSONObject jsonObject = new JSONObject(o);
                         String tempContent = (String) o;
-                        System.out.println("tempContent: " + tempContent);
+//                        System.out.println("tempContent: " + tempContent);
 
                         //at this point, only ~2 headers exist. Try Return-Path check in if
 //                    Enumeration<Header> headers = p.getAllHeaders();
@@ -198,7 +200,7 @@ public class RefinedEmailParser {
                         }
 //                    int innerIndex = tempContent.lastIndexOf("---------- Forwarded message ---------");
 //                    String trueContent = tempContent.substring(innerIndex);
-                        logger.info("true content: " + trueContent);
+//                        logger.info("true content: " + trueContent);
 
                         //got to be a better way than this
                         getSpecifics(trueContent, email);
@@ -231,6 +233,7 @@ public class RefinedEmailParser {
         metaData.put("GREETING", greeting);
         populateMessage(metaData, email);
 
+        nexmoService.sendSMS(email);
         //time to send a text
 //        twilioService.sendText(email);
     }
@@ -318,7 +321,7 @@ public class RefinedEmailParser {
                 }
                 break;
             case MOCK:
-                System.out.println("MOCK original str: " + originalStr);
+//                System.out.println("MOCK original str: " + originalStr);
                 int start = originalStr.indexOf("Your Team");
                 int end = originalStr.indexOf("Round by Round results*");
                 originalStr = originalStr.substring(start, end);

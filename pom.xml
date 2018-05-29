@@ -15,6 +15,13 @@
             <version>7.17.0</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/com.nexmo/client -->
+        <dependency>
+            <groupId>com.nexmo</groupId>
+            <artifactId>client</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>

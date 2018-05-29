@@ -34,6 +34,7 @@ public class EmailParser {
     private static final ArrayList<String> part2 = new ArrayList<>();
     private static final ArrayList<String> opponent = new ArrayList<>();
     private TwilioService twilioService;
+    private NexmoService nexmoService;
 
     public EmailParser(Properties prop) {
         this.prop = prop;
@@ -46,6 +47,7 @@ public class EmailParser {
         emailLimits = new HashMap<>();
         logger = LogManager.getLogger(EmailParser.class.getName());
         twilioService = new TwilioService(prop);
+        nexmoService = new NexmoService(prop);
 
         //generate greetings
         part1.add("Yo");
