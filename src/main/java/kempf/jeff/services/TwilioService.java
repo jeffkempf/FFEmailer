@@ -21,8 +21,12 @@ public class TwilioService {
 
     public void sendText(FFEmail ffEmail){
         Message message = Message.creator(new PhoneNumber("+19196091015"),
-                new PhoneNumber(prop.getProperty("twilio.number")),
+                new PhoneNumber(prop.getProperty("+15005550006")),
                 ffEmail.getContent()).create();
+
+//        Message message = Message.creator(new PhoneNumber(prop.getProperty("twilio.number")),
+//                new PhoneNumber("+19196091015"),
+//                ffEmail.getContent()).create();
 
         System.out.println(message.getSid());
     }

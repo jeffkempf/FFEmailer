@@ -1,8 +1,7 @@
 package kempf.jeff.driver;
 
 import kempf.jeff.services.EmailParser;
-import kempf.jeff.services.EmailParser2;
-import kempf.jeff.services.MailReader;
+import kempf.jeff.services.RefinedEmailParser;
 import kempf.jeff.util.PropertiesUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -28,21 +27,12 @@ public class EmailDriver {
 
 
         //email reader app will be single threaded
-//        MailReader mr = new MailReader(properties);
-        EmailParser ep = new EmailParser(properties);
-        ep.fetch();
+//        EmailParser ep = new EmailParser(properties);
+//        ep.fetch();
+        RefinedEmailParser rep = new RefinedEmailParser(properties);
+        rep.fetch();
         System.out.println("End of app");
 
-
-//        while(true) {
-////            mr.fetch();
-//            ep.fetch();
-//            try {
-//                Thread.sleep(sleepTimer);
-//            } catch (InterruptedException e) {
-//                logger.error(e);
-//            }
-//        }
 
     }
 }

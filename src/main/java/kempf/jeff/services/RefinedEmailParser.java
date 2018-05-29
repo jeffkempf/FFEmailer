@@ -8,8 +8,6 @@ import org.apache.logging.log4j.Logger;
 import org.json.JSONObject;
 
 import javax.mail.*;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -17,34 +15,33 @@ import java.nio.file.Paths;
 import java.util.*;
 import java.util.regex.Pattern;
 
-public class EmailParser {
+/**
+ * Auto-forwarded emails have diff format than manually forwarded.
+ * This class has been created to parse auto-forwarded emails (correct type)
+ */
+public class RefinedEmailParser {
     private Properties prop;
     private String host;
     private String emailUsername;
     private String emailPassword;
-    private FileWriter fw;
-    private BufferedWriter bw;
-    private FFEmail email;
-    private String filePath;
+//    private FFEmail email; //shouldn't be class level.
     private String templatePath;
     private static Logger logger;
-    private boolean textIsHtml = false;
     private HashMap<String, EmailThreshold> emailLimits; //for tracking sender thresholds
     private static final ArrayList<String> part1 = new ArrayList<>();
     private static final ArrayList<String> part2 = new ArrayList<>();
     private static final ArrayList<String> opponent = new ArrayList<>();
     private TwilioService twilioService;
 
-    public EmailParser(Properties prop) {
+    public RefinedEmailParser(Properties prop) {
         this.prop = prop;
         host = prop.getProperty("mail.pop3s.host");
         emailUsername = prop.getProperty("mail.pop3s.user");
         emailPassword = prop.getProperty("mail.pop3s.password");
-        filePath = prop.getProperty("file.dir");
         templatePath = prop.getProperty("template.dir");
-        email = new FFEmail();
+//        email = new FFEmail();
         emailLimits = new HashMap<>();
-        logger = LogManager.getLogger(EmailParser.class.getName());
+        logger = LogManager.getLogger(RefinedEmailParser.class.getName());
         twilioService = new TwilioService(prop);
 
         //generate greetings
@@ -101,17 +98,18 @@ public class EmailParser {
              * issue: ignored emails are getting put back into the messages array and getting parsed in
              * the next iteration.  Once a message initially gets ignored, it should no longer exist.
              */
-            int cutoffSize = Integer.parseInt(prop.getProperty("email.max.size"));
+//            int cutoffSize = Integer.parseInt(prop.getProperty("email.max.size"));
 
             Message[] messages = emailFolder.getMessages();
             logger.info("messages.length in " + Thread.currentThread().getName() + ": " + messages.length);
             if(messages.length > 0) {
                 for (int i = 0; i < messages.length; i++) {
-                    writeBody(messages[i]);
+                    FFEmail email = new FFEmail();
+                    writeBody(messages[i], email);
                 }
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error(e);
         }
     }
 
@@ -121,55 +119,117 @@ public class EmailParser {
      * @param p
      * @throws Exception
      */
-    public void writePart(Part p) throws Exception {
+    public void writePart(Part p, FFEmail email) {
+        try {
+            //check if the content has attachment
+            if (p.isMimeType("multipart/*")) {
+                String[] frm = p.getHeader("From");
+                System.out.println("frm size: " + frm.length);
+                email.setOriginalAddress(frm[0]);
+                String[] sub = p.getHeader("Subject");
+                System.out.println("sub size: " + sub.length);
+                email.setContentType(sub[0]);
 
-        //check if the content has attachment
-        if (p.isMimeType("multipart/*")) {
-            Multipart mp = (Multipart) p.getContent();
-            int count = mp.getCount();
-            for (int i = 0; i < count; i++) {
-                writePart(mp.getBodyPart(i));
-            }
-        }
-        else {
-            Object o = p.getContent();
-            if (o instanceof String) {
-                //try getting original address and forwarded date from body
-                if(o != null){
-                    JSONObject jsonObject = new JSONObject(o);
-                    String tempContent = (String) o;
+//            Enumeration<Header> headers = p.getAllHeaders();
+//            while(headers.hasMoreElements()){
+//                Header header = headers.nextElement();
+//                if(header.getName().equalsIgnoreCase("From")){
+//                    String value = header.getValue();
+//                    System.out.println("header name: " + header.getName() + ", header value: " + value);
+//                    if(value.equalsIgnoreCase("<sports-fantasy-replies@sports.yahoo.com>")){
+//                        email.setOriginalAddress(value);
+//                        Multipart mp = (Multipart) p.getContent();
+//                        int count = mp.getCount();
+//                        for (int i = 0; i < count; i++) {
+//                            writePart(mp.getBodyPart(i), email);
+//                        }
+//                    }
+//                }
+//            }
 
-                    //need better approach than hardcoding
-                    if(tempContent.contains("From: Yahoo Sports <sports-fantasy-replies@sports.yahoo.com>")) {
-                        int innerIndex = tempContent.lastIndexOf("---------- Forwarded message ---------");
-                        String trueContent = tempContent.substring(innerIndex);
+                Multipart mp = (Multipart) p.getContent();
+                int count = mp.getCount();
+                for (int i = 0; i < count; i++) {
+                    writePart(mp.getBodyPart(i), email);
+                }
+            } else {
+                Object o = p.getContent();
+                if (o instanceof String) {
+                    //try getting original address and forwarded date from body
+                    if (o != null) {
+                        JSONObject jsonObject = new JSONObject(o);
+                        String tempContent = (String) o;
+                        System.out.println("tempContent: " + tempContent);
+
+                        //at this point, only ~2 headers exist. Try Return-Path check in if
+//                    Enumeration<Header> headers = p.getAllHeaders();
+//                    while(headers.hasMoreElements()){
+//                        Header header = headers.nextElement();
+//                        if(header.getName().equalsIgnoreCase("Return-Path")){
+//                            String value = header.getValue();
+//                            System.out.println("header name: " + header.getName() + ", header value: " + value);
+//                            if(value.equalsIgnoreCase("<sports-fantasy-replies@sports.yahoo.com>")){
+//                                int innerIndex = tempContent.lastIndexOf("---------- Forwarded message ---------");
+//                                String trueContent = tempContent.substring(innerIndex);
+//                                logger.info("true content: " + trueContent);
+//
+//                                //got to be a better way than this
+//                                getSpecifics(trueContent);
+//                            }
+//                        }
+//                    }
+
+                        //this only works for manually forwarded emails. Try using Return-Path header.
+                        if (tempContent.contains("From: Yahoo Sports <sports-fantasy-replies@sports.yahoo.com>")) {
+//                        int innerIndex = tempContent.lastIndexOf("---------- Forwarded message ---------");
+//                        String trueContent = tempContent.substring(innerIndex);
+//                        logger.info("true content: " + trueContent);
+//
+//                        //got to be a better way than this
+//                        getSpecifics(trueContent);
+                        }
+
+                        String trueContent = null;
+                        if (tempContent.contains("---------- Forwarded message ---------")) {
+                            int innerIndex = tempContent.lastIndexOf("---------- Forwarded message ---------");
+                            trueContent = tempContent.substring(innerIndex);
+                        } else {
+                            trueContent = tempContent;
+                        }
+//                    int innerIndex = tempContent.lastIndexOf("---------- Forwarded message ---------");
+//                    String trueContent = tempContent.substring(innerIndex);
                         logger.info("true content: " + trueContent);
 
                         //got to be a better way than this
-                        getSpecifics(trueContent);
+                        getSpecifics(trueContent, email);
                     }
                 }
             }
+        } catch (MessagingException e) {
+            logger.error("Error parsing message in writePart", e);
+        } catch (IOException e) {
+            logger.error("IOException in writePart", e);
         }
 
     }
 
-    private void getSpecifics(String trueContent) {
-        int i1 = trueContent.indexOf("From: ") + 6;
-        int i2 = trueContent.indexOf("Date: ");
-        String originallyFrom = trueContent.substring(i1, i2);
-        email.setOriginalAddress(originallyFrom);
-        i1 = trueContent.indexOf("Subject: ");
-        i2 = trueContent.indexOf("To: ");
-        String subject = trueContent.substring(i1, i2);
-        email.setContentType(subject);
-        email.setRawContent(trueContent.substring(i2)); //this is pretty close
+    private void getSpecifics(String trueContent, FFEmail email) {
+//        int i1 = trueContent.indexOf("From: ") + 6;
+//        int i2 = trueContent.indexOf("Date: ");
+//        String originallyFrom = trueContent.substring(i1, i2);
+//        email.setOriginalAddress(originallyFrom);
+//        i1 = trueContent.indexOf("Subject: ");
+//        i2 = trueContent.indexOf("To: ");
+//        String subject = trueContent.substring(i1, i2);
+//        email.setContentType(subject);
+//        email.setRawContent(trueContent.substring(i2)); //this is pretty close
+        email.setRawContent(trueContent);
         logger.info("email object: " + email.toString());
         String greeting = generateGreeting();
         System.out.println("Email obj: " + email.toString());
-        JSONObject metaData = populateMetaData(trueContent);
+        JSONObject metaData = populateMetaData(trueContent, email);
         metaData.put("GREETING", greeting);
-        populateMessage(metaData);
+        populateMessage(metaData, email);
 
         //time to send a text
 //        twilioService.sendText(email);
@@ -181,62 +241,30 @@ public class EmailParser {
      * @param message
      * @throws Exception
      */
-    public void writeBody(Message message) throws Exception {
-        writePart(message);
+    public void writeBody(Message message, FFEmail email) {
+        writePart(message, email);
 
-        Object content = message.getContent();
-        if (content instanceof Multipart) {
-            Multipart mp = (Multipart) content;
-            for (int i = 0; i < mp.getCount(); i++) {
-                BodyPart bp = mp.getBodyPart(i);
-                if (Pattern.compile(Pattern.quote("text/html"),
-                        Pattern.CASE_INSENSITIVE).matcher(bp.getContentType()).find()) {
-                    // found html part
+        try {
+            Object content = message.getContent();
+            if (content instanceof Multipart) {
+                Multipart mp = (Multipart) content;
+                for (int i = 0; i < mp.getCount(); i++) {
+                    BodyPart bp = mp.getBodyPart(i);
+                    if (Pattern.compile(Pattern.quote("text/html"),
+                            Pattern.CASE_INSENSITIVE).matcher(bp.getContentType()).find()) {
+                        // found html part
 //                    logger.info("content: " + bp.getContent());
-                } else {
-                    logger.warn("Email doesn't contain an HTML multipart. Will disregard message.");
+                    } else {
+                        logger.warn("Email doesn't contain an HTML multipart. Will disregard message.");
+                    }
                 }
             }
+        } catch (MessagingException e) {
+            logger.error("Error parsing message in writeBody", e);
+        } catch (IOException e) {
+            logger.error("IOException in writeBody", e);
         }
 
-    }
-
-    private String getText(Part p) throws MessagingException, IOException {
-        if (p.isMimeType("text/*")) {
-            String s = (String)p.getContent();
-            textIsHtml = p.isMimeType("text/html");
-            return s;
-        }
-
-        if (p.isMimeType("multipart/alternative")) {
-            // prefer html text over plain text
-            Multipart mp = (Multipart)p.getContent();
-            String text = null;
-            for (int i = 0; i < mp.getCount(); i++) {
-                Part bp = mp.getBodyPart(i);
-                if (bp.isMimeType("text/plain")) {
-                    if (text == null)
-                        text = getText(bp);
-                    continue;
-                } else if (bp.isMimeType("text/html")) {
-                    String s = getText(bp);
-                    if (s != null)
-                        return s;
-                } else {
-                    return getText(bp);
-                }
-            }
-            return text;
-        } else if (p.isMimeType("multipart/*")) {
-            Multipart mp = (Multipart)p.getContent();
-            for (int i = 0; i < mp.getCount(); i++) {
-                String s = getText(mp.getBodyPart(i));
-                if (s != null)
-                    return s;
-            }
-        }
-
-        return null;
     }
 
     private String generateGreeting(){
@@ -247,7 +275,7 @@ public class EmailParser {
         return greeting;
     }
 
-    private JSONObject populateMetaData(String originalStr){
+    private JSONObject populateMetaData(String originalStr, FFEmail email){
         JSONObject metaData = new JSONObject();
 
         //generate guy's name
@@ -290,22 +318,26 @@ public class EmailParser {
                 }
                 break;
             case MOCK:
-                int start = originalStr.indexOf("*Your Team*");
-                int end = originalStr.indexOf("*Round by Round results*");
+                System.out.println("MOCK original str: " + originalStr);
+                int start = originalStr.indexOf("Your Team");
+                int end = originalStr.indexOf("Round by Round results*");
                 originalStr = originalStr.substring(start, end);
                 lines = originalStr.split("\\r?\\n");
                 for(String line : lines){
-                    if(Character.isDigit(line.charAt(0))){
-                        int dlmt = line.indexOf(". ");
-                        metaData.put(line.substring(0, dlmt), line.substring(dlmt + 2, line.indexOf("(")).trim());
-                        System.out.println(line.substring(0, dlmt) + ", " + line.substring(dlmt + 2, line.indexOf("(")).trim());
+                    line = line.trim();
+                    if(!line.isEmpty()) {
+                        if (Character.isDigit(line.charAt(0))) {
+                            int dlmt = line.indexOf(". ");
+                            metaData.put(line.substring(0, dlmt), line.substring(dlmt + 2, line.indexOf("(")).trim());
+                            System.out.println(line.substring(0, dlmt) + ", " + line.substring(dlmt + 2, line.indexOf("(")).trim());
+                        }
                     }
                 }
         }
         return metaData;
     }
 
-    private void populateMessage(JSONObject metaData){
+    private void populateMessage(JSONObject metaData, FFEmail email){
         try {
             String placeHolder = null;
             switch (email.getContentType()) {

@@ -81,6 +81,8 @@ public class FFEmail {
             }
         } else if(subject.toLowerCase().contains("recap")) {
             contentType = MessageType.RECAP;
+        } else if(subject.toLowerCase().contains("mock draft results")){
+            contentType = MessageType.MOCK;
         } else {
             contentType = MessageType.INVALID;
         }
