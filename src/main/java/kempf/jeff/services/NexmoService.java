@@ -35,10 +35,13 @@ public class NexmoService {
             fromNum = fromNum + random.nextInt(9);
         }
         System.out.println("from Num: " + fromNum);
+
+        //was going to hardcode, but want some sort of privacy for number
+        String jeffsCell = prop.getProperty("jeffs.cell");
         try {
             SmsSubmissionResult[] responses = client.getSmsClient().submitMessage(new TextMessage(
                     "12018577657",
-                    "19196091015",
+                    jeffsCell,
                     email.getContent()));
             for (SmsSubmissionResult response : responses) {
                 System.out.println(response);

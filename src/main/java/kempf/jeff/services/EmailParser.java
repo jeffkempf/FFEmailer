@@ -36,6 +36,12 @@ public class EmailParser {
     private TwilioService twilioService;
     private NexmoService nexmoService;
 
+    /**
+     * switching config from pop to imap for testing purposes. If switching back, will want to update pop3
+     * settings in gmail (enable for all, keep copy of email, and disable imap)
+     *
+     * @param prop
+     */
     public EmailParser(Properties prop) {
         this.prop = prop;
         host = prop.getProperty("mail.pop3s.host");

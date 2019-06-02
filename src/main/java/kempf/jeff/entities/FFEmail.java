@@ -79,6 +79,20 @@ public class FFEmail {
             } else {
                 contentType = MessageType.INVALID;
             }
+        } else if(subject.toLowerCase().contains("trade")) {
+            if(subject.toLowerCase().contains("rejected your trade")){
+                contentType = MessageType.TRADEREJECTED;
+            } else if(subject.toLowerCase().contains("proposed a trade to you")) {
+                contentType = MessageType.TRADEPROPOSED;
+            } else {
+                //use this for trade accepted, trade review (for trades among other players), and trade processed
+                contentType = MessageType.TRADEREVIEW;
+            }
+//            } else if(subject.toLowerCase().contains("accepted your trade")){
+//                contentType = MessageType.TRADEREVIEW; //should these be the same type?
+//            } else if(subject.toLowerCase().contains("review trade")){
+//                contentType = MessageType.TRADEREVIEW; //emails are almost identical in content, so why not?
+//            }
         } else if(subject.toLowerCase().contains("recap")) {
             contentType = MessageType.RECAP;
         } else if(subject.toLowerCase().contains("mock draft results")){
