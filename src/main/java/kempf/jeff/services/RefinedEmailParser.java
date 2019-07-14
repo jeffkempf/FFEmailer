@@ -81,7 +81,7 @@ public class RefinedEmailParser {
         opponent.add("Chazz");
         opponent.add("Chad");
         opponent.add("Chad");
-        opponent.add("Paul");
+        opponent.add("Kyle");
         opponent.add("Chad");
         opponent.add("Alex");
         opponent.add("Jose");
@@ -117,6 +117,7 @@ public class RefinedEmailParser {
 
                 // create the POP3 store object and connect with the pop server
 //               Store store = emailSession.getStore("pop3s");
+                //using imap for testing to reuse different message types
                 Store store = emailSession.getStore("imaps");
                 store.connect(host, emailUsername, emailPassword);
 
@@ -150,7 +151,8 @@ public class RefinedEmailParser {
                 Thread.sleep(3600000L);
             }
         } catch(Exception e){
-            logger.error("oops", e);
+            logger.error("Something went wrong. If email credentials failed, log into Gmail account and ensure less secure apps can connect. " +
+                    "Could also just make this app more secure..." , e);
         }
     }
 
@@ -167,13 +169,13 @@ public class RefinedEmailParser {
         String nowStr = sdf.format(System.currentTimeMillis());
         Calendar now = Calendar.getInstance();
 
-        System.out.println("start: " + startCal.getTime().toString() + ", end: " + endCal.getTime().toString());
-        System.out.println("now: " + nowStr);
+        logger.info("start: " + startCal.getTime().toString() + ", end: " + endCal.getTime().toString());
+        logger.info("now: " + nowStr);
         try {
             Date date = new SimpleDateFormat("HH:mm:ss").parse(nowStr);
             now.setTime(date);
         } catch (ParseException e) {
-            e.printStackTrace();
+           logger.error("Error performing time check", e);
         }
 
         if(now.after(startCal) && now.before(endCal)){
@@ -187,11 +189,13 @@ public class RefinedEmailParser {
      */
     private void spaceOutMessages(){
         Random random = new Random();
-        long wait = (random.nextInt(60) + 1) * 1000L;
+        long wait = (random.nextInt(60) + 1);
         try {
-            Thread.sleep(wait);
+            logger.info("waiting " + wait + " minutes before sending text.");
+//            Thread.sleep(wait * 1000);
+            Thread.sleep(1);
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            logger.error("Error sleeping app.", e);
         }
     }
 
@@ -206,10 +210,10 @@ public class RefinedEmailParser {
             //check if the content has attachment
             if (p.isMimeType("multipart/*")) {
                 String[] frm = p.getHeader("From");
-                System.out.println("frm size: " + frm.length);
+//                logger.info("frm size: " + frm.length);
                 email.setOriginalAddress(frm[0]);
                 String[] sub = p.getHeader("Subject");
-                System.out.println("sub size: " + sub.length);
+//                logger.info("sub size: " + sub.length);
                 email.setContentType(sub[0]);
 
                 Multipart mp = (Multipart) p.getContent();
@@ -218,14 +222,14 @@ public class RefinedEmailParser {
                     writePart(mp.getBodyPart(i), email);
                 }
             } else if(p.isMimeType("text/plain")){
-                System.out.println("this is plain text");
+                logger.info("this is plain text");
                 Object o = p.getContent();
                 if (o instanceof String) {
                     //try getting original address and forwarded date from body
                     if (o != null) {
                         JSONObject jsonObject = new JSONObject(o);
                         String tempContent = (String) o;
-                        logger.info("forwareded email: " + tempContent);
+//                        logger.info("forwareded email: " + tempContent);
 
                         //this only works for manually forwarded emails. Try using Return-Path header.
                         if (tempContent.contains("From: Yahoo Sports <sports-fantasy-replies@sports.yahoo.com>")) {
@@ -250,10 +254,10 @@ public class RefinedEmailParser {
                     }
                 }
             } else if(p.isMimeType("text/html")){
-                System.out.println("this is html");
+                logger.info("this is html");
             } else {
-                System.out.println("this is something else");
-                System.out.println(p.getContentType());
+                logger.info("this is something else");
+                logger.info(p.getContentType());
             }
         } catch (MessagingException e) {
             logger.error("Error parsing message in writePart", e);
@@ -270,14 +274,14 @@ public class RefinedEmailParser {
             email.setRawContent(trueContent);
             logger.info("email object: " + email.toString());
             String greeting = generateGreeting();
-            System.out.println("Email obj: " + email.toString());
+//            logger.info("Email obj: " + email.toString());
             JSONObject metaData = populateMetaData(trueContent, email);
             metaData.put("GREETING", greeting);
             populateMessage(metaData, email);
 
 //        nexmoService.sendSMS(email);
             //time to send a text
-//        twilioService.sendText(email);
+        twilioService.sendText(email);
         }
     }
 
@@ -341,12 +345,11 @@ public class RefinedEmailParser {
         int i2;
         switch (email.getContentType()) {
             case RECAP:
-                System.out.println("Coming soon: RECAP");
+                logger.info("Coming soon: RECAP");
                 break;
             case WAIVERSUCCESS:
             case WAIVERFAIL:
                 for(String line : lines){
-                    logger.info("waiver line: " + line);
                     if(line.startsWith("Player Dropped:")){
                         //sometimes player added is on same line as player dropped
                         if(line.contains("Player Added")){
@@ -357,13 +360,13 @@ public class RefinedEmailParser {
                             metaData.put("PLAYERDROPPED", playerDrop.trim());
                             String playerAdd = line.substring(addStart);
                             metaData.put("PLAYERADDED", playerAdd.trim());
-                            System.out.println("dropped player: " + playerDrop);
-                            System.out.println("added player: " + playerAdd);
+                            logger.info("dropped player: " + playerDrop);
+                            logger.info("added player: " + playerAdd);
                         } else {
                             i1 = line.indexOf(":") + 1;
                             String player = line.substring(i1);
                             metaData.put("PLAYERDROPPED", player.trim());
-                            System.out.println("dropped player: " + player);
+                            logger.info("dropped player: " + player);
                         }
                     } else if(line.startsWith("Player Dropped :")){
                         if(line.contains("Player Added")){
@@ -374,30 +377,30 @@ public class RefinedEmailParser {
                             metaData.put("PLAYERDROPPED", playerDrop.trim());
                             String playerAdd = line.substring(addStart);
                             metaData.put("PLAYERADDED", playerAdd.trim());
-                            System.out.println("dropped player: " + playerDrop);
-                            System.out.println("added player: " + playerAdd);
+                            logger.info("dropped player: " + playerDrop);
+                            logger.info("added player: " + playerAdd);
                         } else {
                             i1 = line.indexOf(":") + 1;
                             String player = line.substring(i1);
                             metaData.put("PLAYERDROPPED", player.trim());
-                            System.out.println("dropped player: " + player);
+                            logger.info("dropped player: " + player);
                         }
                     }
                     if(line.startsWith("Player Added:")){
                         i1 = line.indexOf(":") + 1;
                         String player = line.substring(i1);
                         metaData.put("PLAYERADDED", player.trim());
-                        System.out.println("added player: " + player);
+                        logger.info("added player: " + player);
                     } else if(line.startsWith("Player Added :")){
                         i1 = line.indexOf(":") + 1;
                         String player = line.substring(i1);
                         metaData.put("PLAYERADDED", player.trim());
-                        System.out.println("added player: " + player);
+                        logger.info("added player: " + player);
                     }
                 }
                 break;
             case MOCK:
-//                System.out.println("MOCK original str: " + originalStr);
+//                logger.info("MOCK original str: " + originalStr);
                 int start = originalStr.indexOf("Your Team");
                 int end = originalStr.indexOf("Round by Round results*");
 
@@ -410,7 +413,7 @@ public class RefinedEmailParser {
                         if (Character.isDigit(line.charAt(0))) {
                             int dlmt = line.indexOf(". ");
                             metaData.put(line.substring(0, dlmt), line.substring(dlmt + 2, line.indexOf("(")).trim());
-                            System.out.println(line.substring(0, dlmt) + ", " + line.substring(dlmt + 2, line.indexOf("(")).trim());
+                            logger.info(line.substring(0, dlmt) + ", " + line.substring(dlmt + 2, line.indexOf("(")).trim());
                         }
                     }
                 }
@@ -502,7 +505,7 @@ public class RefinedEmailParser {
             String placeHolder = null;
             switch (email.getContentType()) {
                 case RECAP:
-                    System.out.println("Coming soon: RECAP");
+                    logger.info("Coming soon: RECAP");
                     break;
                 case WAIVERSUCCESS:
                     placeHolder = new String(Files.readAllBytes(Paths.get(templatePath + "WaiverSuccess.txt")),
