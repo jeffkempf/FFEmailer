@@ -3,3 +3,4 @@ src/main/resources/FFEmailer-logger.log
 src/main/resources/email.properties
 .idea/*
 target/*
+logs/*
